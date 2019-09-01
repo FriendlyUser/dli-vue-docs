@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>a53_b.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="a53_b.png" alt="DSP" title="a53_b"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[border={10pt}]{standalone}
+\usepackage{tikz,pgfplots,filecontents,amsmath}
+\pgfplotsset{compat=1.5}
+
+\begin{filecontents}{data.dat}
+ n   yn 
+-2   0.0
+-1   0.0
+ 0   1.0
+ 1   2.0
+ 2   3.0
+ 3   4.0
+ 4   4.0
+ 5   4.0
+ 6   4.0 
+ 7   4.0 
+ 8   4.0
+% 3   0.0 
+ %4   0.0 
+% 5   0.0
+\end{filecontents}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}
+[%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    axis x line=middle,
+    axis y line=middle,
+    every axis x label={at={(current axis.right of origin)},anchor=north west},
+    every axis y label={at={(current axis.above origin)},anchor= north west},
+    every axis plot post/.style={mark options={fill=black}},
+    xlabel={$n$},
+    ylabel={$\boldsymbol{y[n]}$},
+    xtick={-2,0, ..., 8},
+    ymin=0,
+    ymax=4,
+]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addplot+[ycomb,black,thick] table [x={n}, y={yn}] {data.dat};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/EngineeringSoftwareDesign/CPUPicture.html">
+        Previous: CPUPicture.png
+      </a></li> <li><a href="/EngineeringSoftwareDesign/Circles.html">
+        Next: Circles.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--DSP-a53_b-md.4793989f.js" defer></script></body></html>

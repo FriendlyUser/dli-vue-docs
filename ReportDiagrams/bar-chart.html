@@ -1,0 +1,99 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>bar-chart.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="bar-chart.png" alt="ReportDiagrams" title="bar-chart"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{url}
+\DeclareUrlCommand\function{\urlstyle{sf}}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+
+\definecolor{chart Idle}{gray}{.6}
+\definecolor{chart Poor}{RGB}{242,28,28}
+\definecolor{chart Ok}{RGB}{248,172,37}
+\definecolor{chart Ideal}{RGB}{1,151,0}
+\definecolor{chart Over}{RGB}{0,125,234}
+
+\newdimen\tempdim
+\newcommand*{\Triangle}{%
+  \settoheight{\tempdim}{L}%
+  \tikz[x=\tempdim, y=\tempdim]\draw(0,0) -- (.5,.5) -- (0,1) --cycle;%
+}
+\newcommand*{\ChartLegend}[1]{%
+  \ifdim\lastkern=1sp %
+    \hspace{1em}%
+  \fi
+  \ChartBox{0.75em}{#1}%
+  \,#1%
+  \kern-1sp\kern1sp\ignorespaces
+}
+\newcommand*{\ChartBox}[2]{%
+  \begingroup
+    \settoheight{\tempdim}{L}%
+    \edef\tempheight{\the\tempdim}%
+    \settodepth{\tempdim}{g}%
+    \edef\tempdepth{\the\tempdim}%
+    \tikz[
+      baseline=0pt,
+      inner sep=0pt,
+    ]
+    \node[
+      fill={chart #2},
+      draw,
+      rounded corners=1pt,
+      anchor=base,
+    ]{%
+      \vphantom{g\&quot;A}%
+      \pgfmathsetlength{\tempdim}{#1}%
+      \kern\tempdim\relax
+    };%
+  \endgroup
+}
+
+\begin{document}
+\sffamily
+\renewcommand*{\arraystretch}{1.2}
+\newcommand*{\chart}[2]{%
+  #1 &amp; \ChartBox{55mm/3.420*#1}{#2}%
+}
+\noindent
+\begin{tabular}{&gt;{\Triangle\,}lS[mode=text,detect-family,table-format=1.3]@{\,s~}l}
+\toprule
+\multicolumn{1}{c}{%
+  \multirow{2}{*}{Source Function\,/\,Function\,/\,Call Stack}%
+}&amp;
+  \multicolumn{2}{c}{CPU Time by Utilization}\\
+\multicolumn{1}{c}{}&amp; \multicolumn{2}{l}{%
+  \ChartLegend{Idle}
+  \ChartLegend{Poor}
+  \ChartLegend{Ok}
+  \ChartLegend{Ideal}
+  \ChartLegend{Over}
+}\\
+\midrule
+\relax[Loop at line 151 in \function{divergence_part_1}] &amp;
+  \chart{3.420}{Poor} \\
+\relax[Loop at line 1071 in \function{radiation_fvm}] &amp;
+  \chart{3.270}{Poor} \\
+\function{scalar_face_value} &amp;
+  \chart{3.090}{Poor} \\
+\relax[Loop at line 102 in \function{get_match}] &amp;
+  \chart{1.700}{Poor} \\
+\function{get_sensible_enthalpy_diff} &amp;
+  \chart{1.250}{Poor} \\
+\function{compare_vec3} &amp;
+  \chart{1.140}{Poor} \\
+\bottomrule
+\end{tabular}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/ciComparsionTable.html">
+        Previous: ciComparsionTable.png
+      </a></li> <li><a href="/BlogDiagrams/chat-decision-tree.html">
+        Next: chat-decision-tree.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-bar-chart-md.d4f89f4b.js" defer></script></body></html>

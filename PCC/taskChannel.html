@@ -1,0 +1,32 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>taskChannel.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="taskChannel.png" alt="PCC" title="taskChannel"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\tikzset{near start abs/.style={xshift=1cm}}
+
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[node distance=1.5cm]
+    % place nodes
+    \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=10pt] (r) {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,right of=r, minimum size=10pt] (r1a)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above right of=r, xshift=-0.25cm, minimum size=10pt] (r2a)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above of=r, minimum size=10pt] (r2t)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above right of=r2t, minimum size=10pt] (r3)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above of=r1a, minimum size=10pt] (r2tb)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above right of=r1a, minimum size=10pt] (r2tc)  {};
+    \node[circle,draw=black, fill=white, inner sep=0pt,above right of=r2tb, minimum size=10pt] (r3tb)  {};
+    % Arrows, right subgraph
+    \draw[-&gt;,thick] (r) -- node[above] {\small{1}} ++(r1a);
+    \draw[-&gt;,thick] (r1a) -- node[right] {\small{3}} ++(r2tc);
+    \draw[-&gt;,thick] (r1a) -- node[right] {\small{2}} ++(r2tb);
+    \draw[-&gt;,thick] (r2tb) -- node[right] {\small{3}} ++(r3tb);
+    % Left subgraph
+     \draw[-&gt;,thick] (r) -- node[right] {\small{3}} ++(r2a);
+    \draw[-&gt;,thick] (r) -- node[right] {\small{2}} ++(r2t);
+    \draw[-&gt;,thick] (r2t) -- node[right] {\small{3}} ++(r3);
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q3Diagram616.html">
+        Previous: Q3Diagram616.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q3Circuit2.html">
+        Next: Q3Circuit2.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--PCC-taskChannel-md.95e93fcd.js" defer></script></body></html>

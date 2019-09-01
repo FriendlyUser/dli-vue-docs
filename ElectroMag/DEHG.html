@@ -1,0 +1,67 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>DEHG.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="DEHG.png" alt="ElectroMag" title="DEHG"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{article}
+\usepackage[paperwidth=55mm,paperheight=55mm,margin=1mm]{geometry}
+\usepackage{bm}
+\usepackage{eucal}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\pagestyle{empty}
+\parindent=0pt
+\begin{document}
+\pgfdeclarelayer{-1}
+\pgfsetlayers{-1,main}
+\tikzset{
+    zlevel/.style={%
+        execute at begin scope={\pgfonlayer{#1}},
+        execute at end scope={\endpgfonlayer}
+    },
+}
+\centering
+\begin{tikzpicture}[
+        ball/.style={circle, shading=ball, ball color=black!15, minimum size=9mm},
+        conline/.style={line width=#1, line cap=round},
+        label/.style 2 args={
+            postaction={decorate,transform shape,decoration={
+                markings, mark=at position #1 with \node {\scriptsize\color{black}#2};
+            }}
+        },
+        blue/.style={color=blue!60},
+        red/.style={color=red!50},
+        redl/.style={color=red!20},
+    ]
+    \def\conline&lt;#1&gt;[#2] (#3) (#4);{%
+        \draw[conline=#1, #2] (#3) -- (#4);
+    }
+    \def\conwhiline (#1) (#2);{%
+        \conline&lt;10pt&gt;[color=white] (#1) (#2);
+    }
+    \def\connectpos[#1] (#2) (#3) #4 #5;{%
+        \conline&lt;8pt&gt;[color=black] (#2) (#3);
+        \conline&lt;7pt&gt;[#1, label={#4}{#5}] (#2) (#3);
+    }
+    \def\connection[#1] (#2) (#3) #4;{%
+        \connectpos[#1] (#2) (#3) 0.5 {#4};
+    }
+    \node (B) [ball]                     {$\bm{B}$};
+    \node (D) [ball] at ($(B)+(95:4.4)$) {$\mathcal{D}$};
+
+    \begin{scope}[zlevel=-1]
+    \node (H) [ball] at ($(B)+(60:2.5)$) {$\mathcal{H}$};
+    \node (E) [ball] at ($(B)+(155:3)$)  {$\bm{E}$};
+    \connectpos[blue] (E)     (H.180) 0.35 {1-forms};
+    \conwhiline       (B)     (D);
+    \connection[red]  (E.-45) (B)          {field strength};
+    \connection[redl] (B)     (H.-115)     {magnetic};
+    \end{scope}
+
+    \connection[red]  (D.-40) (H)          {excitation};
+    \connectpos[blue] (D)     (B)     0.35 {2-forms};
+    \connection[redl] (E.60)  (D)          {electric};
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ArtificialIntelligence/genetic_crossover.html">
+        Previous: genetic_crossover.png
+      </a></li> <li><a href="/ElectroMag/Exampl1Circuit.html">
+        Next: Exampl1Circuit.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-DEHG-md.ac8ca293.js" defer></script></body></html>

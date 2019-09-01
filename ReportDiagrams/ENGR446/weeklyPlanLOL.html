@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>weeklyPlanLOL.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="weeklyPlanLOL.png" alt="ReportDiagrams/ENGR446" title="weeklyPlanLOL"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{datatool}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\usetikzlibrary{positioning}
+%\usetikzlibrary{calc,intersections}
+
+\usepackage{filecontents}
+\begin{filecontents*}{tasks.dat}
+phase,taskid,name,position,size
+initial,initialmeeting,Initial Meeting,-2,4
+planning,needsassesment,Needs Assesment,0,7
+planning,research,Research,3,15
+planning,siteoutline,Site Outline,5,7
+content,contentoutline,Content Outline,10,7
+\end{filecontents*}
+
+\DTLloaddb[noheader=false]{tasks}{tasks.dat}
+
+\begin{document}
+\begin{tikzpicture}[week/.style={font=\bfseries, text=white},
+initial/.style={fill=black!60,circle,opacity=0.5},
+planning/.style={fill=red,circle,opacity=0.5},
+content/.style={fill=yellow,circle,opacity=0.5} ]
+
+%%%%% Tasks
+\DTLforeach*{tasks}{\phase=phase, \taskid=taskid, \name=name, \position=position,\size=size}{\node(\taskid)[\phase, minimum size=\size em] at (\position, 0) {};
+\draw (node cs:name=\taskid, anchor=north) to ++(0,3) node[above, scale=\size/6] {\name};
+}
+
+
+\filldraw[fill=black, draw=white,line width=1ex,opacity=0.75] (-3.5,-0.5) rectangle (54,0.5);
+
+%%%%% Weeks.
+\node[week] at (0,0) {WEEK1};
+\node[week] at (7,0) {WEEK2};
+\node[week] at (14,0) {WEEK3};
+\node[week] at (21,0) {WEEK4};
+\node[week] at (28,0) {WEEK5};
+\node[week] at (35,0) {WEEK6};
+\node[week] at (42,0) {WEEK7};
+\node[week] at (49,0) {WEEK8};  
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/folderSetup.html">
+        Previous: folderSetup.png
+      </a></li> <li><a href="/BlogDiagrams/discordDiagram.html">
+        Next: discordDiagram.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-ENGR446-weeklyPlanLOL-md.95b41497.js" defer></script></body></html>

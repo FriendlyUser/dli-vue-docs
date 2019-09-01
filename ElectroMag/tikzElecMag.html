@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>tikzElecMag.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="tikzElecMag.png" alt="ElectroMag" title="tikzElecMag"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz,bm}
+\usepackage[raggedrightboxes]{ragged2e}
+\begin{document}
+  \begin{tikzpicture}[x={(-10:1cm)},y={(90:1cm)},z={(210:1cm)}]
+    % Axes
+    \draw (-1,0,0) node[above] {$x$} -- (5,0,0);
+    \draw (0,0,0) -- (0,2,0) node[above] {$y$};
+    \draw (0,0,0) -- (0,0,2) node[left] {$z$};
+    % Propagation
+    \draw[-&gt;,ultra thick] (5,0,0) -- node[above] {$c$} (6,0,0);
+    % Waves
+    \draw[thick] plot[domain=0:4.5,samples=200] (\x,{cos(deg(pi*\x))},0);
+    \draw[gray,thick] plot[domain=0:4.5,samples=200] (\x,0,{cos(deg(pi*\x))});
+    % Arrows
+    \foreach \x in {0.1,0.3,...,4.4} {
+      \draw[-&gt;,help lines] (\x,0,0) -- (\x,{cos(deg(pi*\x))},0);
+      \draw[-&gt;,help lines] (\x,0,0) -- (\x,0,{cos(deg(pi*\x))});
+    }
+    % Labels
+    \node[above right] at (0,1,0) {$\bm{E}$};
+    \node[below] at (0,0,1) {$\bm{B}$};
+  \end{tikzpicture}
+
+  \begin{minipage}{.5\linewidth}
+    \[
+      c = \frac{E}{B}
+    \]
+    \begin{tabular}{r@{${}={}$}p{.8\linewidth}}
+      $E$ &amp; electric field amplitude \\
+      $B$ &amp; magnetic field amplitude (instantaneous values) \\
+      $c$ &amp; speed of light ($3\times10^8\mathrm{m/s}$) \\
+    \end{tabular}
+  \end{minipage}%
+  \begin{minipage}{.5\linewidth}
+    \[
+      c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}
+    \]
+    \begin{tabular}{r@{${}={}$}p{.8\linewidth}}
+      $\mu_0$ &amp; magnetic permeability in a vacuum, $\mu_0 = 1.3\times10^{-6}\,\mathrm{N/A^2}$ \\
+      $\varepsilon_0$ &amp; electric permeability in a vacuum, $\varepsilon_0 = 8.9\times10^{-12}\,\mathrm{C^2/N m^2}$ \\
+    \end{tabular}
+  \end{minipage}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/DSP/a5a11_a.html">
+        Previous: a5a11_a.png
+      </a></li> <li><a href="/DSP/a5_4c.html">
+        Next: a5_4c.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-tikzElecMag-md.1a0d6328.js" defer></script></body></html>

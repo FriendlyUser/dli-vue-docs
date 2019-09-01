@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>e514_c2.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="e514_c2.png" alt="DSP" title="e514_c2"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[border={10pt}]{standalone}
+\usepackage{tikz,pgfplots,filecontents,amsmath}
+\pgfplotsset{compat=1.5}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}
+[%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+height=5cm,
+width=\textwidth,
+    axis x line=middle,
+    axis y line= none,
+%    ylabel={Signal Spectrum of $x(t)$},
+     every axis x label={at={(current axis.left of origin)},anchor=south west},
+%    every axis y label={at={(current axis.above origin)},anchor= north west},
+    %every axis plot post/.style={mark options={fill=black}},
+    % every axis plot/.append style={ultra thick},
+   xlabel={$f$},
+%    ylabel={$\boldsymbol{x[n]}$},
+    xtick={0,1,...,7,9,10,11},
+    ymin=-40,
+    ymax=10,
+    xmax=11,
+    xmin=-1,
+]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addplot+[ycomb,black,thick] table [x={n}, y={xn}] {data.dat};
+\addplot+[ycomb,black] plot coordinates
+{(0,1) (1,0) (2,0) (3,0) (4,0) (5,0) (6,0) (7,0) (8,-32) (9,0) (10,0)};
+\node[label={{$1$}}] at (axis cs:0,0) {};
+\node[label={{$0$}}] at (axis cs:1,0) {};
+\node[label={{$0$}}] at (axis cs:2,0) {};
+\node[label={{$0$}}] at (axis cs:3,0) {};
+\node[label={{$0$}}] at (axis cs:4,0) {};
+\node[label={{$0$}}] at (axis cs:5,0) {};
+\node[label={{$0$}}] at (axis cs:6,0) {};
+\node[label={{$0$}}] at (axis cs:7,0) {};
+\node[label={{$-a^{8}$}}] at (axis cs:8,-45) {};
+\node[label={{$0$}}] at (axis cs:9,0) {};
+\node[label={{$0$}}] at (axis cs:10,0) {};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ElectroMag/Q8Circuit.html">
+        Previous: Q8Circuit.png
+      </a></li> <li><a href="/ElectroMag/Transformer3Windings.html">
+        Next: Transformer3Windings.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--DSP-e514_c2-md.1ec46d57.js" defer></script></body></html>

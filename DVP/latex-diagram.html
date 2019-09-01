@@ -1,0 +1,37 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>latex-diagram.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="latex-diagram.png" alt="DVP" title="latex-diagram"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz,border=3.14mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\pgfplotsset{width=5.5in,compat=1.10}
+\begin{document}
+  \begin{tikzpicture}
+  \begin{axis}[axis lines=middle,
+  xmin=-6, xmax=6,
+        ymin=-6,ymax=6,
+                xlabel = $x$,
+                ylabel = $y$]
+\addplot [-&gt;, thick,  red]
+        coordinates { (0,0) (sqrt(3),1)} node[above right,pos=1] {$v_1$};
+\addplot [-&gt;, thick,  blue]
+        coordinates { (0,0) (0,2)} node[above right,pos=1] {$v_2$};
+
+\addplot+ [mark=none,black] table {
+0.5 1
+-0.5 1
+-1 0
+-0.5 -1 
+0.5 -1
+1 0
+0.5 1
+};
+\pgfplotsinvokeforeach{-6,-4,...,6}{
+\addplot[only marks, mark=o, samples
+at={-5.19,-3.46,-1.73,0,1.73,3.46,5.19}]{-0.55*x + #1};}
+\end{axis}
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ElectroMag/Q7Circuit2.html">
+        Previous: Q7Circuit2.png
+      </a></li> <li><a href="/ElectroMag/Q8Circuit.html">
+        Next: Q8Circuit.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--DVP-latex-diagram-md.e5d1e453.js" defer></script></body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>block.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="block.png" alt="DSP" title="block"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{pst-sigsys}	%Not used in the creation of this document
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\usetikzlibrary{automata,positioning,arrows.meta}
+\usetikzlibrary{circuits}
+\begin{document}
+
+\tikzset{%
+	block/.style    = {draw, thick, rectangle, minimum height = 3em,
+		minimum width = 3em},
+	mult/.style    = {draw, circle, node distance = 2cm}, % Multipler
+	sum/.style      = {draw, circle, node distance = 2cm}, % Adder
+	input/.style    = {coordinate}, % Input
+	output/.style   = {coordinate} % Output
+	label/.style   = {draw=none} % Text label
+	
+}
+\newcommand{\suma}{\Large$+$}
+\newcommand{\mult}{\Large$\times$}
+\newcommand{\inte}{$\displaystyle \int$}
+\newcommand{\derv}{\Huge$\frac{d}{dt}$}
+
+\begin{tikzpicture}[auto, node distance=2cm,thick]
+\matrix[column sep = .75cm, row sep = .75cm]
+{   &amp; &amp; &amp; &amp; &amp; &amp; &amp;\\
+	\node [coordinate](a1){}; &amp; \node [block](A2){$\{b_k\}=\{1,1,1,1\}$}; &amp; 	
+	\node [coordinate](a3){}; &amp; &amp; &amp; &amp; &amp;\\
+	\node (x){$x[n]$}; &amp; &amp; \node [sum](add1){\suma}; &amp;  &amp;\node [coordinate](b5){}; &amp; \node [block](B6){$\{b_k\}=\{1,-1\}$}; &amp; \node [coordinate](b7){};&amp; \node [coordinate](b8){}; \\
+	\node [coordinate](c1){}; &amp; \node [block](C2){$\{b_k\}=\{1,1,1,1\}$}; &amp; \node [coordinate](c3){}; &amp; &amp; &amp; &amp; &amp;\\
+	&amp; &amp; &amp; &amp; &amp; &amp; &amp;\\
+};
+\draw [-] (x) to (a1);
+\draw [-&gt;] (a1) to (A2);
+\draw [-] (A2) to (a3);
+\draw [-&gt;] (a3) to (add1);
+\draw [-] (x) to (c1);
+\draw [-&gt;] (c1) to (C2);
+\draw [-] (C2) to (c3);
+\draw [-&gt;] (c3) to (add1);
+\draw [-&gt;] (add1) to (B6);
+\draw [-&gt;] (B6) to (b7);
+
+%draw S text labels
+\node[label,shift={(0,0.75)}] at (A2) {System $S_1$};
+\node[label,shift={(0,-0.75)}] at (C2) {System $S_2$};
+\node[label,shift={(0,-0.75)}] at (B6) {System $S_3$};
+\node[label,shift={(-0.25,0.25)}] at (a3) {$y_1[n]$};
+\node[label,shift={(-0.25,-0.25)}] at (c3) {$y_2[n]$};
+\node[label,shift={(-0.25,0.25)}] at (b5) {$w[n]$};
+\node[label,shift={(-0.25,0)}] at (b8) {$y[n]$};
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ElectroMag/phasor.html">
+        Previous: phasor.png
+      </a></li> <li><a href="/ElectroMag/smithChart.html">
+        Next: smithChart.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--DSP-block-md.d6432027.js" defer></script></body></html>

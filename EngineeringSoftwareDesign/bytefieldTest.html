@@ -1,0 +1,82 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>bytefieldTest.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="bytefieldTest.png" alt="EngineeringSoftwareDesign" title="bytefieldTest"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{article}
+\usepackage{bytefield}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\begin{bytefield}{16}
+	\bitboxes*{1}{01000010} &amp; \bitbox{4}{src\strut} &amp;
+	\bitbox{4}{dest\strut} &amp; \bitbox{4}{const\strut}
+\end{bytefield}
+\section{More testing}
+\begin{bytefield}{16}
+	\bitheader{0,7,8,15} \\
+	\begin{rightwordgroup}{Header}
+		\bitbox{4}{Tag} &amp; \bitbox{12}{Mask} \\
+		\bitbox{8}{Source} &amp; \bitbox{8}{Destination}
+	\end{rightwordgroup} \\
+	\wordbox{3}{Data}
+\end{bytefield}
+\section{Games}
+\medskip
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+\definecolor{lightcyan}{rgb}{0.84,1,1}
+\definecolor{lightgreen}{rgb}{0.64,1,0.71}
+\definecolor{lightred}{rgb}{1,0.7,0.71}
+\begin{bytefield}[bitheight=\widthof{~Sign~},
+	boxformatting={\centering\small}]{32}
+	\bitheader[endianness=big]{31,23,0} \\
+	\colorbitbox{lightcyan}{1}{\rotatebox{90}{Sign}} &amp;
+	\colorbitbox{lightgreen}{8}{Exponent} &amp;
+	\colorbitbox{lightred}{23}{Mantissa}
+\end{bytefield}
+\section{Games}
+\medskip
+\begin{bytefield}[bitheight=2.5\baselineskip]{32}
+	\bitheader{0,7,8,15,16,23,24,31} \\
+	\begin{rightwordgroup}{\parbox{6em}{\raggedright These words were taken
+				verbatim from the TCP header definition (RFC~793).}}
+\bitbox{4}{Data offset} &amp; \bitbox{6}{Reserved} &amp;
+\bitbox{1}{\tiny U\\R\\G} &amp; \bitbox{1}{\tiny A\\C\\K} &amp;
+\bitbox{1}{\tiny P\\S\\H} &amp; \bitbox{1}{\tiny R\\S\\T} &amp;
+\bitbox{1}{\tiny S\\Y\\N} &amp; \bitbox{1}{\tiny F\\I\\N} &amp;
+\bitbox{16}{Window} \\
+\bitbox{16}{Checksum} &amp; \bitbox{16}{Urgent pointer}
+\end{rightwordgroup} \\
+\wordbox[lrt]{1}{Data octets} \\
+\skippedwords \\
+\wordbox[lrb]{1}{} \\
+\begin{leftwordgroup}{\parbox{6em}{\raggedright Note that we can display,
+		for example, a misaligned 64-bit value with clever use of the
+		optional argument to \texttt{\string\wordbox} and
+		\texttt{\string\bitbox}.}}
+\bitbox{8}{Source} &amp; \bitbox{8}{Destination} &amp;
+\bitbox[lrt]{16}{} \\
+\wordbox[lr]{1}{Timestamp} \\
+\begin{rightwordgroup}{\parbox{6em}{\raggedright Why two Length fields?
+			No particular reason.}}
+	\bitbox[lrb]{16}{} &amp; \bitbox{16}{Length}
+\end{leftwordgroup} \\
+\bitbox{6}{Key} &amp; \bitbox{6}{Value} &amp; \bitbox{4}{Unused} &amp;
+\bitbox{16}{Length}
+\end{rightwordgroup} \\
+\wordbox{1}{Total number of 16-bit data words that follow this
+header word, excluding the subsequent checksum-type value} \\
+\bitbox{16}{Data~1} &amp; \bitbox{16}{Data~2} \\
+\bitbox{16}{Data~3} &amp; \bitbox{16}{Data~4} \\
+\bitbox[]{16}{$\vdots$ \\[1ex]} &amp;
+\bitbox[]{16}{$\vdots$ \\[1ex]} \\
+\bitbox{16}{Data~$N-1$} &amp; \bitbox{16}{Data~$N$} \\
+\bitbox{20}{\[ \mbox{A5A5}_{\mbox{\scriptsize H}} \oplus
+\left(\sum_{i=1}^N \mbox{Data}_i \right) \bmod 2^{20} \]} &amp;
+\bitboxes*{1}{000010 000110} \\
+\wordbox{2}{64-bit random number}
+\end{bytefield}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/timeline.html">
+        Previous: timeline.png
+      </a></li> <li><a href="/ControlSystems/CSI/polesZeroes.html">
+        Next: polesZeroes.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-bytefieldTest-md.3875a807.js" defer></script></body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>flow-chart.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="flow-chart.png" alt="ReportDiagrams" title="flow-chart"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,
+                calc, chains,
+                quotes,
+                positioning,
+                shapes.geometric}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance = 8mm and 16mm,
+      start chain = A going below,
+      base/.style = {draw, minimum width=32mm, minimum height=8mm,
+                     align=center, on chain=A},
+ startstop/.style = {base, rectangle, rounded corners, fill=red!30},
+   process/.style = {base, rectangle, fill=orange!30},
+        io/.style = {base, trapezium, 
+                     trapezium left angle=70, trapezium right angle=110,
+                     fill=blue!30},
+  decision/.style = {base, diamond, fill=green!30},
+  every edge quotes/.style = {auto=right}]
+                    ]
+\node [startstop]       {Read Video};            % &lt;-- A-1
+\node [process]         {Extract Frames};
+\node [io]              {Read Frame};
+\node [decision]        {Completed?};
+\node [process]         {Save Watermarked Video};
+\node [process]         {Stop};             % &lt;-- A-6
+%
+\node [process,                             % &lt;-- A-7
+       right=of A-4]    {Get Next Frame};
+%%
+\draw [arrows=-Stealth] 
+    (A-1) edge[&quot;read data&quot;]          (A-2)
+    (A-2) edge[&quot;get watermark&quot;]    (A-3)
+    (A-3) edge[text width=3cm,&quot;apply watermark to all frames &quot;]       (A-4)
+    (A-4) edge[&quot;yes&quot;]            (A-5)
+    (A-5) edge[&quot;exit&quot;]          (A-6)
+    (A-4) edge[&quot;no&quot;']          (A-7)       % &lt;-- by ' is swapped label position
+    (A-7) |- ($(A-2.south east)!0.5!(A-3.north east)$)
+          -| ([xshift=7mm] A-3.north)
+    ;
+  \end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/chat-decision-tree.html">
+        Previous: chat-decision-tree.png
+      </a></li> <li><a href="/BlogDiagrams/buildingDapp.html">
+        Next: buildingDapp.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-flow-chart-md.21c42750.js" defer></script></body></html>

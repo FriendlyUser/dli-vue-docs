@@ -1,0 +1,39 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Q6BlockDiagram5.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Q6BlockDiagram5.png" alt="ControlSystems/CSI" title="Q6BlockDiagram5"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+
+\usepackage{blox}
+\usepackage{tikz}
+\usepackage{amsmath}  % For math
+\usetikzlibrary{positioning}
+\newcommand{\equal}{=}
+\usepackage{tikz}
+
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\bXInput{A}
+\bXComp{B}{A}
+\bXLink[$D(s)$]{A}{B}
+\bXChain[5]{B}%
+{G2G3/$G_2G_3$}
+\bXOutput[7.5]{E}{G2G3}
+\bXLink[$C(s)$]{G2G3}{E}
+\bXBranchy[5]{E}{returnDown}
+
+% return loop
+\bXBlocr[3]{GcBlock}{$G_cH_2+\frac{H_1}{G_3}$}{returnDown}
+\bXBlocr[3]{G1}{$G_1$}{GcBlock}
+\bXLink{GcBlock}{G1}
+\bXLinkxy{G1}{B}
+\bXLinkxy{E}{GcBlock}
+%\bXReturn{G3-E}{B}{}
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/EngineeringSoftwareDesign/timeline.html">
+        Previous: timeline.png
+      </a></li> <li><a href="/PCC/Cube4.html">
+        Next: Cube4.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ControlSystems-CSI-Q6BlockDiagram5-md.32cf926d.js" defer></script></body></html>

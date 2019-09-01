@@ -1,0 +1,60 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>tictactoe.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="tictactoe.png" alt="ArtificialIntelligence" title="tictactoe"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\usepackage{forest,calc}
+\forestset{
+  make tab/.style args={#1:#2:#3/#4:#5:#6/#7:#8:#9}{%
+    content={%
+      \tabcolsep=.4\tabcolsep
+      \begin{tabular}{p{\widthof{x}}|p{\widthof{x}}|p{\widthof{x}}}
+        #1 &amp; #2 &amp; #3\\\hline#4&amp;#5&amp;#6\\\hline#7&amp;#8&amp;#9
+      \end{tabular}}},
+  label position r/.initial=right,
+  label position b/.initial=below
+}
+\begin{document}
+\begin{forest}
+  TTT/.style args={#1:#2}{
+    make tab/.expanded=\forestove{content},
+    label={\pgfkeysvalueof{/forest/label position #1}:$#2$},
+    edge={-&gt;}
+  },
+  TTT*/.style={
+    make tab=::/::/::,
+    content/.expand once=%
+    \expandafter\vphantom\expandafter{\romannumeral-`0\forestov{content}},
+    draw=none,
+    append after command={(\tikzlastnode.north) edge (\tikzlastnode.south)},
+    for descendants={before computing xy={l*=1.8}},
+  },
+  th/.style=very thick,
+  for tree={node options=draw, inner sep=+0pt, parent anchor=south, child anchor=north}
+%
+[::/::/::, TTT=r:0
+ [x::/::/::, TTT=r:-1
+   [x:o:/::/::, TTT=b: 1, th]
+   [x::/:o:/::, TTT=b:-1]
+   [x::o/::/::, TTT=b: 0, th]
+   [x::/::/::o, TTT=b: 0, th]
+   [x::/::o/::, TTT=b: 1, th]
+]
+ [::/::x/::, TTT=r:0,
+   [,TTT* % this is just cheating :(
+    [o::/::x/::, TTT=b:1]
+    [:o:/::x/::, TTT=b:0]
+   ]
+ ]
+ [:x:/::/::, TTT=r:-2
+   [:x:o/::/::, TTT=b:-1, th]
+   [:x:/:o:/::, TTT=b:-2]
+   [:x:/::/:o:, TTT=b: 0, th]
+   [:x:/::/o::, TTT=b:-1, th]
+   [:x:/o::/::, TTT=b: 0, th]
+ ]
+]
+\end{forest}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ReportDiagrams/fontawesomediagram.html">
+        Previous: fontawesomediagram.png
+      </a></li> <li><a href="/ArtificialIntelligence/feature_selection.html">
+        Next: feature_selection.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ArtificialIntelligence-tictactoe-md.7524d30b.js" defer></script></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>SwitchDiagram.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="SwitchDiagram.png" alt="PCC" title="SwitchDiagram"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows,chains,positioning,scopes,quotes,bending,calc}
+
+\tikzset{
+    edge/.style={draw,text width=8em,minimum height=1em,align=center,fill=blue!30},
+    blade/.style={draw,text width=1em,minimum height=5em,align=center,fill=red!30},
+    switch/.style={draw,text width=4em,minimum height=3em,align=center,fill=yellow!30},
+    arrow/.style={-&gt;}
+}
+
+\begin{document}
+    \begin{tikzpicture}[&gt;=stealth']
+    % Direction Switches
+    {[start chain]
+        \node[switch,on chain] (M0) {Direction Switch};
+        \node[switch,on chain,right=3cm of M0] (M1) {Direction Switch 2};
+    }
+    % Edge switches
+    {[start chain]
+        \node[edge,on chain,below left=2cm and 0.25cm of M0] (N0) {Edge Switch 1};
+        \node[edge,on chain,right=1cm of N0] (N1) {Edge Switch 2};
+        %\node[block,on chain,join=by {arrow},right=1cm of N1] (N2) {N2};
+        \node[on chain,right=1cm of N1] (N2) {$\cdots$};
+        \node[edge,on chain,right=1cm of N2] (N3) {Edge Switch 56};
+    }
+    % Blade Switches
+     {[start chain]
+        \node[blade,on chain, below left=0.7cm and 0.1cm of N0] (B0) {B \\ l \\ a \\ d \\ e \\ 0 \\ 0};
+        \node[blade,on chain,right=0.25cm of B0] (B1) {B \\ l \\ a \\ d \\ e \\ 0 \\ 1 };
+        %\node[block,on chain,join=by {arrow},right=1cm of N1] (N2) {N2};
+        \node[on chain,right=0.25cm of B1] (B2) {$\cdots$};
+        \node[blade,on chain,right=0.25cm of B2] (B3) {B \\ l \\ a \\ d \\ e \\ 1 \\ 7};
+    }
+    % node containing number of blades
+    \node[below =0.25cm of N0] (L1) {\underline{18}};
+    % arrows from blade to edge
+    \draw [-&gt;] (B0.north) -- (N0);
+    \draw [-&gt;] (B1.north) -- (N0);
+    \draw [-&gt;] (B3.north) -- (N0);
+    \draw[red,thick,dotted] ($(B0.north west)+(-0.3,0.1)$)  rectangle ($(B3.south east)+(0.3,-0.1)$);
+    \node [below = 1cm of B2](Lsd0) {\small{chasis 0}};
+    {[start chain]
+        \node[blade,on chain, below left=0.7cm and 0.1cm of N1] (C0) {B \\ l \\ a \\ d \\ e \\  0 \\ 0 };
+        \node[blade,on chain,right=0.25cm of C0] (C1) {B \\ l \\ a \\ d \\ e \\ 0 \\ 1 };
+        %\node[block,on chain,join=by {arrow},right=1cm of N1] (N2) {N2};
+        \node[on chain,right=0.25cm of C1] (C2) {$\cdots$};
+        \node[blade,on chain,right=0.25cm of C2] (C3) {B \\ l \\ a \\ d \\ e \\ 1 \\ 7};
+    }
+    % node containing number of blades
+    \node[below =0.25cm of N1] (L2) {\underline{18}};
+    % arrows from blade to edge
+    \draw [-&gt;] (C0.north) -- (N1);
+    \draw [-&gt;] (C1.north) -- (N1);
+    \draw [-&gt;] (C3.north) -- (N1);
+    % bounding box
+    \draw[red,thick,dotted] ($(C0.north west)+(-0.3,0.1)$)  rectangle ($(C3.south east)+(0.3,-0.1)$);
+    \node [below = 1cm of C2](Lsd1) {\small{chasis 1}};
+    {[start chain]
+        \node[blade,on chain, below left=0.7cm and 0.1cm of N3] (D0) {B \\ l \\ a \\ d \\ e \\ 0 \\ 0};
+        \node[blade,on chain,right=0.25cm of D0] (D1) {B \\ l \\ a \\ d \\ e \\ 0 \\ 1 };
+        %\node[block,on chain,join=by {arrow},right=1cm of N1] (N2) {N2};
+        \node[on chain,right=0.25cm of D1] (D2) {$\cdots$};
+        \node[blade,on chain,right=0.25cm of D2] (D3) {B \\ l \\ a \\ d \\ e \\ 1 \\ 7};
+    }
+    % node containing number of blades
+    \node[below =0.25cm of N3] (L3) {\underline{18}};
+    % arrows from blade to edge
+    \draw [-&gt;] (D0.north) -- (N3);
+    \draw [-&gt;] (D1.north) -- (N3);
+    \draw [-&gt;] (D3.north) -- (N3);
+        % bounding box
+    \draw[red,thick,dotted] ($(D0.north west)+(-0.3,0.1)$)  rectangle ($(D3.south east)+(0.3,-0.1)$);
+    \node [below = 1cm of D2](Lsd3) {\small{chasis 56}};
+    
+    % Edge switchs to direction switches arrows
+    \path (N1.north west) edge[blue,-&gt;,bend left=10] node [left] {} (M0); 
+    \path (N1.north west) edge[blue,-&gt;,bend left=30] node [left] {} (M0);
+    \path (N1.north west) edge[blue,-&gt;] node [left] {} (M0); 
+    
+    \path (N1.north east) edge[blue,-&gt;,bend left=10] node [left] {} (M1); 
+    \path (N1.north east) edge[blue,-&gt;,bend left=30] node [left] {} (M1);
+    \path (N1.north east) edge[blue,-&gt;] node [left] {} (M1); 
+    
+    % N1, switch 2
+    \path (N0.north west) edge[blue,-&gt;,bend left=10] node [left] {} (M0); 
+    \path (N0.north west) edge[blue,-&gt;,bend left=30] node [left] {} (M0);
+    \path (N0.north west) edge[blue,-&gt;] node [left] {} (M0); 
+    
+    \path (N0.north east) edge[blue,-&gt;,bend left=10] node [left] {} (M1); 
+    \path (N0.north east) edge[blue,-&gt;,bend left=30] node [left] {} (M1);
+    \path (N0.north east) edge[blue,-&gt;] node [left] {} (M1); 
+    % N3, edge switch 56
+    \path (N3.north west) edge[blue,-&gt;,bend left=20] node [left] {} (M0.east); 
+    \path (N3.north west) edge[blue,-&gt;,bend left=40] node [left] {} (M0.east);
+    \path (N3.north west) edge[blue,-&gt;] node [left] {} (M0.east); 
+    \path (N3) edge[blue,-&gt;,bend left=20] node [left] {} (M1); 
+    \path (N3) edge[blue,-&gt;,bend left=40] node [left] {} (M1);
+    \path (N3) edge[blue,-&gt;] node [left] {} (M1); 
+    
+    \node[above right =0.10cm of N1.north west] (NL1) {\underline{9}};
+    \node[above =0.25cm of N0.north west] (NL0) {\underline{9}};
+    \node[above =0.25cm of N0.north west] (NL0) {\underline{9}};
+    \end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q6BlockDiagram4.html">
+        Previous: Q6BlockDiagram4.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q6BlockDiagram.html">
+        Next: Q6BlockDiagram.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--PCC-SwitchDiagram-md.ce0acff7.js" defer></script></body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>buildingDapp.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="buildingDapp.png" alt="BlogDiagrams" title="buildingDapp"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\usepackage{smartdiagram}
+\usetikzlibrary{shapes.geometric,calc}
+\begin{document}
+\tikzset{
+  planet/.append style={regular polygon, regular polygon sides=6},
+  satellite/.append style={regular polygon, regular polygon sides=6},
+  every picture/.append style={rotate=30},
+  connection planet satellite/.style={
+    bend right/.style=,
+    every edge/.style={fill=\col},
+    to path={
+      \pgfextra
+        \path[draw=none, fill=none] (\tikztostart) 
+          -- coordinate[at start] (@start@) coordinate[at end] (@target@) (\tikztotarget);
+      \endpgfextra
+      \ifnum\xi&lt;\maxsmitem % to disable the last arrow
+        ($(@start@)!.6cm!90:(@target@)$) -- ($(@target@)!.25cm!-90:(@start@)$)
+          -- ($(@target@)!.25cm!90:(@start@)$) -- ($(@start@)!.6cm!-90:(@target@)$)
+          -- cycle
+      \fi}}}
+\smartdiagram[connected constellation diagram]{
+  Build a Dapp,
+  Set up truffle box,
+  Build Smart Contracts,
+  Automated Testing,
+  Build Front /\\ End,
+  CI/CD,
+  Documentation / \\ Polishing}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ReportDiagrams/flow-chart.html">
+        Previous: flow-chart.png
+      </a></li> <li><a href="/ReportDiagrams/fontawesomediagram.html">
+        Next: fontawesomediagram.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--BlogDiagrams-buildingDapp-md.1cd55cdc.js" defer></script></body></html>

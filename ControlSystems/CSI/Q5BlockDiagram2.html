@@ -1,0 +1,91 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Q5BlockDiagram2.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Q5BlockDiagram2.png" alt="ControlSystems/CSI" title="Q5BlockDiagram2"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+
+\usepackage{blox}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\newcommand{\equal}{=}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usepackage{tkz-euclide}
+% Radius for arc over intersection
+\def\radius{1.mm} 
+
+\tikzset{
+	connect/.style args={(#1) to (#2) over (#3) by #4}{
+		insert path={
+			let \p1=($(#1)-(#3)$), \n1={veclen(\x1,\y1)}, 
+			\n2={atan2(\y1,\x1)}, \n3={abs(#4)}, \n4={#4&gt;0 ?180:-180}  in 
+			(#1) -- ($(#1)!\n1-\n3!(#3)$) 
+			arc (\n2:\n2+\n4:\n3) -- (#2)
+		}
+	},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\bXInput{A}				% Input
+\bXComp{B}{A}			% First adder
+\bXLink[$R(s)$]{A}{B}	% Input Label
+\bXBloc[2]{C}{$G_1$}{B}	% Block G1
+\bXLink{B}{C}			% First added -- G1
+\bXComp{D}{C}			% Second adder
+\bXComp{E}{D}			% Third adder
+\bXBloc[2]{G2}{$G_2$}{E}	% Block G2
+\bXBranchx[5]{G2}{G2Right}	% Branch for H1, G2
+\bXBranchy[-5]{G2Right}{invG2Left}	% node before 1 /G2
+\bXBloc[-1.5]{invG2}{$\frac{1}{G_2}$}{invG2Left}	% Block 1/G2
+\bXBloc[1.5]{H1}{$H_1$}{invG2}	% Block 1/G2
+\bXBranchx[-3.5]{H1}{H1left}	% Branch for H1, G2
+
+\bXBranchx[10]{G2}{Bran2}		% Branch after G2 and for H2
+\bXBranchy[5]{Bran2}{Bran2Down}	% beneath branch 2
+\bXBloc[-4.5]{H2Block}{$H_2$}{Bran2Down}
+\bXSuma{adder4}{Bran2}
+\bXLink{C}{D}
+\bXLink{D}{E}
+\bXLink{E}{G2}
+\bXLink{G2}{adder4}		% G2 to adder
+
+\bXBloc[3]{G3Block}{$G_3$}{adder4} % G3
+\bXBranchx[4]{G3Block}{BranEnd} % branch before output
+\bXBranchy[7.5]{BranEnd}{H3BlockRight} % Right H3 Block
+\bXBranchy[2.5]{H3BlockRight}{BranEndReturn} % Right H3 Block
+\bXBranchy[7.5]{E}{adder3down} % Below adder3
+\bXBloc[-7.5]{H3Block}{$H_3$}{H3BlockRight}	% H3 Block
+\draw[-] (BranEnd.center) -- (H3BlockRight.center);
+\draw[-&gt;] (H3BlockRight.center) -- (H3Block);
+\draw[-] (H3BlockRight.center) -- (BranEndReturn.center);
+\bXBranchy[10]{B}{adder1Down}
+\draw[-] (BranEndReturn.center) -- (adder1Down);
+
+\bXBranchy[5]{D}{adder2down}	% beneath adder2
+\bXBranchy[-5]{adder4}{adder4up}		% beneath adder4
+%\bXLinkyx{EH1.center}{H2} % -- Connection for branch 1 and H1
+\draw[-&gt;]  (G2Right.center) -- (invG2);
+\draw[-&gt;] (invG2) -- (H1);
+\draw[-&gt;] (Bran2Down.center) -- (H2Block);
+\draw[-] (Bran2Down.center) -- (Bran2.center);
+\draw[-,name path=H2 to adder2down] (H2Block) -- (adder2down.center); % used in intersection
+\draw[-&gt;] (adder2down.center) -- (D);
+\draw[-]  (H1) -- (adder4up.center);
+\draw[-&gt;]  (adder4up.center)   -- (adder4);
+\draw[-&gt;] (adder4) -- (G3Block);
+
+\node[right = 0.5cm of BranEnd] (end) {$C(s)$};
+\draw[-&gt;] (G3Block) -- (end);
+
+\draw[-] (H3Block) -- (adder3down.center);
+\path[name path=line] (adder3down.center) -- (E);
+\path[name intersections={of=H2 to adder2down and line,by=inter}];
+\draw[-&gt;,connect=(adder3down.center) to (E) over (inter) by 3pt ];
+
+\bXLinkxy{BranEndReturn}{B}
+ %\bXLinkyx{Bran2}{H2Block}
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/PCC/reduc21.html">
+        Previous: reduc21.png
+      </a></li> <li><a href="/PCC/reduc7.html">
+        Next: reduc7.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ControlSystems-CSI-Q5BlockDiagram2-md.dd14a4a3.js" defer></script></body></html>

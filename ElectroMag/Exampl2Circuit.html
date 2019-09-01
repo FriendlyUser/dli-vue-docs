@@ -1,0 +1,25 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Exampl2Circuit.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Exampl2Circuit.png" alt="ElectroMag" title="Exampl2Circuit"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage[american]{circuitikz}
+\usepackage{graphicx}
+\usepackage{mathrsfs} 
+\usepackage{latexsym,amssymb,amsmath}
+\newcommand{\equal}{=}
+\begin{document}
+	\begin{circuitikz}
+		\draw (0,3) to [V,l_=$\mathscr{F}\equal NI$] (0,0) 
+		(0,3) node[anchor=south] {$\textcolor{red}{1}$} to [R,i^&gt;=$\phi_1$, l^=$\mathscr{R}_1$,*-,color=red] (3,3)
+			node[anchor=south] {$\textcolor{blue}{2}$}
+		to [R, l_= $\mathscr{R}_2$, *-, i&gt;^=$\phi_2$,color=blue] (3,0) 
+			node[anchor=north] {$\textcolor{purple}{3}$}
+		%(3,3) -- (6,3) to [L=$L$, i&gt;^=$i_L(t)$, v=$v_L(t)$] (6,0) -- (0,0)
+		(3,3) -- (6,3) to [R=$L$,l_=$\mathscr{R}_3$, i&gt;^=$\phi_3$, *- ,color=purple] (6,0) -- (0,0)
+		(6,0) -- (0,0)
+		;\end{circuitikz}
+	\label{fig:q1fig}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ArtificialIntelligence/can_mis.html">
+        Previous: can_mis.png
+      </a></li> <li><a href="/ElectroMag/PrimarySide.html">
+        Next: PrimarySide.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-Exampl2Circuit-md.20ff29d7.js" defer></script></body></html>

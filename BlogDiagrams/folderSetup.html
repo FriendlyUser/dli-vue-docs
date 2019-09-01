@@ -1,0 +1,68 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>folderSetup.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="folderSetup.png" alt="BlogDiagrams" title="folderSetup"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[border=10pt]{standalone}
+\usepackage{forest}
+
+\definecolor{fblue}{RGB}{92,144,192}
+\definecolor{fgreen}{RGB}{34,162,70}
+
+\newcommand\myfolder[2][fblue]{%
+\begin{tikzpicture}[overlay]
+\begin{scope}[xshift=20pt]
+\filldraw[rounded corners=1pt,fill=#1,draw=white,double=black]
+  (-23pt,10pt) -- ++(3pt,5pt) -- ++(18pt,0pt) -- ++(40:3pt) -- ++(9pt,0pt) -- ++(-40:3pt)
+  -- (20pt,15pt) -- (23pt,10pt) -- cycle;
+\filldraw[rounded corners,draw=white,double=black,top color=#1,bottom color=#1!30]
+  (-22pt,-12pt) -- ++(44pt,0pt) -- (25pt,12pt) coordinate (topr) -- ++(-50pt,0pt) coordinate (topl) -- cycle;
+\end{scope}  
+\end{tikzpicture}%
+\makebox[35pt]{\raisebox{-3pt}{{\ttfamily/#2}}}%
+}
+
+\begin{document}
+
+\begin{forest}
+  for tree={
+    font=\sffamily,
+    minimum height=0.75cm,
+    rounded corners=4pt,
+    grow'=0,
+    inner ysep=8pt,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    edge={rounded corners},
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) +(12.5pt,0) |- (.child anchor)\forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+        {insert before={[,phantom,minimum height=18pt]}}
+        {}
+    },
+    fit=band,
+    s sep=12pt,
+    before computing xy={l=25pt},
+  }
+[\myfolder{}
+  [\myfolder{jhunt}]
+  [\myfolder{dev}
+  	[{\myfolder[fgreen]{bchain}}]
+  	[{\myfolder[fgreen]{other}}]
+  ]
+  [{\myfolder[fgreen]{games}}
+    [{\myfolder[fgreen]{vns}}]
+    [{\myfolder[fgreen]{other}}]
+  ]
+  [\myfolder{music}]
+  [\myfolder{other}]
+]
+\end{forest}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ReportDiagrams/ENGR446/smartContractsExp.html">
+        Previous: smartContractsExp.png
+      </a></li> <li><a href="/ReportDiagrams/ENGR446/weeklyPlanLOL.html">
+        Next: weeklyPlanLOL.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--BlogDiagrams-folderSetup-md.8394e717.js" defer></script></body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Cube4.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Cube4.png" alt="PCC" title="Cube4"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[tdplot_main_coords]
+\def\BigSide{5}
+\def\SmallSide{1.5}
+\pgfmathsetmacro{\CalcSide}{\BigSide-\SmallSide}
+
+% The vertex at V
+\tdplotsetcoord{P}{sqrt(3)*\BigSide}{55}{45}
+
+\coordinate (sxl) at (\BigSide,\CalcSide,\BigSide);
+\coordinate (syl) at (\CalcSide,\CalcSide,\BigSide);
+\coordinate (szl) at (\CalcSide,\BigSide,\BigSide);
+
+\draw[dashed] 
+  (0,0,0) -- (Px)
+  (0,0,0) -- (Py)
+  (0,0,0) -- (Pz);
+\draw[-&gt;] 
+  (Px) -- ++ (1,0,0) node[anchor=north east]{$x$};
+\draw[-&gt;]
+   (Py) -- ++(0,1,0) node[anchor=north west]{$y$};
+\draw[-&gt;] 
+  (Pz) -- ++(0,0,1) node[anchor=south]{$z$};
+
+\draw[thick]
+  (Pxz) -- (P) -- (Pxy) -- (Px) -- (Pxz) -- (Pz) -- (Pyz) -- (P); 
+\draw[thick]
+  (Pyz) -- (Py) -- (Pxy);
+
+
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q6BlockDiagram5.html">
+        Previous: Q6BlockDiagram5.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q6BlockDiagram4.html">
+        Next: Q6BlockDiagram4.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--PCC-Cube4-md.f38897a7.js" defer></script></body></html>

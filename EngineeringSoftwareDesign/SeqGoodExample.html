@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>SeqGoodExample.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="SeqGoodExample.png" alt="EngineeringSoftwareDesign" title="SeqGoodExample"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[border=3mm]{standalone}
+\usepackage[english]{babel}
+\usepackage{tikz-uml}
+
+\begin{document}
+
+\begin{tikzpicture}
+ \tikzumlset{fill object = white, fill call = gray!20} 
+\begin{umlseqdiag}
+\umlobject[class=B]{b}
+\umlobject[class=C]{c}
+\umlobject[class=D]{d}
+
+
+\begin{umlfragment}[type=loop]
+\begin{umlcallself}[op=run]{b} 
+
+\begin{umlcall}[op=send, type=asynchron]{b}{c}
+    \begin{umlfragment}[type=alt, label=condition, inner xsep=8]
+        \begin{umlcall}[op=send, type=synchron, return=send update]{c}{d}
+            \begin{umlcallself}[padding=1.5, op=run]{d} 
+            \end{umlcallself}
+        \end{umlcall}
+        \begin{umlcallself}[op=assess update]{c} 
+            \begin{umlcall}[op=send update, type=synchron, return=acknowledge]{c}{b}
+            \end{umlcall}
+            \begin{umlcall}[op=allow continue, padding=-2.5, type=asynchron]{c}{b}
+            \end{umlcall}
+        \end{umlcallself}
+        \umlfpart[default]
+        \begin{umlcall}[op=allow continue, type=asynchron]{c}{b}
+        \end{umlcall}
+    \end{umlfragment}
+\end{umlcall}
+
+\end{umlcallself}
+
+\end{umlfragment}
+\umlsdnode[dt=1.5]{b}
+\umlsdnode[dt=5]{c}
+\umlsdnode[dt=32]{d}
+\end{umlseqdiag}
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/block410.html">
+        Previous: block410.png
+      </a></li> <li><a href="/ControlSystems/CSII/StraightLinebasicBlock.html">
+        Next: StraightLinebasicBlock.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-SeqGoodExample-md.ebaf1d0e.js" defer></script></body></html>

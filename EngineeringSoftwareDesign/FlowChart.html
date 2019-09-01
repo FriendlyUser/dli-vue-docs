@@ -1,0 +1,77 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>FlowChart.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="FlowChart.png" alt="EngineeringSoftwareDesign" title="FlowChart"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">% Diagram of Android activity life cycle
+% Author: Pavel Seda 
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{%
+	&gt;={Latex[width=2mm,length=2mm]},
+	% Specifications for style of nodes:
+	base/.style = {rectangle, rounded corners, draw=black,
+		minimum width=4cm, minimum height=1cm,
+		text centered, font=\sffamily},
+	activityStarts/.style = {base, fill=blue!30},
+	startstop/.style = {base, fill=red!30},
+	activityRuns/.style = {base, fill=green!30},
+	process/.style = {base, minimum width=2.5cm, fill=orange!15,
+		font=\ttfamily},
+}
+\begin{document}    
+	% Drawing part, node distance is 1.5 cm and every node
+	% is prefilled with white background
+	\begin{tikzpicture}[node distance=1.5cm,
+	every node/.style={fill=white, font=\sffamily}, align=center]
+	% Specification of nodes (position, etc.)
+	\node (start)             [activityStarts]              {Activity starts};
+	\node (onCreateBlock)     [process, below of=start]          {onCreate()};
+	\node (onStartBlock)      [process, below of=onCreateBlock]   {onStart()};
+	\node (onResumeBlock)     [process, below of=onStartBlock]   {onResume()};
+	\node (activityRuns)      [activityRuns, below of=onResumeBlock]
+	{Activity is running};
+	\node (onPauseBlock)      [process, below of=activityRuns, yshift=-1cm]
+	{onPause()};
+	\node (onStopBlock)       [process, below of=onPauseBlock, yshift=-1cm]
+	{onStop()};
+	\node (onDestroyBlock)    [process, below of=onStopBlock, yshift=-1cm] 
+	{onDestroy()};
+	\node (onRestartBlock)    [process, right of=onStartBlock, xshift=4cm]
+	{onRestart()};
+	\node (ActivityEnds)      [startstop, left of=activityRuns, xshift=-4cm]
+	{Process is killed};
+	\node (ActivityDestroyed) [startstop, below of=onDestroyBlock]
+	{Activity is shut down};     
+	% Specification of lines between nodes specified above
+	% with aditional nodes for description 
+	\draw[-&gt;]             (start) -- (onCreateBlock);
+	\draw[-&gt;]     (onCreateBlock) -- (onStartBlock);
+	\draw[-&gt;]      (onStartBlock) -- (onResumeBlock);
+	\draw[-&gt;]     (onResumeBlock) -- (activityRuns);
+	\draw[-&gt;]      (activityRuns) -- node[text width=4cm]
+	{Another activity comes in
+		front of the activity} (onPauseBlock);
+	\draw[-&gt;]      (onPauseBlock) -- node {The activity is no longer visible}
+	(onStopBlock);
+	\draw[-&gt;]       (onStopBlock) -- node {The activity is shut down by
+		user or system} (onDestroyBlock);
+	\draw[-&gt;]    (onRestartBlock) -- (onStartBlock);
+	\draw[-&gt;]       (onStopBlock) -| node[yshift=1.25cm, text width=3cm]
+	{The activity comes to the foreground}
+	(onRestartBlock);
+	\draw[-&gt;]    (onDestroyBlock) -- (ActivityDestroyed);
+	\draw[-&gt;]      (onPauseBlock) -| node(priorityXMemory)
+	{higher priority $\rightarrow$ more memory}
+	(ActivityEnds);
+	\draw           (onStopBlock) -| (priorityXMemory);
+	\draw[-&gt;]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
+	{User navigates back to the activity}
+	(onCreateBlock);
+	\draw[-&gt;] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
+	node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
+	{The activity comes to the foreground}(onResumeBlock.east);
+	\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/samplerBlock.html">
+        Previous: samplerBlock.png
+      </a></li> <li><a href="/ControlSystems/CSII/sampler413.html">
+        Next: sampler413.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-FlowChart-md.4837b5e1.js" defer></script></body></html>

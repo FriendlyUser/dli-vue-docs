@@ -1,0 +1,48 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>tasks310.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="tasks310.png" alt="PCC" title="tasks310"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,calc}
+\usetikzlibrary{chains}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{shapes}
+\begin{document}
+
+\newsavebox{\task}
+\savebox{\task}{%
+    \begin{tikzpicture}[font=\small,
+            &gt;=stealth,
+        ]
+    \tikzset{every node/.style={rectangle split, draw, rotate=90}, rectangle split parts=5}
+    \node[rectangle split, minimum width= 1.2cm,
+                        minimum height = 1cm]  {};
+    \end{tikzpicture}%
+}
+
+\begin{tikzpicture}
+    {[start chain]
+        \node[ellipse, start chain, minimum width=90pt, draw] (t1){\usebox{\task}};
+        \node[ellipse, on chain, right=1cm of t1, draw] (t2) {\usebox{\task}};
+        %\node[block,on chain,join=by {arrow},right=1cm of N1] (N2) {N2};
+        \node[ellipse,on chain,right=1cm of t2, draw] (t3) {\usebox{\task}};
+        \node[ellipse,on chain, right=1cm of t3] (t4) {$\cdots$};
+        \node[ellipse,on chain,right=1cm of t4, draw] (t5) {\usebox{\task}};
+    }
+    % Arrows
+     \path (t1) edge[very thick,-&gt;,bend left=30] node [left] {} (t2);
+     \path (t2) edge[very thick,-&gt;,bend left=30] node [left] {} (t3);
+     \path (t3) edge[very thick, -&gt;,bend left=30] node [left] {} (t4);
+     \path (t4) edge[very thick, -&gt;,bend left=30] node [left] {} (t5);
+     
+    % Arrows
+     \path (t5) edge[very thick, -&gt;,bend left=30] node [left] {} (t4);
+     \path (t4) edge[very thick, -&gt;,bend left=30] node [left] {} (t3);
+     \path (t3) edge[very thick, -&gt;,bend left=30] node [left] {} (t2);
+     \path (t2) edge[very thick, -&gt;,bend left=30] node [left] {} (t1);
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q3Circuit2.html">
+        Previous: Q3Circuit2.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q3Circuit.html">
+        Next: Q3Circuit.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--PCC-tasks310-md.8c5f306f.js" defer></script></body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>WBSChart.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="WBSChart.png" alt="EngineeringSoftwareDesign" title="WBSChart"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{forest}
+\usetikzlibrary{arrows.meta,shapes,positioning,shadows,trees}
+%
+\tikzset{
+    basic/.style  = {draw, text width=2cm, drop shadow, font=\sffamily, rectangle},
+    root/.style   = {basic, rounded corners=2pt, thin, align=center,
+                     fill=green!30},
+    onode/.style = {basic, thin, rounded corners=2pt, align=center, fill=green!60,text width=3cm,},
+    tnode/.style = {basic, thin, align=left, fill=pink!60, text width=6.5em},
+    xnode/.style = {basic, thin, rounded corners=2pt, align=center, fill=blue!20,text width=5cm,},
+    wnode/.style = {basic, thin, align=left, fill=pink!10!blue!80!red!10, text width=6.5em},
+    edge from parent/.style={draw=black, edge from parent fork right}
+
+}
+%
+\begin{document}
+\begin{forest} for tree={
+    grow=east,
+    growth parent anchor=east,
+    parent anchor=east,
+    child anchor=west,
+    edge path={\noexpand\path[\forestoption{edge},-&gt;, &gt;={latex}] 
+         (!u.parent anchor) -- +(5pt,0pt) |- (.child anchor)
+         \forestoption{edge label};}
+}
+[Networked Game Work BreakDown, root
+    [Software Engineering Report, xnode
+        [Setting shape, tnode]
+        [Choosing color, tnode]
+        [Adding shading, tnode] ]
+    [Game Demo Preparation, onode
+        [Using a Matrix, tnode]
+        [Relatively, tnode]
+        [Absolutely, tnode] 
+        [Using overlays, wnode] ]
+    [Project Proposal and Game Logic, onode
+        [Default arrows, tnode]
+        [Arrow library, tnode]
+        [Resizing tips, tnode] 
+        [Shortening, tnode]
+        [Bending, tnode] ] ]
+\end{forest}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/OgataB6-17.html">
+        Previous: OgataB6-17.png
+      </a></li> <li><a href="/ControlSystems/CSII/B48RLocus.html">
+        Next: B48RLocus.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-WBSChart-md.3e7ffe94.js" defer></script></body></html>

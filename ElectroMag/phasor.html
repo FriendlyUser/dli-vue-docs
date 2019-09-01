@@ -1,0 +1,39 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>phasor.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="phasor.png" alt="ElectroMag" title="phasor"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz} 
+\usepackage{siunitx} 
+
+\begin{document}        
+\begin{tikzpicture}[&gt;=latex]
+%\draw[style=help lines] (0,0) (3,2);
+
+%\coordinate (vec1) at (300:1.5); 
+%\coordinate (vec2) at (30:2.5);
+%\coordinate (vec3) at (0:2.5);
+%\coordinate (vec4) at (90:2);
+%\coordinate (vec5) at (270:2);
+%\coordinate (vec6) at (180:2);
+
+\coordinate (vec1) at (0:2.5); 
+\coordinate (vec1mid) at (0:2);
+\coordinate (vec2) at (270:2.5);
+\coordinate (vec3) at (315:3);
+\draw[-&gt;,thick,black] (0,0) -- (vec1) node[right] {$\bar{V}_2 \angle0^\circ$};
+\draw[-&gt;,thick,black] (0,0) -- (vec1mid) node[midway,above] {$I_R = 2.8  \angle0^\circ A$};
+\draw[-&gt;,thick,black] (0,0) -- (vec2) node[below right] {$I_L=2.8  \angle-90^\circ$};
+\draw[-&gt;,thick,black] (0,0) -- (vec3) node[midway, below, sloped] {$I_{Load} = 4 A$};
+%\draw[-&gt;,thick,black] (0,0) -- (vec3) node [below] {$Re$};
+%\draw[-&gt;,thick,black] (0,0) -- (vec4) node [left] {$Im$};
+%\draw[-&gt;,thick,black] (0,0) -- (vec5);
+%\draw[-&gt;,thick,black] (0,0) -- (vec6);
+
+%\draw [black, thick ] (1.0,0) arc (0:30:1cm)    node [midway, right] {$\theta=45^\circ$};    
+\draw [black, thick] (0.5,0) arc (0:-60:0.38cm) node [midway, right] {$\theta=45^\circ$};  
+
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/DSP/c514_c.html">
+        Previous: c514_c.png
+      </a></li> <li><a href="/DSP/block.html">
+        Next: block.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-phasor-md.177f9d76.js" defer></script></body></html>

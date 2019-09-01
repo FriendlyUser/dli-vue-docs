@@ -1,0 +1,54 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>fontawesomediagram.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="fontawesomediagram.png" alt="ReportDiagrams" title="fontawesomediagram"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc, chains,positioning}
+\usepackage{fontawesome}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    start chain = going right,
+    bin/.style={
+      %draw,
+      % text width=6mm,
+      inner sep=5pt,
+      %fill=blue!20,
+      on chain
+    }
+]
+% Move label below icon
+\node[] (mob) {\LARGE{\faMobilePhone}};
+\node[right = 2cm of mob] (cam) {\LARGE{\faCamera}};
+\node[right = 2cm of cam] (lap) {\LARGE \faLaptop};
+\node[below = 0.1 cm of mob] (moblabel) {\tiny{Phone}};
+\node[below = 0.1 cm of cam] (camlabel) {\tiny{Camera}};
+\node[below = 0.1 cm of lap] (laplabel) {\tiny{Server}};
+
+\node[bin,below left=of lap] (c1) {\tiny{Cardboard}};
+\node[bin] (c2) {\tiny{Food}};
+\node[bin] (c3) {\tiny{Glass}};
+\node[bin] (c4) {\tiny{$\cdots$}};
+\node[bin] (c5) {\tiny{Landfill}};
+
+\path[every node/.style={font=\sffamily\small}]
+      (laplabel) edge node[right] {} (c1)
+      (laplabel) edge node[left] {} (c2)
+      (laplabel) edge node[] {} (c3)
+      (laplabel) edge node[] {} (c5);
+
+\node[below = 0.1 cm of c3] (label) {\tiny{Categories}};
+
+% \draw[thick] (c3) -&gt; (moblabel);
+
+ \path[-&gt;]          (c1)  edge   [bend left=50, below]   node {\tiny{send result to phone}} (moblabel);
+ \path[-&gt;]          (mob)  edge   [below]   node {\tiny{take picture}} (cam);
+  \path[-&gt;]          (cam)  edge [below]   node {\tiny{send picture}} (lap);
+\draw[thick,dotted]     ($(c1.north west)+(0.025,-0.125)$) rectangle ($(c5.north east)+(0.25,-0.35)$);
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/buildingDapp.html">
+        Previous: buildingDapp.png
+      </a></li> <li><a href="/ArtificialIntelligence/tictactoe.html">
+        Next: tictactoe.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-fontawesomediagram-md.23f43a10.js" defer></script></body></html>

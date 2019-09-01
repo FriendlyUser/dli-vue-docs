@@ -1,0 +1,50 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>crossover.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="crossover.png" alt="ArtificialIntelligence" title="crossover"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{positioning}
+
+\tikzset{
+chromosome/.style 2 args={
+       rectangle split ,
+       rectangle split parts=2,
+       rectangle split horizontal,
+       rectangle split part fill={#1,#2},
+       draw=black, very thick,
+       minimum height=2.5em,
+       text width=3.0cm,
+       inner sep=2pt,
+       text centered,
+       }
+}
+
+\begin{document}
+\begin{tikzpicture}
+%% Rectangles
+% Set of Parents
+\node [chromosome={blue!15}{red!20}] (a) { \nodepart{two} } ;
+\node [chromosome={yellow!30}{green!20}, right = of a] (b) { \nodepart{two} } ;
+% Set of Children
+\node [chromosome={blue!15}{yellow!30}, below = 2 cm of a] (c) { \nodepart{two} } ;
+\node [chromosome={red!20}{green!20}, right = of c] (d) { \nodepart{two} } ;
+
+% Labels
+\node[right = of b] () {\textbf{Set of Parents}};
+
+\node[right = of d] () {\textbf{Set of Children}};
+
+% Paths
+\path [-&gt;, very thick] (a.one south) edge[] node {}(c.one north);
+\path [-&gt;, very thick] (a.two south) edge[out=-90, in=90] node {}(d.one north);
+
+\path [-&gt;, very thick] (b.one south) edge[out=-90, in=90] node {}(c.two north);
+
+\path [-&gt;, very thick] (b.two south) edge[] node {}(d.two north);
+
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ArtificialIntelligence/feature_selection.html">
+        Previous: feature_selection.png
+      </a></li> <li><a href="/ArtificialIntelligence/can_mis.html">
+        Next: can_mis.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ArtificialIntelligence-crossover-md.6c8c4375.js" defer></script></body></html>

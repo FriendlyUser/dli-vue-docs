@@ -1,0 +1,41 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>3DCylinder.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="3DCylinder.png" alt="ElectroMag" title="3DCylinder"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{article}
+\usepackage{tikz,tikz-3dplot}
+\begin{document}
+
+\begin{figure}
+\centering
+\tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[tdplot_main_coords][scale=0.75]
+\tikzstyle{every node}=[font=\small]
+\draw[thick,-latex] (0,0,0) -- (6,0,0) node[anchor=north east]{$x$};
+\draw[thick,-latex] (0,0,0) -- (0,6,0) node[anchor=north west]{$y$};
+\draw[thick,-latex] (0,0,0) -- (0,0,6) node[anchor=south]{$z$};
+\draw [thick](0,0,0) circle (3);
+\draw [thick](0,0,4) circle (3);
+\draw [thick](1.9,-2.35,0) -- (1.9,-2.35,4) node[midway, left]{$r=r_1$ surface};
+\draw [thick](-1.9,2.35,0) -- (-1.9,2.35,4);
+\filldraw[fill=orange, nearly transparent] (-4,-4,4) -- (4,-4,4) --  (4,5,4) -- (-4,5,4) -- (-4,-4,4);
+\filldraw[fill=blue, nearly transparent] (0,0,4) -- (5.2,6,4) --  (5.2,6,0) -- (0,0,0) -- (0,0,4);
+\filldraw [color=blue](2,2.25,4) circle (0.075cm) ;
+\draw (-4,5,4) node[anchor=south]{$z=z_1$ plane};
+\draw (5.2,6,0) node[anchor=south west]{$\phi=\phi_1$ plane};
+\node at (1.8,1,4)  { $P_1(r_1,\phi_1,z_1)$};
+\draw[ultra thick,-latex](2,2.25,4) -- (3,3.45,4) node[anchor=north] {$\mathbf{a}_r$};
+\draw[ultra thick,-latex](2,2.25,4) -- (1,2.5,4) node[anchor=north west] {$\mathbf{a}_\phi$};
+\draw[ultra thick,-latex](2,2.25,4) -- (2,2.25,4.75) node[anchor=north west] {$\mathbf{a}_z$};
+\draw [thick,-&gt;](4,0,0) arc (0:45:4 and 4.5);
+\draw (3.6,2,0) node[anchor=north] {$\phi_1$};
+\draw[ultra thick,-latex](0,0,0) -- (2,2.35,0);
+\draw (1,1,0) node[anchor=north] {$r_1$};
+\draw [ultra thick] (2,2.25,4)--(1.95,2.25,0);
+
+\draw[ultra thick](0.1,0,4) -- (-0.1,0,4) node[anchor=south west] {$z_1$};
+\end{tikzpicture}
+\end{figure}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ElectroMag/Q3Circuit2.html">
+        Previous: Q3Circuit2.png
+      </a></li> <li><a href="/ElectroMag/Q4Circuit.html">
+        Next: Q4Circuit.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-3DCylinder-md.3a4eec50.js" defer></script></body></html>

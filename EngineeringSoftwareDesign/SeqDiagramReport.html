@@ -1,0 +1,63 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>SeqDiagramReport.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="SeqDiagramReport.png" alt="EngineeringSoftwareDesign" title="SeqDiagramReport"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\pgfdeclarelayer{background,foreground}
+\pgfsetlayers{background,main,foreground}
+\usepackage{tikz-uml}
+\usepackage[english]{babel}  % load this package so tikz-uml loads, it may be due to my japanesse localle lol.
+
+\begin{document}
+\begin{tikzpicture}
+	\begin{umlseqdiag}
+		\umlactor{Player A}
+		\umlobject{Server}
+		\umlactor{Player B}
+		
+		% Player spawns, no other player on the map
+		\begin{umlcall}[op=new-player,return=update-players]{Player A}{Server}
+		\end{umlcall}
+		
+		% Player spawns after player A, update both
+		\begin{umlcall}[dt=7.5,op=new-player,return=update-players]{Player B}{Server}
+		
+		\begin{umlcall}[type=return,op=update-players]{Server}{Player A} 
+		\end{umlcall} 
+		\end{umlcall}
+		
+		% Player B shoots a bullet
+		\begin{umlcall}[op=shoot-bullet,return=bullets-update]{Player B}{Server}
+		\begin{umlcall}[type=return,op=bullets-update]{Server}{Player A} 
+		\end{umlcall} 
+		\end{umlcall}
+		
+		% Player A Moves
+		\begin{umlcall}[op=move-player,return=update-players]{Player B}{Server}
+		\begin{umlcall}[type=return,op=update-players]{Server}{Player A} 
+		\end{umlcall} 
+		\end{umlcall}
+		\begin{umlfragment}[type=loop]
+		\begin{umlcallself}[dt=5,op=ServerGameLoop]{Server}
+		\begin{umlcallself}[op=spawnHealthPacks]{Server}
+		\end{umlcallself}
+		% Update hearts, mini-ships on both sides
+		\begin{umlcall}[type=return,op=healthPack-update]{Server}{Player A} 
+		\end{umlcall} 
+		\begin{umlcall}[type=return,op=healthPack-update]{Server}{Player B}
+		\begin{umlcall}[type=return,op=bullet-update]{Server}{Player A} 
+		\end{umlcall}  
+		\begin{umlcall}[type=return,op=bullet-update]{Server}{Player B} 
+		\end{umlcall}  
+		\end{umlcall} 
+				\end{umlcallself}
+		\end{umlfragment}
+	\end{umlseqdiag}
+\end{tikzpicture}
+
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/block412.html">
+        Previous: block412.png
+      </a></li> <li><a href="/ControlSystems/CSII/block410.html">
+        Next: block410.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-SeqDiagramReport-md.380b97ca.js" defer></script></body></html>

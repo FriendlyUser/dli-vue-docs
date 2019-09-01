@@ -1,0 +1,70 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>requiredFields.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="requiredFields.png" alt="ReportDiagrams/ENGR003-004" title="requiredFields"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[border=5pt]{standalone}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{matrix, positioning}
+
+\definecolor{bluei}{RGB}{83,116,191}
+\definecolor{blueii}{RGB}{207,212,232}
+\definecolor{greeni}{RGB}{135,200,81}
+\definecolor{greenii}{RGB}{216,235,207}
+\definecolor{redi}{RGB}{196,125,82}
+\definecolor{redii}{RGB}{234,214,207}
+
+\tikzset{
+  myiblock/.style 2 args={
+    draw=white,
+    fill=#1,
+    line width=1pt,
+    rounded corners,
+    minimum height=1cm,
+    align=center,
+    text=white,
+    font=\sffamily,
+    text width=#2
+  },
+  myoblock/.style={
+     matrix of nodes,
+    fill=#1,
+    rounded corners,
+    align=center,
+    inner xsep=10pt,
+    draw=none,
+    row sep=0.5cm
+  },
+  mylabel/.style={
+    black, 
+    minimum height=0pt
+    }
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+\matrix (A) [myoblock={blueii}, nodes={myiblock={bluei}{3cm}}, row sep=3pt]
+  {|[label={[mylabel]\faUserSecret \ Personal Info}]|{ Name, Address }\\ 
+  Date Of Birth \\
+  Zip Code\\
+  };
+
+\matrix (B) [myoblock={greenii}, nodes={myiblock={greeni}{3cm}}, 
+   row sep=3pt, right=5mm of A.north east, anchor=north west]
+  {|[label={[mylabel] \faBank \ Financial Info}]| Credit Score \\
+   Income \\ 
+   SIN Number\\
+  };
+  
+\matrix (C) [myoblock={redii}, nodes={myiblock={redi}{3cm}}, 
+   row sep=3pt, right=5mm of B.north east, anchor=north west]
+  {|[label={[mylabel] \faHome \ Property Info}]| Mortgage Amount \\
+   Purchase Amount \\ 
+   Other Properties \\
+  };
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q10BlockDiagram.html">
+        Previous: Q10BlockDiagram.png
+      </a></li> <li><a href="/ControlSystems/CSI/Mason.html">
+        Next: Mason.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-ENGR003-004-requiredFields-md.6e965e3b.js" defer></script></body></html>

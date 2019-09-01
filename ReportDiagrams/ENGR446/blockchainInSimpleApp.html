@@ -1,0 +1,73 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>blockchainInSimpleApp.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="blockchainInSimpleApp.png" alt="ReportDiagrams/ENGR446" title="blockchainInSimpleApp"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">%\documentclass[class=scrreprt,preview]{standalone}
+\documentclass[class=scrreprt,pagesize=off]{standalone}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usetikzlibrary{positioning,matrix,shapes.arrows}
+\usetikzlibrary{arrows}
+\tikzset{
+	modulematrix/.style={draw=blue!50,rounded corners,matrix of nodes,row sep=1cm,column sep=2cm,nodes={draw=blue,align=center,font=\sffamily},inner ysep=0.5cm},
+	module/.style={rounded corners, align=center, font=\sffamily, thick},
+	simple module/.style={module, top color=blue!10, bottom color=blue!35, draw=blue!75, text width=7.5mm, minimum height=5mm},
+	module down arrow/.style={module arrow, shape border rotate=-90},
+	module right arrow/.style={module arrow},
+	module arrow/.style={single arrow, single arrow head extend=2.5mm, draw=gray!75, inner color=blue!45, outer color=gray!35, thick, shape border uses incircle, anchor=tail,minimum height=0.7cm},
+}
+\tikzset{
+database/.style={
+      cylinder,
+      cylinder uses custom fill,
+      cylinder body fill=blue!45,
+      cylinder end fill=blue!45,
+      shape border rotate=90,
+      aspect=0.25,
+      draw
+    }
+}
+\begin{document}
+	\begin{tikzpicture}
+	\node[inner sep=0pt] (user) at (0,0)
+	  {\includegraphics[width=.05\textwidth]{person.pdf}};
+	\node [simple module,right = 0.5 cm of user] (app)  at (1.5,0) {App};
+	\node[database,right = 2cm of app] (db) {DB};
+	\matrix[modulematrix,right=3.2cm of db,label={[anchor=north]above:Ethereum Node}] (ethNode) {Sign Transactions \\ Unlocked Account \\};
+	\foreach \n in {ethNode-1-1}
+		\node[module down arrow,below=1mm of \n] {};
+	\node[inner sep=0pt, right = 3.5cm of ethNode] (bchain)
+		  {\includegraphics[width=.45\textwidth]{linkedBlocks.pdf}};
+		  	
+	% Arrows
+	\draw [-&gt;,very thick,bend right] (user)  -- node [text width=2.5cm,midway,above=3em,draw=blue,align=center,font=\sffamily] {Transaction using Ethereum browser } (app);
+	% app to node
+	\draw [-&gt;, very thick] (app) to [bend left](db);
+	\draw [-&gt;, very thick] (db) to [bend left](app);
+	% db to node
+	\draw [-&gt;, very thick] (db) to [bend left=15](ethNode);
+	\draw [&lt;-, very thick] (db) to [bend right=15](ethNode);
+	% node to blockchain
+	\draw [-&gt;, very thick] (ethNode) to [bend left=8](bchain);
+	\draw [&lt;-&gt;, very thick] (ethNode) to [bend right=8](bchain);
+	% Paths, label about arrows
+	\path (app) -- node [very thick,text width=2.5cm,midway,above=3em,draw=blue,align=center,font=\sffamily] {submit transactions to database}  (db);
+	\path (app) -- node [very thick,text width=2.5cm,midway,above=-6em,draw=blue,align=center,font=\sffamily] {query database for information on transactions}  (db);
+	% Paths, eth node
+	\path (db) -- node [very thick,text width=2.5cm,midway,above=3em,draw=blue,align=center,font=\sffamily] {send updates to private ethereum node}  (ethNode);
+	\path (db) -- node [very thick,text width=2.5cm,midway,above=-6em,draw=blue,align=center,font=\sffamily] {update \\ transactional data in DB}  (ethNode);
+	% eth node to blockchain
+	\path (ethNode) -- node [very thick,text width=2.5cm,midway,above=3em,draw=blue,align=center,font=\sffamily] {Broadcast Transactions to blockchain}  (bchain);
+	\path (ethNode) -- node [very thick,text width=2.5cm,midway,above=-6em,draw=blue,align=center,font=\sffamily] {synchronize state with ethereum Node}  (bchain);
+	% Perform transaction    % Footnotes
+%	\node[inner sep=0pt,outer sep=0pt, font=\footnotesize,label={[yshift=-2ex]north west:{\large Note:}},text width=1.5\textwidth,anchor=north west] at ([yshift=-13,xshift=1cm]current bounding box.south west) (a)
+%		{\large
+%		A blockchain is a digitized, decentralized, public ledger of all cryptocurrency transactions. 
+%		To access websites on the Ethereum blockchain and use dapps a specialized browser is needed, or a plugin like metamask. \\
+%		\textbf{Signing Transactions}: with a private local ethereum node, use its JSON RPC interface from the application to \\ perform all your blockchain operations. In order to sign something, a mathematical function is used to &quot;sign&quot; a piece of document/data. A digital signature of a document/data is a number generated using a private key. The private key has a corresponding public key. \\};
+	\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/tech-stack.html">
+        Previous: tech-stack.png
+      </a></li> <li><a href="/BlogDiagrams/redmineOrg.html">
+        Next: redmineOrg.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-ENGR446-blockchainInSimpleApp-md.577f122e.js" defer></script></body></html>

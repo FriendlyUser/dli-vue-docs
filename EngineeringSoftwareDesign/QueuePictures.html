@@ -1,0 +1,53 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>QueuePictures.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="QueuePictures.png" alt="EngineeringSoftwareDesign" title="QueuePictures"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\def\cells#1#2#3{%
+% #1 = total number of cells
+% #2 = number of grey cells
+% #3 = index for &quot;front&quot; (&quot;back&quot; is mod(#3+#2-1, #1))
+  \foreach [count=\i from 0] \j  in {1,...,#1} {
+    % \node[cell,label=above:\i] (cell\i) at (\i,0) {};
+    \node[cell] (cell\i) at (\i,0) {};
+  }
+  \pgfmathsetmacro{\last}{#3+#2-1}
+  \foreach \i in {#3,...,\last} {
+    \pgfmathsetmacro{\back}{mod(\i,#1)}
+    \node[shaded cell] (back) at (\back,0) {};
+  }
+  \node[below] at (cell#3.south) {front};
+  \node[below] at (back.south) {back};
+}
+
+\tikzset{
+  cell/.style = {draw, minimum width=1cm, minimum height=0.8cm},
+  shaded cell/.style = {cell, fill=black!30},
+}
+
+\begin{document}
+%\begin{tikzpicture}
+%\cells{6}{3}{0}
+%\end{tikzpicture} \\
+%
+%\begin{tikzpicture}
+%\cells{6}{3}{3}
+%\end{tikzpicture} \\
+%
+%\begin{tikzpicture}
+%\cells{6}{3}{4}
+%\end{tikzpicture} \\
+
+\begin{tikzpicture}
+\cells{8}{7}{0}
+\foreach [count=\i from 0] \number in {$P_1[0]$, $P_2[0]$, $P_3[0]$, 299, 8, 14, 53, 78}
+\node at (cell\i) {\number};
+\end{tikzpicture}
+
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/digraphs.html">
+        Previous: digraphs.png
+      </a></li> <li><a href="/ControlSystems/CSII/block415.html">
+        Next: block415.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-QueuePictures-md.70125bf0.js" defer></script></body></html>

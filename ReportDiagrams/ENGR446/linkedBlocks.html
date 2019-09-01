@@ -1,0 +1,80 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>linkedBlocks.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="linkedBlocks.png" alt="ReportDiagrams/ENGR446" title="linkedBlocks"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\usepackage{lmodern}
+\usetikzlibrary{shadows,chains,scopes}
+\usetikzlibrary{decorations.pathmorphing, shapes}
+\begin{document}
+\begin{tikzpicture}
+  [
+    start chain=going right,
+    node distance=5mm,
+    every on chain/.style={
+      thick,
+      draw=black,
+      top color=white,
+      bottom color=blue!20,
+      font=\sffamily\small,
+      minimum width=12mm,
+      minimum height=10mm,
+      drop shadow,
+      %label={below:block \tikzchaincount},
+    },
+    decoration={coil},
+    dna/.style={decorate, thick, decoration={aspect=0, segment length=0.75cm}},
+%    post join/.style={
+%      -stealth,
+%      line width=1.5mm,
+%      red,
+%      rounded corners=1mm,
+%    },
+	square/.style={thick,
+	      draw=black,
+	      top color=white,
+	      bottom color=black!10,
+	      font=\sffamily\small,
+	      minimum width=12mm,
+	      minimum height=10mm,
+	      drop shadow},
+    every label/.style={
+      font=\sffamily\scriptsize
+    },
+  ]
+  \draw[dna, decoration={amplitude=.15cm}] (.5,-0) -- (1.9,-0);
+  %\draw[dna, decoration={amplitude=.35cm}] (.9,-0) -- (1.5,-0);
+  \draw[dna, decoration={amplitude=.15cm}] (.1,-0) -- (1.5,-0);
+  
+  \draw[dna, decoration={amplitude=.15cm}] (2.25,-0) -- (3.65,-0);
+   %\draw[dna, decoration={amplitude=.35cm}] (.9,-0) -- (1.5,-0);
+  \draw[dna, decoration={amplitude=.15cm}] (1.85,-0) -- (3.25,-0);
+    
+  \draw[dna, decoration={amplitude=.15cm}] (.5,-2.5) -- (1.9,-2.5);
+  %\draw[dna, decoration={amplitude=.35cm}] (.9,-0) -- (1.5,-0);
+  \draw[dna, decoration={amplitude=.15cm}] (.1,-2.5) -- (1.5,-2.5);
+    
+  \draw[dna, decoration={amplitude=.15cm}] (2.25,-2.5) -- (3.65,-2.5);
+   %\draw[dna, decoration={amplitude=.35cm}] (.9,-0) -- (1.5,-0);
+   \draw[dna, decoration={amplitude=.15cm}] (1.85,-2.5) -- (3.25,-2.5);
+   
+   %% Path for dots
+  \node [on chain,label={above:block 1}] {A};
+  \node [on chain,label={above:block 2}] {B};
+  \node [on chain,label={above:block 3}] {C};
+  \node [on chain=going below,yshift=-1cm,label={below:block n--2}] {D};
+  {[continue chain=going left]
+    \node [on chain,label={below:block n--1}] {E};
+    \node [on chain,label={below:block n}] {F};
+  }
+  %\node[square,left of= chain-6] {G};
+  {[transparency group, opacity=.25]
+%    \draw [post join] (chain-1.south) |- (chain-3.center) |- (chain-6.center) -- (chain-6.north);
+  }
+ \path (chain-3.south) -- (chain-4.north) node [black, font=\Huge, midway, sloped,xshift=0cm] {$\dots$};
+ 
+\node[] at (1.75,-1.25) { \textsc{BLOCKCHAIN}};
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/osiModel.html">
+        Previous: osiModel.png
+      </a></li> <li><a href="/BlogDiagrams/latex_user_sw_levels.html">
+        Next: latex_user_sw_levels.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-ENGR446-linkedBlocks-md.2159697d.js" defer></script></body></html>

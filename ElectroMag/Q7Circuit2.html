@@ -1,0 +1,26 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Q7Circuit2.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Q7Circuit2.png" alt="ElectroMag" title="Q7Circuit2"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage[american]{circuitikz}
+\usepackage{graphicx}
+\usepackage{mathrsfs} 
+\usepackage{latexsym,amssymb,amsmath}
+\newcommand{\equal}{=}
+\begin{document}
+	\begin{circuitikz}
+		\draw (0,0) to [R,i^&lt;=$\phi_1$, l^= $\mathscr{R}_{g1}$,v_&lt;=$\mathscr{F}_{g1}$, color=blue] (0,6)
+		(0,6) -- (4,6)
+		(0,0) -- (4,0)
+		(4,0) to [I,i=$\phi$,l_=$(N_1-N_2)i$] (4,4)
+		(4,4) -- (4,6) 
+		(8,0) -- (4,0)
+		(4,6) to [R,l^= $\mathscr{R}_{3}$,v_&gt;=$\mathscr{F}_3$, color=red] (8,6)
+		(8,0) to [R,i^&lt;=$\phi_2$, l^= $\mathscr{R}_{g2}$,v_&lt;=$\mathscr{F}_{g2}$, color=cyan] (8,6)
+
+		;\end{circuitikz}
+	\label{fig:q1fig}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/DVP/lattice-sampling.html">
+        Previous: lattice-sampling.png
+      </a></li> <li><a href="/DVP/latex-diagram.html">
+        Next: latex-diagram.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-Q7Circuit2-md.6e697a9b.js" defer></script></body></html>

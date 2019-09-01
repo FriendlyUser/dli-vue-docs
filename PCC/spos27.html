@@ -1,0 +1,81 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>spos27.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="spos27.png" alt="PCC" title="spos27"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=newest}
+  %% the following commands are needed for some matlab2tikz features
+  \usetikzlibrary{plotmarks}
+  \usetikzlibrary{arrows.meta}
+  \usepgfplotslibrary{patchplots}
+  \usepackage{grffile}
+  \usepackage{amsmath}
+
+  %% you may also want the following commands
+  %\pgfplotsset{plot coordinates/math parser=false}
+  %\newlength\figureheight
+  %\newlength\figurewidth
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}
+\begin{document}
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.055in,
+height=3.17in,
+at={(0.524in,0.428in)},
+scale only axis,
+xmin=-100000000000,
+xmax=100000000000,
+tick align=outside,
+ymin=-100000000000,
+ymax=100000000000,
+zmin=-100000000000,
+zmax=100000000000,
+view={-37.5}{30},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+axis z line*=left,
+xmajorgrids,
+ymajorgrids,
+zmajorgrids,
+legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot3[scatter, only marks, mark=o, color=mycolor1, mark options={}, scatter/use mapped color=mycolor1, visualization depends on={\thisrow{size} \as \perpointmarksize}, scatter/@pre marker code/.append style={/tikz/mark size=\perpointmarksize}] table[row sep=crcr]{%
+x	y	z	size\\
+-100000000000	-100000000000	-100000000000	2.53722289127305\\
+-100000000000	-100000000000	0	2.53722289127305\\
+-100000000000	-100000000000	100000000000	2.51246890528022\\
+-100000000000	0	-100000000000	2.52487623459052\\
+-100000000000	0	0	2.52487623459052\\
+-100000000000	0	100000000000	2.5\\
+-100000000000	100000000000	-100000000000	2.51246890528022\\
+-100000000000	100000000000	0	2.53722289127305\\
+-100000000000	100000000000	100000000000	2.52487623459052\\
+0	-100000000000	-100000000000	2.52487623459052\\
+0	-100000000000	0	2.52487623459052\\
+0	-100000000000	100000000000	2.51246890528022\\
+0	0	-100000000000	2.51246890528022\\
+0	0	0	5.59016994374947\\
+0	0	100000000000	2.51246890528022\\
+0	100000000000	-100000000000	2.51246890528022\\
+0	100000000000	0	2.51246890528022\\
+0	100000000000	100000000000	2.52487623459052\\
+100000000000	-100000000000	-100000000000	2.52487623459052\\
+100000000000	-100000000000	0	2.51246890528022\\
+100000000000	-100000000000	100000000000	2.52487623459052\\
+100000000000	0	-100000000000	2.53722289127305\\
+100000000000	0	0	2.51246890528022\\
+100000000000	0	100000000000	2.52487623459052\\
+100000000000	100000000000	-100000000000	2.52487623459052\\
+100000000000	100000000000	0	2.52487623459052\\
+100000000000	100000000000	100000000000	2.51246890528022\\
+};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/Q5BlockDiagram2-2.html">
+        Previous: Q5BlockDiagram2-2.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q5BlockDiagram.html">
+        Next: Q5BlockDiagram.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--PCC-spos27-md.1f9288da.js" defer></script></body></html>

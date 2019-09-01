@@ -1,0 +1,29 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Tables.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Tables.png" alt="EngineeringSoftwareDesign" title="Tables"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{report}
+\usepackage[table]{xcolor}
+\definecolor{lightblue}{rgb}{0.93,0.95,1.0}
+
+\begin{document}
+ \rowcolors{1}{lightgray}{white}   %% &lt;--- here
+ \noindent
+ \begin{tabular}[!ht]{&gt;{\bfseries}l &lt;{\raggedright}p{10cm}}
+      \rowcolor{black!90}\textcolor{white}{Identifier/Name} &amp; \textcolor{white}{\textbf{UC1 - Login}}  \\
+      Importance    &amp; 5/5\\
+      Difficulty    &amp; 1/5\\
+      Actor(s)      &amp; Generalized User\\
+      Goal          &amp; To allow the user to access the system.\\
+      Preconditions &amp; The user is at the login page. \\
+      Summary       &amp; Will validate the users name and password and subsequently give them access to the
+      system.\\
+      Steps         &amp; 
+                      {\begin{tabular}{@{}p{4cm} | p{4cm}@{}}
+                          1. User provides username and password. &amp; 2. System directs user to main system page. \\
+                      \end{tabular}} \\
+      Postcondition &amp; \textbf{Success:} User is logged in. \newline \textbf{Failure:} The system reamins at the login state. \\
+  \end{tabular}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSII/StraightLinebasicBlock.html">
+        Previous: StraightLinebasicBlock.png
+      </a></li> <li><a href="/ControlSystems/CSII/OgataB6-17.html">
+        Next: OgataB6-17.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-Tables-md.203c11cf.js" defer></script></body></html>

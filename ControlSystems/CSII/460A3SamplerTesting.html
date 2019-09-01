@@ -1,0 +1,80 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>460A3SamplerTesting.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="460A3SamplerTesting.png" alt="ControlSystems/CSII" title="460A3SamplerTesting"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,arrows,calc} 
+\usetikzlibrary{decorations.text}
+\tikzset{add/.style n args={4}{
+		minimum width=6mm,
+		path picture={
+			\draw[black] 
+			(path picture bounding box.south east) -- (path picture bounding box.north west)
+			(path picture bounding box.south west) -- (path picture bounding box.north east);
+			\node at ($(path picture bounding box.south)+(0,0.13)$)     {\tiny #1};
+			\node at ($(path picture bounding box.west)+(0.13,0)$)      {\tiny #2};
+			\node at ($(path picture bounding box.north)+(0,-0.13)$)        {\tiny #3};
+			\node at ($(path picture bounding box.east)+(-0.13,0)$)     {\tiny #4};
+		}
+	}
+}
+\begin{document}
+	
+%\begin{figure}
+%\centering
+	\tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=3em, minimum width=4em]
+	\tikzstyle{controller} = [draw, fill=red!20, rectangle, minimum height=3em, minimum width=4em]
+	\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+	\tikzstyle{input} = [coordinate]
+	\tikzstyle{output} = [coordinate]
+	\tikzstyle{sampleSP} = [coordinate]
+	\tikzstyle{sampleEP} = [coordinate]
+	\tikzstyle{otherPoint} = [coordinate]
+	\begin{tikzpicture}[auto, &gt;=latex']
+	% Nodes
+	\node [input] (input) {};
+	%\node [sum, right = 1cm of input] (sum) {};
+	\node[draw,circle,add={--}{+}{}{},right of= input](sum){}; 
+	\node [sampleSP, right = 1cm of sum] (sumSP) {};
+	\node [sampleEP, right = 1cm of sumSP] (sumEP) {};
+	\node [sampleEP, above = 1cm of sumEP] (sumEPTOP) {};
+	\node [controller, right = 2cm of sumEP] (system) {$G(s)$};
+	\node [otherPoint,right = 1cm of system] (branchPoint) {};
+	\node [otherPoint,below = 1 cm of system] (belowsystem) {}; %{$\frac{1}{Ts+1}$};
+	%\node [block, right = 1cm of system] (system2) {$\frac{1}{Ts+1}$};
+	\node [output, right = 2cm of branchPoint] (output) {};
+	%\node [input, below = 0.5cm of system] (m) {};
+	\node [block, right = 0.75 of belowsystem] (systemH) {$H_1(s)$};
+	
+	% Second Sampler Point
+	\node [sampleSP, left = 1cm of systemH] (sysHSP2) {};
+	\node [sampleEP, left = 1cm of sysHSP2] (sysHEP2) {};
+	\node [sampleEP, above = 1cm of sysHEP2] (sumEPTOP2) {};
+	
+	% Second block 
+	\node [block, left = 1.5cm of sysHEP2] (systemH2) {$H_2(s)$};
+	% Arrows
+	\draw [draw,-&gt;] (input) -- node {$R$} (sum);
+	% Arrows for first sampler
+	\draw [-] (sum) -- node {$E(s)$} (sumSP);
+	\draw [-,thick] (sumEPTOP) -- node {$\delta_\tau$} (sumSP);
+	\draw [-&gt;] (sumEP) -- node {$E^\ast(s)$} (system);
+	%Arrows for second sampler (bottom)
+	\draw [-]  (sysHSP2)-- node {$M(s)$} (systemH);  
+	\draw [-,thick] (sysHSP2) -- node {$\delta_\tau$} (sumEPTOP2);
+	%\draw [-&gt;] (sumEP) -- node {$M^\ast(s)$} (systemH);
+	% \draw [-&gt;] (system) --  (system2);
+	\draw [-] (system) --  (branchPoint);
+	\draw [-&gt;] (branchPoint) -- node (y) {$C(s)$}(output);
+	\draw [-] (y) |- (systemH) {};
+	%\draw [-] (y) |- (m) {} ;
+	\draw [&lt;-] (systemH2) -- node {$M^\ast(s)$} (sysHEP2);
+	\draw [-&gt;] (systemH2) -| (sum); %{$-$}  node [near end] {} (sum);
+	%\draw [-&gt;] (m) -| node[pos=0.99] {} node [near end] {} (sum); %{$-$}  node [near end] {} (sum);
+	\end{tikzpicture}
+%\end{figure}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/EngineeringSoftwareDesign/betterClientServer.html">
+        Previous: betterClientServer.png
+      </a></li> <li><a href="/EngineeringSoftwareDesign/bytefieldCENG356A2.html">
+        Next: bytefieldCENG356A2.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ControlSystems-CSII-460A3SamplerTesting-md.ca8ad7cf.js" defer></script></body></html>

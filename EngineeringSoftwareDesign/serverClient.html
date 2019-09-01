@@ -1,0 +1,54 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>serverClient.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="serverClient.png" alt="EngineeringSoftwareDesign" title="serverClient"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[ border={60pt 0pt 55pt 0pt} 
+% left bottom right top] real order is left bottom right top
+]{standalone}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit, calc, shapes, arrows}
+\usepackage[underline=false]{pgf-umlsd}
+% message between threads
+% Example:
+% \bloodymess[delay]{sender}{message content}{receiver}{DIR}{start note}{end note}
+\newcommand{\bloodymess}[7][0]{
+  \stepcounter{seqlevel}
+  \path
+  (#2)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess from) {};
+  \addtocounter{seqlevel}{#1}
+  \path
+  (#4)+(0,-\theseqlevel*\unitfactor-0.7*\unitfactor) node (mess to) {};
+  \draw[-&gt;,&gt;=angle 60] (mess from) -- (mess to) node[midway, above]
+  {#3};
+
+  \if R#5
+    \node (#3 from) at (mess from) {\llap{#6~}};
+    \node (#3 to) at (mess to) {\rlap{~#7}};
+  \else\if L#5
+         \node (#3 from) at (mess from) {\rlap{~#6}};
+         \node (#3 to) at (mess to) {\llap{#7~}};
+       \else
+         \node (#3 from) at (mess from) {#6};
+         \node (#3 to) at (mess to) {#7};
+       \fi
+  \fi
+}
+\begin{document}
+
+%\begin{figure}[H]
+%    \centering
+    \begin{sequencediagram}
+        \newinst{c}{Client}
+        \newinst[6]{s}{Server}
+
+        \bloodymess[1]{c}{Requesting Access to Server}{s}{R}{Start}{Server receives}
+        \bloodymess[1]{s}{Access Granted}{c}{L}{Server responds}{}
+        \bloodymess[1]{c}{Acknowledgement}{s}{R}{2nd handshake begins}{Server receives}
+        \bloodymess[1]{s}{Send Data and Acknowledge}{c}{L}{}{End}
+    \end{sequencediagram}
+    %\caption{Client-Server messaging example}
+%\end{figure}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ControlSystems/CSI/conSys.html">
+        Previous: conSys.png
+      </a></li> <li><a href="/ControlSystems/CSI/Q6BlockDiagram6fin.html">
+        Next: Q6BlockDiagram6fin.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--EngineeringSoftwareDesign-serverClient-md.e79a9c61.js" defer></script></body></html>

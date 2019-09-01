@@ -1,0 +1,25 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>artificialNeuron.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="artificialNeuron.png" alt="ReportDiagrams/MISCELLANOUS" title="artificialNeuron"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{calc, shapes.geometric,shapes.symbols,fit,positioning,shadows}
+\begin{document}
+\begin{tikzpicture}
+\node [circle split,draw,rotate=90, align=center,label={[anchor=north, inner sep=0pt, yshift=1.2em] east:{\selectfont Neural Body}}] (part){\rotatebox{-90}{ \parbox{1.5cm}{Network input to neuron z} } \nodepart{lower} \rotatebox{-90}{\parbox{1.5cm}{Neuron Output o}} };
+\draw[-&gt;,rounded corners=5pt] (part.south) -- ($(part.south)+(1.5,0)$);
+\node[right = 3 em of part.south, label=Neuron Output] () {};
+
+\node[above left = 0em and 10em of part.east] (t1) {$I_1-$Input 1};
+\node[left = 4em of part.north] (t2) {$I_2-$Input 2};
+\node[below left = 4em and 4em of part.north] (t3) {$I_3-$Input 3};
+
+\draw[-&gt;] (t1) -- (part) node[midway,sloped,above] {$W_1$};
+\draw[-&gt;] (t2) -- (part) node[midway,sloped,above] {$W_2$};
+\draw[-&gt;] (t3) -- (part) node[midway,sloped,above] {$W_3$};
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/BlogDiagrams/discordDiagram.html">
+        Previous: discordDiagram.png
+      </a></li> <li><a href="/BlogDiagrams/circleDia.html">
+        Next: circleDia.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ReportDiagrams-MISCELLANOUS-artificialNeuron-md.f86e39fe.js" defer></script></body></html>

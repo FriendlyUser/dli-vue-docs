@@ -1,0 +1,51 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>lbp.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="lbp.png" alt="DVP" title="lbp"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[varwidth]{standalone}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\tikzset{
+   % styling for filled node
+   filled/.style={circle,draw,fill=green!60, minimum size=5},
+   % styling for white nodes
+   empty/.style={circle,draw, minimum size=5},
+   % diagram with P = 4
+   pics/pattern/.style args={#1/#2/#3/#4/#5}{
+   code={
+      \node[#1] at (0, 1) (#5-1) {};
+      \node[#2] at (1, 0) (#5-2) {};
+      \node[#3] at (0, -1) (#5-3) {};
+      \node[#4] at (-1, 0) (#5-4) {};
+    }},
+    pics/pattern/.default=empty/empty/empty/empty/a
+}
+\begin{document}
+\begin{tikzpicture}[background rectangle/.style={fill=blue!15}, show background rectangle]
+% Uniform LBP, and draw box
+% U = 0 Row
+\node[] at (-2,0) {U=0};
+\path (0,0) pic[scale=1.0] {pattern};
+\path (+3.5,0) pic[scale=1.0] {pattern=filled/filled/filled/filled/a};
+% U = 2 Row
+\node[] at (-2,-3) {U=2};
+\path (0,-3) pic[scale=1.0] {pattern=filled/empty/empty/empty/b};
+\path (+3.5,-3) pic[scale=1.0] {pattern=filled/filled/empty/empty/c};
+\path (+7.0,-3) pic[scale=1.0] {pattern=filled/filled/filled/empty/d};
+\node[text width= 2cm] at (7.0, 1) {\LARGE{Uniform \hfill \break Patterns}};
+\end{tikzpicture}
+%
+\begin{tikzpicture}[background rectangle/.style={fill=red!15}, show background rectangle]
+% Uniform LBP, and draw box
+% U = 4 Row. i think
+\node[] at (-2,0) {U=4};
+\path (0,0) pic[scale=1.0] {pattern=empty/filled/empty/filled/e};
+\path (+3.5,0) pic[scale=1.0] {pattern=filled/empty/filled/empty/f};
+\node[text width= 4cm, align=right] at (6, 1) {\hfill \LARGE{Non-Uniform} \break \hfill \break \LARGE{Patterns}};
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/ElectroMag/Q6Circuit.html">
+        Previous: Q6Circuit.png
+      </a></li> <li><a href="/ElectroMag/Q7Circuit.html">
+        Next: Q7Circuit.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--DVP-lbp-md.d2eace32.js" defer></script></body></html>

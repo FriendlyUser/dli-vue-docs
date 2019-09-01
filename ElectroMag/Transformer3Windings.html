@@ -1,0 +1,55 @@
+<!DOCTYPE html><html data-saber-ssr><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta data-saber-head="ssr" name="generator" content="Saber v0.8.1"> <title>Transformer3Windings.png - My Epic Blog</title> <link data-saber-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&amp;display=swap"><style data-vue-ssr-id="562bd7d1:0">nav[data-v-cdc72040]{box-sizing:border-box;background-color:#b05ac4;padding-top:15px;padding-bottom:15px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.nav-left[data-v-cdc72040],.nav-right[data-v-cdc72040]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-cdc72040]{text-decoration:none}</style>  </head><body><div id="_saber" data-server-rendered="true"><div><nav data-v-cdc72040><div class="nav-left" data-v-cdc72040><a href="/" class="router-link-active" data-v-cdc72040>Home</a> <a href="/" class="router-link-active" data-v-cdc72040>Home</a></div> <div class="nav-right" data-v-cdc72040><a href="/about.html" data-v-cdc72040>About me</a></div></nav> <p><img src="Transformer3Windings.png" alt="ElectroMag" title="Transformer3Windings"></p> <div class="saber-highlight" data-lang="tex"><pre class="saber-highlight-code language-tex"><code class="language-tex">\documentclass[tikz,border=3mm]{standalone}
+
+\usetikzlibrary{quotes,arrows.meta}
+
+\begin{document}
+
+\tikzset{
+    terminal_a/.pic = {%
+        \coordinate (-in) at (-3mm,0);
+        \coordinate (-out) at (-3mm,-4.5mm);
+
+        \path[fill] (-in) circle (2pt);
+        \draw[thick] (-in)--(0,0)--++(0:1cm) arc[start angle=90, delta angle=-180, radius=.75mm]; 
+        \draw[thick] (0,-1.5mm) arc[start angle=90, delta angle=180, radius=.75mm]--++(0:1cm) arc[start angle=90, delta angle=-180, radius=.75mm]; 
+        \fill (-out) circle (2pt);
+        \draw[thick] (-out) -- ++(0:3mm);
+        },
+    terminal_b/.pic = {%
+        \coordinate (-in) at (-3mm,0);
+        \coordinate (-out) at (-3mm,-7.5mm);
+
+        \path[fill] (-in) circle (2pt);
+        \draw[thick] (-in)--(0,0)--++(0:1cm) arc[start angle=90, delta angle=-180, radius=.75mm]; 
+        \draw[thick] (0,-1.5mm) arc[start angle=90, delta angle=180, radius=.75mm]--++(0:1cm) arc[start angle=90, delta angle=-180, radius=.75mm]; 
+        \draw[thick] (0,-4.5mm) arc[start angle=90, delta angle=180, radius=.75mm]--++(0:1cm) arc[start angle=90, delta angle=-180, radius=.75mm]; 
+        \fill (-out) circle (2pt);
+        \draw[thick] (-out) -- ++(0:3mm);
+        },
+    field/.pic = {
+        \draw[thick,-Stealth] (0,0) -- (90:7mm) node[above] {\tikzpictext};
+        }
+}
+
+\begin{tikzpicture}
+\draw (0,0) rectangle (7,5);
+\draw (1,1) rectangle (3,4);
+\draw (4,1) rectangle (6,4);
+
+\foreach \i/\j in {0/A,3/B,6/C}{
+    \pic (upper-\j) at (\i,3.8) {terminal_a};
+    \pic (lower-\j) at (\i,2) {terminal_b};
+    \pic[&quot;$\Psi_\j<div id="_saber"></div>quot;] at ([xshift=5mm]\i,2.2) {field};
+    }
+
+\node[left] at (upper-A-in) {A};
+\draw[red] (upper-A-out) to [bend right] (lower-A-in);
+
+\end{tikzpicture}
+\end{document}</code></pre></div> <p data-v-bdc5cd6e>
+  Created by David Li
+</p> <ul><li><a href="/DSP/e514_c2.html">
+        Previous: e514_c2.png
+      </a></li> <li><a href="/DSP/c514_c.html">
+        Next: c514_c.png
+      </a></li></ul></div></div><script src="/_saber/js/client.7d6083be.js" defer></script><script src="/_saber/js/page--ElectroMag-Transformer3Windings-md.85e11deb.js" defer></script></body></html>
