@@ -1,0 +1,21 @@
+{
+  "name": "dli-doc-site-saber",
+  "version": "0.0.1",
+  "description": "Basic documentation site for things that cannot be contained in latex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "saber",
+    "vue"
+  ],
+  "author": "David Li",
+  "license": "ISC",
+  "dependencies": {
+    "prismjs": "^1.17.1",
+    "saber": "^0.8.1",
+    "saber-highlight-css": "^0.1.1",
+    "saber-plugin-prismjs": "^0.2.2"
+  }
+}
