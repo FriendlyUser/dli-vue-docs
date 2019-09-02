@@ -5,12 +5,12 @@
     <div class="links">
       <div v-if="page.prevPost">
         <router-link :to="page.prevPost.permalink">
-          Previous: {{ page.prevPost.title }}
+          <arrow-left-icon /> {{ page.prevPost.title }}
         </router-link>
       </div>
       <div v-if="page.nextPost">
         <router-link :to="page.nextPost.permalink">
-          Next: {{ page.nextPost.title }}
+         {{ page.nextPost.title }} <arrow-right-icon /> 
         </router-link>
       </div>
     </div>
@@ -21,12 +21,15 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
-
+import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue'
+import ArrowRightIcon from 'vue-material-design-icons/ArrowRight.vue'
 export default {
   props: ['page'],
   components: {
     Navbar,
-    Footer
+    Footer,
+    ArrowLeftIcon,
+    ArrowRightIcon
   },
   head() {
     const {title: pageTitle} = this.page

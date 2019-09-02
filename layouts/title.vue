@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="background">
     <Navbar />
-    <slot name="default" />
+      <slot name="default" />
     <TableOfContents v-bind:toc="toc"/>
     <Footer />
   </div>
@@ -41,5 +41,12 @@ export default {
 }
 .page-enter, .page-leave-to {
   opacity: 0;
+}
+.background {
+  background-color: #eee;
+  height: 100%;
+}
+html, body {
+  height:100%;
 }
 </style>

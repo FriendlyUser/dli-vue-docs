@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="footer-container">
     <br />
     <br />
     <div class="footer">
@@ -20,9 +20,10 @@
 .footer-container {
   box-sizing: border-box;
   position: relative;
-  padding-bottom: 1em; /* Height of footer */
+  padding-bottom: 1em; 
   min-height: 100%;
-}
+} 
+
 .footer {
   position: relative;
   bottom: 0;
