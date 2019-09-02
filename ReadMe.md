@@ -7,3 +7,5 @@ With the rich set of features that saber has, and the ease of dumping markdown f
 
 
 Also add [https://saber.land/docs/saber-config.html#linenumbers](markdown) plugins at some point.
+
+Built on CircleCI.
