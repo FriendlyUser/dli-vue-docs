@@ -2,160 +2,160 @@
 .saber-highlight{position:relative;overflow:hidden;margin:2rem 0;background:#f5f7fa;border-radius:4px}.saber-highlight:before{content:attr(data-lang);position:absolute;right:10px;top:5px;font-size:.75rem;color:#bdc5d1}.saber-highlight-code,.saber-highlight-mask{line-height:1.5;background-color:transparent!important;text-shadow:none!important;box-shadow:none!important;margin:0!important;padding:1.25rem 1.5rem!important;white-space:pre}.saber-highlight-mask{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:transparent!important;padding-left:0!important;padding-right:0!important}.saber-highlight-code{position:relative;z-index:2;font-size:0!important}.saber-highlight-code code,.saber-highlight-mask{font-size:.875rem}.code-line.highlighted{background:rgba(3,169,244,.121)}.saber-highlight-line-numbers{pointer-events:none;font-size:100%;float:left;letter-spacing:-1px;border-right:1px solid #999;user-select:none;text-align:right;padding-right:.8rem;margin-right:.8rem;counter-reset:linenumber}.saber-highlight-line-numbers>span{counter-increment:linenumber;display:block}.saber-highlight-line-numbers>span:before{content:counter(linenumber);color:#999;display:block}
 p[data-v-13f50f72]{font-family:Helvetica}.page-enter-active[data-v-13f50f72],.page-leave-active[data-v-13f50f72]{transition:opacity .5s}.page-enter[data-v-13f50f72],.page-leave-to[data-v-13f50f72]{opacity:0}.links[data-v-13f50f72]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.img[data-v-13f50f72]{max-width:100%}
 nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direction:row;align-items:center;justify-content:space-between;color:#1c3ed3;background-color:#fff;display:flex;box-shadow:0 1px 15px rgba(50,50,93,.2);height:60px}.nav-left[data-v-b9ef9ed0],.nav-right[data-v-b9ef9ed0]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-b9ef9ed0]{text-decoration:none;font-size:2em}a[data-v-b9ef9ed0]:hover{color:#4e20ca}
-.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="advancedTimeline.png" alt="ReportDiagrams/ENGR446" title="advancedTimeline" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72>\documentclass[tikz,multi,border=10pt]{standalone}
-\usepackage{datenumber,xparse}
-\usetikzlibrary{arrows.meta,backgrounds}
-\newcounter{chronosstartdate}
-\newcounter{chronosenddate}
-\newcounter{chronosstartyear}
-\newcounter{chronosendyear}
-\newcounter{chronosyeardate}
-\newcounter{chronosthingdate}
-\newcounter{chronosotherthingdate}
-\pgfkeys{/pgf/number format,
+.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="advancedTimeline.png" alt="ReportDiagrams/ENGR446" title="advancedTimeline" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72><span class="token function selector" data-v-13f50f72>\documentclass</span><span class="token punctuation" data-v-13f50f72>[</span>tikz,multi,border=10pt<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>standalone</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>datenumber,xparse</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>arrows.meta,backgrounds<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartdate<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosenddate<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartyear<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosendyear<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosyeardate<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosthingdate<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosotherthingdate<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\pgfkeys</span><span class="token punctuation" data-v-13f50f72>{</span>/pgf/number format,
   int detect,
-  set thousands separator={},
-}
-\tikzset{
-  chronos/.code={% https://tex.stackexchange.com/a/159856/ - Claudio Fiandrino
-    \tikzset{%
+  set thousands separator=<span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span>,
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span>
+  chronos/.code=<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>% https://tex.stackexchange.com/a/159856/ - Claudio Fiandrino</span>
+    <span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
       align=center,
       anchor=mid,
       /chronos/.cd,
       #1
-    }%
-    \setstartyear{\chronosstartyear}%
-    \setmydatenumber{chronosstartdate}{\chronosstartyear}{\chronosstartmonth}{\chronosstartday}%
-    \setmydatenumber{chronosenddate}{\chronosendyear}{\chronosendmonth}{\chronosendday}%
-    \pgfmathsetmacro\chronosunit{(\chronoswidth-20pt)/(\thechronosenddate-\thechronosstartdate)}%
-    \draw [line width=\chronosheight] (-10pt,0) coordinate (chronos pre) -- +(\chronoswidth,0) coordinate (chronos post);
-    \coordinate (chronos start) at (0,0);
-    \coordinate (chronos end) at ([xshift=-10pt]chronos post);
-    \setcounter{chronosstartyear}{\chronosstartyear}%
-    \setcounter{chronosendyear}{\chronosendyear}%
-    \def\tempa{01}%
-    \ifx\chronosstartmonth\tempa
-      \ifx\chronosstartday\tempa
-        \else\stepcounter{chronosstartyear}%
-      \fi
-      \else\stepcounter{chronosstartyear}%
-    \fi
-    \def\tempa{12}%
-    \def\tempb{31}%
-    \ifx\chronosendmonth\tempa
-      \ifx\chronosendday\tempb
-        \stepcounter{chronosendyear}%
-      \fi
-    \fi
-    \foreach \i in {\thechronosstartyear,...,\thechronosendyear} {%
-      \setmydatenumber{chronosyeardate}{\i}{01}{01}%
-      \node [above, anchor=south, yshift=.5*\chronosheight] at ({(\thechronosyeardate-\thechronosstartdate)*\chronosunit pt},0) {\i}; }
-  },
-  chronos set date/.code args={#1-#2-#3:#4}{%
-    \tikzset{%
+    <span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\setstartyear</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosstartyear</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\setmydatenumber</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartdate<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosstartyear</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosstartmonth</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosstartday</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\setmydatenumber</span><span class="token punctuation" data-v-13f50f72>{</span>chronosenddate<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosendyear</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosendmonth</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosendday</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\pgfmathsetmacro</span><span class="token function selector" data-v-13f50f72>\chronosunit</span><span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\chronoswidth</span>-20pt)/(<span class="token function selector" data-v-13f50f72>\thechronosenddate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\draw</span> <span class="token punctuation" data-v-13f50f72>[</span>line width=<span class="token function selector" data-v-13f50f72>\chronosheight</span><span class="token punctuation" data-v-13f50f72>]</span> (-10pt,0) coordinate (chronos pre) -- +(<span class="token function selector" data-v-13f50f72>\chronoswidth</span>,0) coordinate (chronos post);
+    <span class="token function selector" data-v-13f50f72>\coordinate</span> (chronos start) at (0,0);
+    <span class="token function selector" data-v-13f50f72>\coordinate</span> (chronos end) at (<span class="token punctuation" data-v-13f50f72>[</span>xshift=-10pt<span class="token punctuation" data-v-13f50f72>]</span>chronos post);
+    <span class="token function selector" data-v-13f50f72>\setcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartyear<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosstartyear</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\setcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosendyear<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosendyear</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\tempa</span><span class="token punctuation" data-v-13f50f72>{</span>01<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\ifx</span><span class="token function selector" data-v-13f50f72>\chronosstartmonth</span><span class="token function selector" data-v-13f50f72>\tempa</span>
+      <span class="token function selector" data-v-13f50f72>\ifx</span><span class="token function selector" data-v-13f50f72>\chronosstartday</span><span class="token function selector" data-v-13f50f72>\tempa</span>
+        <span class="token function selector" data-v-13f50f72>\else</span><span class="token function selector" data-v-13f50f72>\stepcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartyear<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+      <span class="token function selector" data-v-13f50f72>\fi</span>
+      <span class="token function selector" data-v-13f50f72>\else</span><span class="token function selector" data-v-13f50f72>\stepcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosstartyear<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\fi</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\tempa</span><span class="token punctuation" data-v-13f50f72>{</span>12<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\tempb</span><span class="token punctuation" data-v-13f50f72>{</span>31<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\ifx</span><span class="token function selector" data-v-13f50f72>\chronosendmonth</span><span class="token function selector" data-v-13f50f72>\tempa</span>
+      <span class="token function selector" data-v-13f50f72>\ifx</span><span class="token function selector" data-v-13f50f72>\chronosendday</span><span class="token function selector" data-v-13f50f72>\tempb</span>
+        <span class="token function selector" data-v-13f50f72>\stepcounter</span><span class="token punctuation" data-v-13f50f72>{</span>chronosendyear<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+      <span class="token function selector" data-v-13f50f72>\fi</span>
+    <span class="token function selector" data-v-13f50f72>\fi</span>
+    <span class="token function selector" data-v-13f50f72>\foreach</span> <span class="token function selector" data-v-13f50f72>\i</span> in <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\thechronosstartyear</span>,...,<span class="token function selector" data-v-13f50f72>\thechronosendyear</span><span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+      <span class="token function selector" data-v-13f50f72>\setmydatenumber</span><span class="token punctuation" data-v-13f50f72>{</span>chronosyeardate<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\i</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>01<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>01<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+      <span class="token function selector" data-v-13f50f72>\node</span> <span class="token punctuation" data-v-13f50f72>[</span>above, anchor=south, yshift=.5*<span class="token function selector" data-v-13f50f72>\chronosheight</span><span class="token punctuation" data-v-13f50f72>]</span> at (<span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\thechronosyeardate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)*<span class="token function selector" data-v-13f50f72>\chronosunit</span> pt<span class="token punctuation" data-v-13f50f72>}</span>,0) <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\i</span><span class="token punctuation" data-v-13f50f72>}</span>; <span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  chronos set date/.code args=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3:#4<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
       /chronos/.cd,
-      #4 year={#1},
-      #4 month={#2},
-      #4 day={#3},
-    }%
-    \setmydatenumber{chronos#4date}{\csname chronos#4year\endcsname}{\csname chronos#4month\endcsname}{\csname chronos#4day\endcsname}%
-  },
-  chronos date/.style args={#1-#2-#3}{%
-    chronos set date/.expanded={#1-#2-#3:thing}%
-  },
-  chronos period date/.style args={#1-#2-#3}{%
-    chronos set date/.expanded={#1-#2-#3:otherthing}%
-  },
-  /chronos/.search also={/tikz},
+      #4 year=<span class="token punctuation" data-v-13f50f72>{</span>#1<span class="token punctuation" data-v-13f50f72>}</span>,
+      #4 month=<span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span>,
+      #4 day=<span class="token punctuation" data-v-13f50f72>{</span>#3<span class="token punctuation" data-v-13f50f72>}</span>,
+    <span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+    <span class="token function selector" data-v-13f50f72>\setmydatenumber</span><span class="token punctuation" data-v-13f50f72>{</span>chronos#4date<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\csname</span> chronos#4year<span class="token function selector" data-v-13f50f72>\endcsname</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\csname</span> chronos#4month<span class="token function selector" data-v-13f50f72>\endcsname</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\csname</span> chronos#4day<span class="token function selector" data-v-13f50f72>\endcsname</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  chronos date/.style args=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    chronos set date/.expanded=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3:thing<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  chronos period date/.style args=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    chronos set date/.expanded=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3:otherthing<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  /chronos/.search also=<span class="token punctuation" data-v-13f50f72>{</span>/tikz<span class="token punctuation" data-v-13f50f72>}</span>,
   /chronos/.cd,
-  start year/.store in=\chronosstartyear,
-  start month/.store in=\chronosstartmonth,
-  start day/.store in=\chronosstartday,
-  end year/.store in=\chronosendyear,
-  end month/.store in=\chronosendmonth,
-  end day/.store in=\chronosendday,
-  thing year/.store in=\chronosthingyear,
-  thing month/.store in=\chronosthingmonth,
-  thing day/.store in=\chronosthingday,
-  otherthing year/.store in=\chronosotherthingyear,
-  otherthing month/.store in=\chronosotherthingmonth,
-  otherthing day/.store in=\chronosotherthingday,
-  start date/.style args={#1-#2-#3}{%
-    start year={#1},
-    start month={#2},
-    start day={#3},
-  },
-  end date/.style args={#1-#2-#3}{%
-    end year={#1},
-    end month={#2},
-    end day={#3},
-  },
-  width/.store in=\chronoswidth,
-  height/.store in=\chronosheight,
-  period/.style={draw=gray},
-  period event line/.style={draw=gray, -{Triangle[width=1.5pt, reversed, length=.75pt, fill=gray]}},
-  period event/.style={anchor=north, fill=gray!25, draw=gray, rounded corners, align=center, font=\footnotesize},
-  event line/.style={draw=gray, -{Triangle[width=1.5pt, reversed, length=.75pt, fill=gray]}},
-  event/.style={anchor=north, fill=gray!25, draw=gray, rounded corners, align=center, font=\footnotesize},
+  start year/.store in=<span class="token function selector" data-v-13f50f72>\chronosstartyear</span>,
+  start month/.store in=<span class="token function selector" data-v-13f50f72>\chronosstartmonth</span>,
+  start day/.store in=<span class="token function selector" data-v-13f50f72>\chronosstartday</span>,
+  end year/.store in=<span class="token function selector" data-v-13f50f72>\chronosendyear</span>,
+  end month/.store in=<span class="token function selector" data-v-13f50f72>\chronosendmonth</span>,
+  end day/.store in=<span class="token function selector" data-v-13f50f72>\chronosendday</span>,
+  thing year/.store in=<span class="token function selector" data-v-13f50f72>\chronosthingyear</span>,
+  thing month/.store in=<span class="token function selector" data-v-13f50f72>\chronosthingmonth</span>,
+  thing day/.store in=<span class="token function selector" data-v-13f50f72>\chronosthingday</span>,
+  otherthing year/.store in=<span class="token function selector" data-v-13f50f72>\chronosotherthingyear</span>,
+  otherthing month/.store in=<span class="token function selector" data-v-13f50f72>\chronosotherthingmonth</span>,
+  otherthing day/.store in=<span class="token function selector" data-v-13f50f72>\chronosotherthingday</span>,
+  start date/.style args=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    start year=<span class="token punctuation" data-v-13f50f72>{</span>#1<span class="token punctuation" data-v-13f50f72>}</span>,
+    start month=<span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span>,
+    start day=<span class="token punctuation" data-v-13f50f72>{</span>#3<span class="token punctuation" data-v-13f50f72>}</span>,
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  end date/.style args=<span class="token punctuation" data-v-13f50f72>{</span>#1-#2-#3<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    end year=<span class="token punctuation" data-v-13f50f72>{</span>#1<span class="token punctuation" data-v-13f50f72>}</span>,
+    end month=<span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span>,
+    end day=<span class="token punctuation" data-v-13f50f72>{</span>#3<span class="token punctuation" data-v-13f50f72>}</span>,
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  width/.store in=<span class="token function selector" data-v-13f50f72>\chronoswidth</span>,
+  height/.store in=<span class="token function selector" data-v-13f50f72>\chronosheight</span>,
+  period/.style=<span class="token punctuation" data-v-13f50f72>{</span>draw=gray<span class="token punctuation" data-v-13f50f72>}</span>,
+  period event line/.style=<span class="token punctuation" data-v-13f50f72>{</span>draw=gray, -<span class="token punctuation" data-v-13f50f72>{</span>Triangle<span class="token punctuation" data-v-13f50f72>[</span>width=1.5pt, reversed, length=.75pt, fill=gray<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>,
+  period event/.style=<span class="token punctuation" data-v-13f50f72>{</span>anchor=north, fill=gray!25, draw=gray, rounded corners, align=center, font=<span class="token function selector" data-v-13f50f72>\footnotesize</span><span class="token punctuation" data-v-13f50f72>}</span>,
+  event line/.style=<span class="token punctuation" data-v-13f50f72>{</span>draw=gray, -<span class="token punctuation" data-v-13f50f72>{</span>Triangle<span class="token punctuation" data-v-13f50f72>[</span>width=1.5pt, reversed, length=.75pt, fill=gray<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>,
+  event/.style=<span class="token punctuation" data-v-13f50f72>{</span>anchor=north, fill=gray!25, draw=gray, rounded corners, align=center, font=<span class="token function selector" data-v-13f50f72>\footnotesize</span><span class="token punctuation" data-v-13f50f72>}</span>,
   start date=1001-10-01,
   end date=1003-06-14,
   width=100mm,
   height=1pt,
   chronos date=1850-01-01,
   chronos period date=1851-01-01,
-}
-\NewDocumentCommand \chronosevent { O {} m O {} +m D () { -10pt-.5*\chronosheight } }
-{%
-  \scoped[on background layer]{\path [postaction={/chronos/event line, #1}, chronos date/.expanded={#2}] ({(\thechronosthingdate-\thechronosstartdate)*\chronosunit pt},0) -- +(0,#5) node [/chronos/event, #3] {\chronosthingday/\chronosthingmonth/\chronosthingyear\\#4};}
-}
-\NewDocumentCommand \chronosperiod { O {} m O {} m O {} +m D () { -10pt-.5*\chronosheight } }
-{%
-  \tikzset{%
-    chronos date/.expanded={#2}, chronos period date/.expanded={#4}
-  }
-  \path [postaction={line width=\chronosheight, /chronos/period, #1}] ({(\thechronosthingdate-\thechronosstartdate)*\chronosunit pt},0) -- ({(\thechronosotherthingdate-\thechronosstartdate)*\chronosunit pt},0);
-  \scoped[on background layer]{\path [postaction={/chronos/period event line, #3}] ({(.5*\thechronosotherthingdate+.5*\thechronosthingdate-\thechronosstartdate)*\chronosunit pt},0) -- +(0,#7) node [/chronos/period event, #5] {\chronosthingday/\chronosthingmonth/\chronosthingyear--\chronosotherthingday/\chronosotherthingmonth/\chronosotherthingyear\\#6};}
-}
-\begin{document}
-\begin{tikzpicture}
-  [
- % yscale = 5,
-    chronos={%
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\NewDocumentCommand</span> <span class="token function selector" data-v-13f50f72>\chronosevent</span> <span class="token punctuation" data-v-13f50f72>{</span> O <span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span> m O <span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span> +m D () <span class="token punctuation" data-v-13f50f72>{</span> -10pt-.5*<span class="token function selector" data-v-13f50f72>\chronosheight</span> <span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+  <span class="token function selector" data-v-13f50f72>\scoped</span><span class="token punctuation" data-v-13f50f72>[</span>on background layer<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\path</span> <span class="token punctuation" data-v-13f50f72>[</span>postaction=<span class="token punctuation" data-v-13f50f72>{</span>/chronos/event line, #1<span class="token punctuation" data-v-13f50f72>}</span>, chronos date/.expanded=<span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>]</span> (<span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\thechronosthingdate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)*<span class="token function selector" data-v-13f50f72>\chronosunit</span> pt<span class="token punctuation" data-v-13f50f72>}</span>,0) -- +(0,#5) node <span class="token punctuation" data-v-13f50f72>[</span>/chronos/event, #3<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosthingday</span>/<span class="token function selector" data-v-13f50f72>\chronosthingmonth</span>/<span class="token function selector" data-v-13f50f72>\chronosthingyear</span><span class="token function selector" data-v-13f50f72>\\</span>#4<span class="token punctuation" data-v-13f50f72>}</span>;<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\NewDocumentCommand</span> <span class="token function selector" data-v-13f50f72>\chronosperiod</span> <span class="token punctuation" data-v-13f50f72>{</span> O <span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span> m O <span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span> m O <span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span> +m D () <span class="token punctuation" data-v-13f50f72>{</span> -10pt-.5*<span class="token function selector" data-v-13f50f72>\chronosheight</span> <span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+  <span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+    chronos date/.expanded=<span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span>, chronos period date/.expanded=<span class="token punctuation" data-v-13f50f72>{</span>#4<span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token function selector" data-v-13f50f72>\path</span> <span class="token punctuation" data-v-13f50f72>[</span>postaction=<span class="token punctuation" data-v-13f50f72>{</span>line width=<span class="token function selector" data-v-13f50f72>\chronosheight</span>, /chronos/period, #1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>]</span> (<span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\thechronosthingdate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)*<span class="token function selector" data-v-13f50f72>\chronosunit</span> pt<span class="token punctuation" data-v-13f50f72>}</span>,0) -- (<span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\thechronosotherthingdate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)*<span class="token function selector" data-v-13f50f72>\chronosunit</span> pt<span class="token punctuation" data-v-13f50f72>}</span>,0);
+  <span class="token function selector" data-v-13f50f72>\scoped</span><span class="token punctuation" data-v-13f50f72>[</span>on background layer<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\path</span> <span class="token punctuation" data-v-13f50f72>[</span>postaction=<span class="token punctuation" data-v-13f50f72>{</span>/chronos/period event line, #3<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>]</span> (<span class="token punctuation" data-v-13f50f72>{</span>(.5*<span class="token function selector" data-v-13f50f72>\thechronosotherthingdate</span>+.5*<span class="token function selector" data-v-13f50f72>\thechronosthingdate</span>-<span class="token function selector" data-v-13f50f72>\thechronosstartdate</span>)*<span class="token function selector" data-v-13f50f72>\chronosunit</span> pt<span class="token punctuation" data-v-13f50f72>}</span>,0) -- +(0,#7) node <span class="token punctuation" data-v-13f50f72>[</span>/chronos/period event, #5<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\chronosthingday</span>/<span class="token function selector" data-v-13f50f72>\chronosthingmonth</span>/<span class="token function selector" data-v-13f50f72>\chronosthingyear</span>--<span class="token function selector" data-v-13f50f72>\chronosotherthingday</span>/<span class="token function selector" data-v-13f50f72>\chronosotherthingmonth</span>/<span class="token function selector" data-v-13f50f72>\chronosotherthingyear</span><span class="token function selector" data-v-13f50f72>\\</span>#6<span class="token punctuation" data-v-13f50f72>}</span>;<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token punctuation" data-v-13f50f72>[</span>
+ <span class="token comment" data-v-13f50f72>% yscale = 5,</span>
+    chronos=<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
       width=360mm,
       height=10pt,
       start date=2008-01-01,
       end date=2018-05-05,
-      period/.style={draw=green},
-      event line/.append style={draw=blue},
-      period event line/.append style={draw=green},
-      event/.append style={fill=blue!25, draw=blue, text=blue},
-      period event/.append style={fill=green!25, draw=green!75!black, text=green!75!black},
-    }
-  ]
-  %\chronosperiod [draw=red] {2011-10-10} [draw=red] {2012-01-16} [fill=red!25, draw=red, text=red] {Leave}
-  %\chronosperiod {2013-03-23} {2014-05-27} {training}
-  \chronosevent[draw=green] {2008-01-03} [draw=black,fill=green!10, draw=green, text=black]{Bitcoin White Paper}
+      period/.style=<span class="token punctuation" data-v-13f50f72>{</span>draw=green<span class="token punctuation" data-v-13f50f72>}</span>,
+      event line/.append style=<span class="token punctuation" data-v-13f50f72>{</span>draw=blue<span class="token punctuation" data-v-13f50f72>}</span>,
+      period event line/.append style=<span class="token punctuation" data-v-13f50f72>{</span>draw=green<span class="token punctuation" data-v-13f50f72>}</span>,
+      event/.append style=<span class="token punctuation" data-v-13f50f72>{</span>fill=blue!25, draw=blue, text=blue<span class="token punctuation" data-v-13f50f72>}</span>,
+      period event/.append style=<span class="token punctuation" data-v-13f50f72>{</span>fill=green!25, draw=green!75!black, text=green!75!black<span class="token punctuation" data-v-13f50f72>}</span>,
+    <span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token punctuation" data-v-13f50f72>]</span>
+  <span class="token comment" data-v-13f50f72>%\chronosperiod [draw=red] {2011-10-10} [draw=red] {2012-01-16} [fill=red!25, draw=red, text=red] {Leave}</span>
+  <span class="token comment" data-v-13f50f72>%\chronosperiod {2013-03-23} {2014-05-27} {training}</span>
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span><span class="token punctuation" data-v-13f50f72>[</span>draw=green<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>2008-01-03<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>[</span>draw=black,fill=green!10, draw=green, text=black<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>Bitcoin White Paper<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosevent[draw=green] {2009-01-03} [draw=black,fill=green!10, draw=green, text=black]{Bitcoin “Genesis” Block}
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span><span class="token punctuation" data-v-13f50f72>[</span>draw=green<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>2009-01-03<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>[</span>draw=black,fill=green!10, draw=green, text=black<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>Bitcoin “Genesis” Block<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosperiod [draw=red] {2010-08-16} [draw=red] {2013-02-20} [fill=red!25, draw=red, text=red] {Bitcoin popular explodes \\ 1,309 BTC to \$1 USD in 2010 \\ to 1 BTC = \$31 USD in 2013}
+  <span class="token function selector" data-v-13f50f72>\chronosperiod</span> <span class="token punctuation" data-v-13f50f72>[</span>draw=red<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>2010-08-16<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>[</span>draw=red<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>2013-02-20<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>[</span>fill=red!25, draw=red, text=red<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>Bitcoin popular explodes <span class="token function selector" data-v-13f50f72>\\</span> 1,309 BTC to <span class="token function selector" data-v-13f50f72>\$</span>1 USD in 2010 <span class="token function selector" data-v-13f50f72>\\</span> to 1 BTC = <span class="token function selector" data-v-13f50f72>\$</span>31 USD in 2013<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosperiod {2013-01-01} [draw=red] {2013-12-31} {Ethereum White paper published \\ Ethereum yellow paper published}
+  <span class="token function selector" data-v-13f50f72>\chronosperiod</span> <span class="token punctuation" data-v-13f50f72>{</span>2013-01-01<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>[</span>draw=red<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span>2013-12-31<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span>Ethereum White paper published <span class="token function selector" data-v-13f50f72>\\</span> Ethereum yellow paper published<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosevent {2015-06-15} {Ethereum \\ “Genesis” \\ Block}
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span> <span class="token punctuation" data-v-13f50f72>{</span>2015-06-15<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span>Ethereum <span class="token function selector" data-v-13f50f72>\\</span> “Genesis” <span class="token function selector" data-v-13f50f72>\\</span> Block<span class="token punctuation" data-v-13f50f72>}</span>
 
-  % See https://blog.seedly.sg/cryptocurrency-timeline-beginning-end-everything/
-  \chronosevent {2015-12-31} {Hyperledger \\ project \\ started.}
+  <span class="token comment" data-v-13f50f72>% See https://blog.seedly.sg/cryptocurrency-timeline-beginning-end-everything/</span>
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span> <span class="token punctuation" data-v-13f50f72>{</span>2015-12-31<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span>Hyperledger <span class="token function selector" data-v-13f50f72>\\</span> project <span class="token function selector" data-v-13f50f72>\\</span> started.<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosevent {2017-04-04} {Hyperledger Burrow \\ 0.16.0 released}
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span> <span class="token punctuation" data-v-13f50f72>{</span>2017-04-04<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span>Hyperledger Burrow <span class="token function selector" data-v-13f50f72>\\</span> 0.16.0 released<span class="token punctuation" data-v-13f50f72>}</span>
   
-  \chronosevent {2018-04-19} {Amazon Launches \\ AWS BlockChain Templates}
-  % Researchers published a paper showing that by November 2013 bitcoin commerce was no longer driven by “sin” activities but instead by legitimate enterprises. Uber switched to bitcoin in Argentina after the government blocked credit card companies from dealing with Uber.
+  <span class="token function selector" data-v-13f50f72>\chronosevent</span> <span class="token punctuation" data-v-13f50f72>{</span>2018-04-19<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>{</span>Amazon Launches <span class="token function selector" data-v-13f50f72>\\</span> AWS BlockChain Templates<span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token comment" data-v-13f50f72>% Researchers published a paper showing that by November 2013 bitcoin commerce was no longer driven by “sin” activities but instead by legitimate enterprises. Uber switched to bitcoin in Argentina after the government blocked credit card companies from dealing with Uber.</span>
   
-  %https://hackernoon.com/blockchain-jobs-and-salaries-2018-report-45d3e7741c19
+  <span class="token comment" data-v-13f50f72>%https://hackernoon.com/blockchain-jobs-and-salaries-2018-report-45d3e7741c19</span>
   
-\end{tikzpicture}
-\end{document}</code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSI/Q1Diagram67.html" data-v-13f50f72>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span></code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSI/Q1Diagram67.html" data-v-13f50f72>
         Previous: Q1Diagram67.png
       </a></div> <div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSI/Q10BlockDiagram.html" data-v-13f50f72>
         Next: Q10BlockDiagram.png
@@ -165,4 +165,4 @@ nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direct
       Used to display latex docs
     </div> <div data-v-7934a95b> 
        Made with saber
-    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.9afb9940.js" defer></script><script src="/dli-vue-docs/_saber/js/page--ReportDiagrams-ENGR446-advancedTimeline-md.c06da003.js" defer></script></body></html>
+    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.d17572fb.js" defer></script><script src="/dli-vue-docs/_saber/js/page--ReportDiagrams-ENGR446-advancedTimeline-md.1bb6c1c6.js" defer></script></body></html>

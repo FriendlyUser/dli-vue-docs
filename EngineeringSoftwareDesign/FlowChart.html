@@ -2,77 +2,77 @@
 .saber-highlight{position:relative;overflow:hidden;margin:2rem 0;background:#f5f7fa;border-radius:4px}.saber-highlight:before{content:attr(data-lang);position:absolute;right:10px;top:5px;font-size:.75rem;color:#bdc5d1}.saber-highlight-code,.saber-highlight-mask{line-height:1.5;background-color:transparent!important;text-shadow:none!important;box-shadow:none!important;margin:0!important;padding:1.25rem 1.5rem!important;white-space:pre}.saber-highlight-mask{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:transparent!important;padding-left:0!important;padding-right:0!important}.saber-highlight-code{position:relative;z-index:2;font-size:0!important}.saber-highlight-code code,.saber-highlight-mask{font-size:.875rem}.code-line.highlighted{background:rgba(3,169,244,.121)}.saber-highlight-line-numbers{pointer-events:none;font-size:100%;float:left;letter-spacing:-1px;border-right:1px solid #999;user-select:none;text-align:right;padding-right:.8rem;margin-right:.8rem;counter-reset:linenumber}.saber-highlight-line-numbers>span{counter-increment:linenumber;display:block}.saber-highlight-line-numbers>span:before{content:counter(linenumber);color:#999;display:block}
 p[data-v-13f50f72]{font-family:Helvetica}.page-enter-active[data-v-13f50f72],.page-leave-active[data-v-13f50f72]{transition:opacity .5s}.page-enter[data-v-13f50f72],.page-leave-to[data-v-13f50f72]{opacity:0}.links[data-v-13f50f72]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.img[data-v-13f50f72]{max-width:100%}
 nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direction:row;align-items:center;justify-content:space-between;color:#1c3ed3;background-color:#fff;display:flex;box-shadow:0 1px 15px rgba(50,50,93,.2);height:60px}.nav-left[data-v-b9ef9ed0],.nav-right[data-v-b9ef9ed0]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-b9ef9ed0]{text-decoration:none;font-size:2em}a[data-v-b9ef9ed0]:hover{color:#4e20ca}
-.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="FlowChart.png" alt="EngineeringSoftwareDesign" title="FlowChart" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72>% Diagram of Android activity life cycle
-% Author: Pavel Seda 
-\documentclass[border=10pt]{standalone}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-\tikzset{%
-	&gt;={Latex[width=2mm,length=2mm]},
-	% Specifications for style of nodes:
-	base/.style = {rectangle, rounded corners, draw=black,
+.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="FlowChart.png" alt="EngineeringSoftwareDesign" title="FlowChart" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72><span class="token comment" data-v-13f50f72>% Diagram of Android activity life cycle</span>
+<span class="token comment" data-v-13f50f72>% Author: Pavel Seda </span>
+<span class="token function selector" data-v-13f50f72>\documentclass</span><span class="token punctuation" data-v-13f50f72>[</span>border=10pt<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>standalone</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikz</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>arrows.meta<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+	&gt;=<span class="token punctuation" data-v-13f50f72>{</span>Latex<span class="token punctuation" data-v-13f50f72>[</span>width=2mm,length=2mm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>}</span>,
+	<span class="token comment" data-v-13f50f72>% Specifications for style of nodes:</span>
+	base/.style = <span class="token punctuation" data-v-13f50f72>{</span>rectangle, rounded corners, draw=black,
 		minimum width=4cm, minimum height=1cm,
-		text centered, font=\sffamily},
-	activityStarts/.style = {base, fill=blue!30},
-	startstop/.style = {base, fill=red!30},
-	activityRuns/.style = {base, fill=green!30},
-	process/.style = {base, minimum width=2.5cm, fill=orange!15,
-		font=\ttfamily},
-}
-\begin{document}    
-	% Drawing part, node distance is 1.5 cm and every node
-	% is prefilled with white background
-	\begin{tikzpicture}[node distance=1.5cm,
-	every node/.style={fill=white, font=\sffamily}, align=center]
-	% Specification of nodes (position, etc.)
-	\node (start)             [activityStarts]              {Activity starts};
-	\node (onCreateBlock)     [process, below of=start]          {onCreate()};
-	\node (onStartBlock)      [process, below of=onCreateBlock]   {onStart()};
-	\node (onResumeBlock)     [process, below of=onStartBlock]   {onResume()};
-	\node (activityRuns)      [activityRuns, below of=onResumeBlock]
-	{Activity is running};
-	\node (onPauseBlock)      [process, below of=activityRuns, yshift=-1cm]
-	{onPause()};
-	\node (onStopBlock)       [process, below of=onPauseBlock, yshift=-1cm]
-	{onStop()};
-	\node (onDestroyBlock)    [process, below of=onStopBlock, yshift=-1cm] 
-	{onDestroy()};
-	\node (onRestartBlock)    [process, right of=onStartBlock, xshift=4cm]
-	{onRestart()};
-	\node (ActivityEnds)      [startstop, left of=activityRuns, xshift=-4cm]
-	{Process is killed};
-	\node (ActivityDestroyed) [startstop, below of=onDestroyBlock]
-	{Activity is shut down};     
-	% Specification of lines between nodes specified above
-	% with aditional nodes for description 
-	\draw[-&gt;]             (start) -- (onCreateBlock);
-	\draw[-&gt;]     (onCreateBlock) -- (onStartBlock);
-	\draw[-&gt;]      (onStartBlock) -- (onResumeBlock);
-	\draw[-&gt;]     (onResumeBlock) -- (activityRuns);
-	\draw[-&gt;]      (activityRuns) -- node[text width=4cm]
-	{Another activity comes in
-		front of the activity} (onPauseBlock);
-	\draw[-&gt;]      (onPauseBlock) -- node {The activity is no longer visible}
+		text centered, font=<span class="token function selector" data-v-13f50f72>\sffamily</span><span class="token punctuation" data-v-13f50f72>}</span>,
+	activityStarts/.style = <span class="token punctuation" data-v-13f50f72>{</span>base, fill=blue!30<span class="token punctuation" data-v-13f50f72>}</span>,
+	startstop/.style = <span class="token punctuation" data-v-13f50f72>{</span>base, fill=red!30<span class="token punctuation" data-v-13f50f72>}</span>,
+	activityRuns/.style = <span class="token punctuation" data-v-13f50f72>{</span>base, fill=green!30<span class="token punctuation" data-v-13f50f72>}</span>,
+	process/.style = <span class="token punctuation" data-v-13f50f72>{</span>base, minimum width=2.5cm, fill=orange!15,
+		font=<span class="token function selector" data-v-13f50f72>\ttfamily</span><span class="token punctuation" data-v-13f50f72>}</span>,
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>    
+	<span class="token comment" data-v-13f50f72>% Drawing part, node distance is 1.5 cm and every node</span>
+	<span class="token comment" data-v-13f50f72>% is prefilled with white background</span>
+	<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>node distance=1.5cm,
+	every node/.style=<span class="token punctuation" data-v-13f50f72>{</span>fill=white, font=<span class="token function selector" data-v-13f50f72>\sffamily</span><span class="token punctuation" data-v-13f50f72>}</span>, align=center<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token comment" data-v-13f50f72>% Specification of nodes (position, etc.)</span>
+	<span class="token function selector" data-v-13f50f72>\node</span> (start)             <span class="token punctuation" data-v-13f50f72>[</span>activityStarts<span class="token punctuation" data-v-13f50f72>]</span>              <span class="token punctuation" data-v-13f50f72>{</span>Activity starts<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onCreateBlock)     <span class="token punctuation" data-v-13f50f72>[</span>process, below of=start<span class="token punctuation" data-v-13f50f72>]</span>          <span class="token punctuation" data-v-13f50f72>{</span>onCreate()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onStartBlock)      <span class="token punctuation" data-v-13f50f72>[</span>process, below of=onCreateBlock<span class="token punctuation" data-v-13f50f72>]</span>   <span class="token punctuation" data-v-13f50f72>{</span>onStart()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onResumeBlock)     <span class="token punctuation" data-v-13f50f72>[</span>process, below of=onStartBlock<span class="token punctuation" data-v-13f50f72>]</span>   <span class="token punctuation" data-v-13f50f72>{</span>onResume()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (activityRuns)      <span class="token punctuation" data-v-13f50f72>[</span>activityRuns, below of=onResumeBlock<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>Activity is running<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onPauseBlock)      <span class="token punctuation" data-v-13f50f72>[</span>process, below of=activityRuns, yshift=-1cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>onPause()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onStopBlock)       <span class="token punctuation" data-v-13f50f72>[</span>process, below of=onPauseBlock, yshift=-1cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>onStop()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onDestroyBlock)    <span class="token punctuation" data-v-13f50f72>[</span>process, below of=onStopBlock, yshift=-1cm<span class="token punctuation" data-v-13f50f72>]</span> 
+	<span class="token punctuation" data-v-13f50f72>{</span>onDestroy()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (onRestartBlock)    <span class="token punctuation" data-v-13f50f72>[</span>process, right of=onStartBlock, xshift=4cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>onRestart()<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (ActivityEnds)      <span class="token punctuation" data-v-13f50f72>[</span>startstop, left of=activityRuns, xshift=-4cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>Process is killed<span class="token punctuation" data-v-13f50f72>}</span>;
+	<span class="token function selector" data-v-13f50f72>\node</span> (ActivityDestroyed) <span class="token punctuation" data-v-13f50f72>[</span>startstop, below of=onDestroyBlock<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>Activity is shut down<span class="token punctuation" data-v-13f50f72>}</span>;     
+	<span class="token comment" data-v-13f50f72>% Specification of lines between nodes specified above</span>
+	<span class="token comment" data-v-13f50f72>% with aditional nodes for description </span>
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>             (start) -- (onCreateBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>     (onCreateBlock) -- (onStartBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>      (onStartBlock) -- (onResumeBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>     (onResumeBlock) -- (activityRuns);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>      (activityRuns) -- node<span class="token punctuation" data-v-13f50f72>[</span>text width=4cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>Another activity comes in
+		front of the activity<span class="token punctuation" data-v-13f50f72>}</span> (onPauseBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>      (onPauseBlock) -- node <span class="token punctuation" data-v-13f50f72>{</span>The activity is no longer visible<span class="token punctuation" data-v-13f50f72>}</span>
 	(onStopBlock);
-	\draw[-&gt;]       (onStopBlock) -- node {The activity is shut down by
-		user or system} (onDestroyBlock);
-	\draw[-&gt;]    (onRestartBlock) -- (onStartBlock);
-	\draw[-&gt;]       (onStopBlock) -| node[yshift=1.25cm, text width=3cm]
-	{The activity comes to the foreground}
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>       (onStopBlock) -- node <span class="token punctuation" data-v-13f50f72>{</span>The activity is shut down by
+		user or system<span class="token punctuation" data-v-13f50f72>}</span> (onDestroyBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>    (onRestartBlock) -- (onStartBlock);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>       (onStopBlock) -| node<span class="token punctuation" data-v-13f50f72>[</span>yshift=1.25cm, text width=3cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>The activity comes to the foreground<span class="token punctuation" data-v-13f50f72>}</span>
 	(onRestartBlock);
-	\draw[-&gt;]    (onDestroyBlock) -- (ActivityDestroyed);
-	\draw[-&gt;]      (onPauseBlock) -| node(priorityXMemory)
-	{higher priority $\rightarrow$ more memory}
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>    (onDestroyBlock) -- (ActivityDestroyed);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>      (onPauseBlock) -| node(priorityXMemory)
+	<span class="token punctuation" data-v-13f50f72>{</span>higher priority <span class="token equation string" data-v-13f50f72>$<span class="token equation-command regex" data-v-13f50f72>\rightarrow</span>$</span> more memory<span class="token punctuation" data-v-13f50f72>}</span>
 	(ActivityEnds);
-	\draw           (onStopBlock) -| (priorityXMemory);
-	\draw[-&gt;]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
-	{User navigates back to the activity}
+	<span class="token function selector" data-v-13f50f72>\draw</span>           (onStopBlock) -| (priorityXMemory);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span>     (ActivityEnds)  |- node <span class="token punctuation" data-v-13f50f72>[</span>yshift=-2cm, text width=3.1cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>User navigates back to the activity<span class="token punctuation" data-v-13f50f72>}</span>
 	(onCreateBlock);
-	\draw[-&gt;] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
-	node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
-	{The activity comes to the foreground}(onResumeBlock.east);
-	\end{tikzpicture}
-\end{document}</code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSII/stepResponsePlot.html" data-v-13f50f72>
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-&gt;<span class="token punctuation" data-v-13f50f72>]</span> (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
+	node<span class="token punctuation" data-v-13f50f72>[</span>xshift=1.2cm,yshift=-1.5cm, text width=2.5cm<span class="token punctuation" data-v-13f50f72>]</span>
+	<span class="token punctuation" data-v-13f50f72>{</span>The activity comes to the foreground<span class="token punctuation" data-v-13f50f72>}</span>(onResumeBlock.east);
+	<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span></code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSII/stepResponsePlot.html" data-v-13f50f72>
         Previous: stepResponsePlot.png
       </a></div> <div data-v-13f50f72><a href="/dli-vue-docs/ControlSystems/CSII/samplerTesting.html" data-v-13f50f72>
         Next: samplerTesting.png
@@ -82,4 +82,4 @@ nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direct
       Used to display latex docs
     </div> <div data-v-7934a95b> 
        Made with saber
-    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.9afb9940.js" defer></script><script src="/dli-vue-docs/_saber/js/page--EngineeringSoftwareDesign-FlowChart-md.9a9bb4d2.js" defer></script></body></html>
+    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.d17572fb.js" defer></script><script src="/dli-vue-docs/_saber/js/page--EngineeringSoftwareDesign-FlowChart-md.07ad9afa.js" defer></script></body></html>

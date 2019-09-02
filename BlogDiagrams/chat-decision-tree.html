@@ -2,212 +2,212 @@
 .saber-highlight{position:relative;overflow:hidden;margin:2rem 0;background:#f5f7fa;border-radius:4px}.saber-highlight:before{content:attr(data-lang);position:absolute;right:10px;top:5px;font-size:.75rem;color:#bdc5d1}.saber-highlight-code,.saber-highlight-mask{line-height:1.5;background-color:transparent!important;text-shadow:none!important;box-shadow:none!important;margin:0!important;padding:1.25rem 1.5rem!important;white-space:pre}.saber-highlight-mask{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:transparent!important;padding-left:0!important;padding-right:0!important}.saber-highlight-code{position:relative;z-index:2;font-size:0!important}.saber-highlight-code code,.saber-highlight-mask{font-size:.875rem}.code-line.highlighted{background:rgba(3,169,244,.121)}.saber-highlight-line-numbers{pointer-events:none;font-size:100%;float:left;letter-spacing:-1px;border-right:1px solid #999;user-select:none;text-align:right;padding-right:.8rem;margin-right:.8rem;counter-reset:linenumber}.saber-highlight-line-numbers>span{counter-increment:linenumber;display:block}.saber-highlight-line-numbers>span:before{content:counter(linenumber);color:#999;display:block}
 p[data-v-13f50f72]{font-family:Helvetica}.page-enter-active[data-v-13f50f72],.page-leave-active[data-v-13f50f72]{transition:opacity .5s}.page-enter[data-v-13f50f72],.page-leave-to[data-v-13f50f72]{opacity:0}.links[data-v-13f50f72]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.img[data-v-13f50f72]{max-width:100%}
 nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direction:row;align-items:center;justify-content:space-between;color:#1c3ed3;background-color:#fff;display:flex;box-shadow:0 1px 15px rgba(50,50,93,.2);height:60px}.nav-left[data-v-b9ef9ed0],.nav-right[data-v-b9ef9ed0]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-b9ef9ed0]{text-decoration:none;font-size:2em}a[data-v-b9ef9ed0]:hover{color:#4e20ca}
-.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="chat-decision-tree.png" alt="BlogDiagrams" title="chat-decision-tree" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72>% Decision Tree for conversation
+.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="chat-decision-tree.png" alt="BlogDiagrams" title="chat-decision-tree" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72><span class="token comment" data-v-13f50f72>% Decision Tree for conversation</span>
 
-\documentclass[border=10pt,multi,tikz,dvipsnames,svgnames,rgb]{standalone}
-\usepackage[edges]{forest}
-\usetikzlibrary{arrows.meta}
-\forestset{
+<span class="token function selector" data-v-13f50f72>\documentclass</span><span class="token punctuation" data-v-13f50f72>[</span>border=10pt,multi,tikz,dvipsnames,svgnames,rgb<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>standalone</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>[</span>edges<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>forest</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>arrows.meta<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\forestset</span><span class="token punctuation" data-v-13f50f72>{</span>
   declare dimen register=gap,
   gap'=10mm,
   declare count register=twist,
   twist'=2,
-  family tree/.style={
+  family tree/.style=<span class="token punctuation" data-v-13f50f72>{</span>
     forked edges,
-    for tree={
+    for tree=<span class="token punctuation" data-v-13f50f72>{</span>
       rounded corners,
-      minimum width/.wrap pgfmath arg={##1}{(\textwidth-6*(gap))/3},
+      minimum width/.wrap pgfmath arg=<span class="token punctuation" data-v-13f50f72>{</span>##1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>(<span class="token function selector" data-v-13f50f72>\textwidth</span>-6*(gap))/3<span class="token punctuation" data-v-13f50f72>}</span>,
       minimum height=4ex,
-      edge={-Latex},
-      font=\sffamily,
+      edge=<span class="token punctuation" data-v-13f50f72>{</span>-Latex<span class="token punctuation" data-v-13f50f72>}</span>,
+      font=<span class="token function selector" data-v-13f50f72>\sffamily</span>,
       text centered,
-      % blur shadow,
+      <span class="token comment" data-v-13f50f72>% blur shadow,</span>
       edge=thick,
-    },
-    where={level()&lt;(twist)}{%
+    <span class="token punctuation" data-v-13f50f72>}</span>,
+    where=<span class="token punctuation" data-v-13f50f72>{</span>level()&lt;(twist)<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
       parent anchor=children,
       l sep+=10pt,
       s sep'+=10pt,
-    }{%
+    <span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
       folder,
       grow'=0,
       l sep'+=2pt,
-      if={level()==(twist)}{%
-        before typesetting nodes={child anchor=north},
+      if=<span class="token punctuation" data-v-13f50f72>{</span>level()==(twist)<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        before typesetting nodes=<span class="token punctuation" data-v-13f50f72>{</span>child anchor=north<span class="token punctuation" data-v-13f50f72>}</span>,
         !u.s sep'+=10pt,
-        edge path'={%
+        edge path'=<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
           (!u.parent anchor) -- ++(0,-10pt) -| (.child anchor)
-        },
-      }{},
-    },
-  },
-  branch shade/.style args={from #1 to #2}{
-    before typesetting nodes={
-      tempcountc/.max={level}{current,tree},
+        <span class="token punctuation" data-v-13f50f72>}</span>,
+      <span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token punctuation" data-v-13f50f72>}</span>,
+    <span class="token punctuation" data-v-13f50f72>}</span>,
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+  branch shade/.style args=<span class="token punctuation" data-v-13f50f72>{</span>from #1 to #2<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>
+    before typesetting nodes=<span class="token punctuation" data-v-13f50f72>{</span>
+      tempcountc/.max=<span class="token punctuation" data-v-13f50f72>{</span>level<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>current,tree<span class="token punctuation" data-v-13f50f72>}</span>,
       tempcountb/.option=level,
       tempcounta=(tempcountc)-(tempcountb)+1,
       temptoksa/.option=name,
-      TeX/.wrap pgfmath arg={
-        \colorlet{##1col1}{#1}
-        \colorlet{##1col2}{#2}
-      }{name()},
-      for tree={
+      TeX/.wrap pgfmath arg=<span class="token punctuation" data-v-13f50f72>{</span>
+        <span class="token function selector" data-v-13f50f72>\colorlet</span><span class="token punctuation" data-v-13f50f72>{</span>##1col1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>#1<span class="token punctuation" data-v-13f50f72>}</span>
+        <span class="token function selector" data-v-13f50f72>\colorlet</span><span class="token punctuation" data-v-13f50f72>{</span>##1col2<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>#2<span class="token punctuation" data-v-13f50f72>}</span>
+      <span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>name()<span class="token punctuation" data-v-13f50f72>}</span>,
+      for tree=<span class="token punctuation" data-v-13f50f72>{</span>
         rounded corners,
-        top color/.wrap 2 pgfmath args={##2col2!##1!##2col1}{100*((level()-(tempcountb))/(tempcounta))}{(temptoksa)},
-        +edge/.wrap 2 pgfmath args={##2col2!##1!##2col1}{100*((level()-(tempcountb))/(tempcounta))}{(temptoksa)},
-        bottom color/.wrap 2 pgfmath args={##2col2!##1!##2col1}{100*((level()-(tempcountb)+1)/(tempcounta))}{(temptoksa)},
-        draw/.wrap 2 pgfmath args={##2col2!##1!##2col1}{100*((level()-(tempcountb)+1)/(tempcounta))}{(temptoksa)},
+        top color/.wrap 2 pgfmath args=<span class="token punctuation" data-v-13f50f72>{</span>##2col2!##1!##2col1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>100*((level()-(tempcountb))/(tempcounta))<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>(temptoksa)<span class="token punctuation" data-v-13f50f72>}</span>,
+        +edge/.wrap 2 pgfmath args=<span class="token punctuation" data-v-13f50f72>{</span>##2col2!##1!##2col1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>100*((level()-(tempcountb))/(tempcounta))<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>(temptoksa)<span class="token punctuation" data-v-13f50f72>}</span>,
+        bottom color/.wrap 2 pgfmath args=<span class="token punctuation" data-v-13f50f72>{</span>##2col2!##1!##2col1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>100*((level()-(tempcountb)+1)/(tempcounta))<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>(temptoksa)<span class="token punctuation" data-v-13f50f72>}</span>,
+        draw/.wrap 2 pgfmath args=<span class="token punctuation" data-v-13f50f72>{</span>##2col2!##1!##2col1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>100*((level()-(tempcountb)+1)/(tempcounta))<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>(temptoksa)<span class="token punctuation" data-v-13f50f72>}</span>,
         thick,
-      },
-    }
-  },
-}
-\begin{document}
-\begin{forest}
+      <span class="token punctuation" data-v-13f50f72>}</span>,
+    <span class="token punctuation" data-v-13f50f72>}</span>
+  <span class="token punctuation" data-v-13f50f72>}</span>,
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>forest</span><span class="token punctuation" data-v-13f50f72>}</span>
   family tree,
-   [Chatbot, left color=cyan, right color=SpringGreen, middle color=Pink, draw=Silver
-     [Resume, branch shade=from cyan to blue
-       [Co-op
-         [ENGR 001 \&amp; 002
-         	[ENGR 003 \&amp; 004]
-         ]
-       ]
-       [Github
-       	 [Projects]
-       	 [Academic]
-       ]
-     ]
-     [Education, branch shade=from Pink to WildStrawberry
-       [UVIC
-         [SENG]
-         [CENG]
-       ]
-     ]
-     [Personal, branch shade=from SpringGreen to ForestGreen
-       [Blockchain
-         [Ethereum]
-         [Hashgraph]
-       ]
-     ]
-   ]
-\end{forest}
-%\begin{forest}
-%  family tree,
-%   [Grandparent, fill=darkgray, text=Silver, double=Silver, draw=darkgray
-%     [Parent 1, branch shade=from blue!80 to blue!20
-%       [Child 1
-%         [Grandchild 1]
-%       ]
-%     ]
-%     [Parent 2, branch shade=from WildStrawberry!80 to WildStrawberry!20
-%       [Child 2
-%         [Grandchild 2]
-%       ]
-%     ]
-%     [Parent 3, branch shade=from ForestGreen!80 to ForestGreen!20
-%       [Child 3
-%         [Grandchild 3]
-%       ]
-%     ]
-%   ]
-%\end{forest}
-\end{document}
+   <span class="token punctuation" data-v-13f50f72>[</span>Chatbot, left color=cyan, right color=SpringGreen, middle color=Pink, draw=Silver
+     <span class="token punctuation" data-v-13f50f72>[</span>Resume, branch shade=from cyan to blue
+       <span class="token punctuation" data-v-13f50f72>[</span>Co-op
+         <span class="token punctuation" data-v-13f50f72>[</span>ENGR 001 <span class="token function selector" data-v-13f50f72>\&amp;</span> 002
+         	<span class="token punctuation" data-v-13f50f72>[</span>ENGR 003 <span class="token function selector" data-v-13f50f72>\&amp;</span> 004<span class="token punctuation" data-v-13f50f72>]</span>
+         <span class="token punctuation" data-v-13f50f72>]</span>
+       <span class="token punctuation" data-v-13f50f72>]</span>
+       <span class="token punctuation" data-v-13f50f72>[</span>Github
+       	 <span class="token punctuation" data-v-13f50f72>[</span>Projects<span class="token punctuation" data-v-13f50f72>]</span>
+       	 <span class="token punctuation" data-v-13f50f72>[</span>Academic<span class="token punctuation" data-v-13f50f72>]</span>
+       <span class="token punctuation" data-v-13f50f72>]</span>
+     <span class="token punctuation" data-v-13f50f72>]</span>
+     <span class="token punctuation" data-v-13f50f72>[</span>Education, branch shade=from Pink to WildStrawberry
+       <span class="token punctuation" data-v-13f50f72>[</span>UVIC
+         <span class="token punctuation" data-v-13f50f72>[</span>SENG<span class="token punctuation" data-v-13f50f72>]</span>
+         <span class="token punctuation" data-v-13f50f72>[</span>CENG<span class="token punctuation" data-v-13f50f72>]</span>
+       <span class="token punctuation" data-v-13f50f72>]</span>
+     <span class="token punctuation" data-v-13f50f72>]</span>
+     <span class="token punctuation" data-v-13f50f72>[</span>Personal, branch shade=from SpringGreen to ForestGreen
+       <span class="token punctuation" data-v-13f50f72>[</span>Blockchain
+         <span class="token punctuation" data-v-13f50f72>[</span>Ethereum<span class="token punctuation" data-v-13f50f72>]</span>
+         <span class="token punctuation" data-v-13f50f72>[</span>Hashgraph<span class="token punctuation" data-v-13f50f72>]</span>
+       <span class="token punctuation" data-v-13f50f72>]</span>
+     <span class="token punctuation" data-v-13f50f72>]</span>
+   <span class="token punctuation" data-v-13f50f72>]</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>forest</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token comment" data-v-13f50f72>%\begin{forest}</span>
+<span class="token comment" data-v-13f50f72>%  family tree,</span>
+<span class="token comment" data-v-13f50f72>%   [Grandparent, fill=darkgray, text=Silver, double=Silver, draw=darkgray</span>
+<span class="token comment" data-v-13f50f72>%     [Parent 1, branch shade=from blue!80 to blue!20</span>
+<span class="token comment" data-v-13f50f72>%       [Child 1</span>
+<span class="token comment" data-v-13f50f72>%         [Grandchild 1]</span>
+<span class="token comment" data-v-13f50f72>%       ]</span>
+<span class="token comment" data-v-13f50f72>%     ]</span>
+<span class="token comment" data-v-13f50f72>%     [Parent 2, branch shade=from WildStrawberry!80 to WildStrawberry!20</span>
+<span class="token comment" data-v-13f50f72>%       [Child 2</span>
+<span class="token comment" data-v-13f50f72>%         [Grandchild 2]</span>
+<span class="token comment" data-v-13f50f72>%       ]</span>
+<span class="token comment" data-v-13f50f72>%     ]</span>
+<span class="token comment" data-v-13f50f72>%     [Parent 3, branch shade=from ForestGreen!80 to ForestGreen!20</span>
+<span class="token comment" data-v-13f50f72>%       [Child 3</span>
+<span class="token comment" data-v-13f50f72>%         [Grandchild 3]</span>
+<span class="token comment" data-v-13f50f72>%       ]</span>
+<span class="token comment" data-v-13f50f72>%     ]</span>
+<span class="token comment" data-v-13f50f72>%   ]</span>
+<span class="token comment" data-v-13f50f72>%\end{forest}</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[border=10pt]{standalone}
-%\usepackage{tikz}
-%\usepackage{forest}
-%\begin{document}
-%\begin{forest}
-%  roundish filling/.style={%
-%    draw=#1,
-%    inner color=#1!25,
-%    outer color=#1,
-%  },
-%  for tree={%
-%    double,
-%    rounded corners,
-%  },
-%  where level=0{% for the root node
-%    minimum size=20pt,
-%    roundish filling=red,
-%    ultra thick,
-%  }{%
-%    if level=1{% middle nodes
-%      minimum size=15pt,
-%      semithick,
-%      roundish filling=blue!50!cyan,
-%    }
-%    {% remaining nodes
-%      delay={%
-%        if n children=0{%
-%          label/.wrap pgfmath arg={-90:#1}{content},
-%          !u.s sep'+=5pt,
-%          !uu.s sep'+=10pt,
-%          content=,
-%        }{},
-%      },
-%      green!75!black,
-%      circle,
-%      fill,
-%      fill opacity=.5,
-%      draw opacity=1,
-%      draw,
-%      minimum size=5pt,
-%      inner sep=0pt,
-%    },
-%  },
-%  [ChatBot
-%    [B [C][Ch]]
-%    [D [Dd][E][F][Ff [black]]]
-%  ]
-%\end{forest}
-%\end{document}
+<span class="token comment" data-v-13f50f72>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="token comment" data-v-13f50f72>%\documentclass[border=10pt]{standalone}</span>
+<span class="token comment" data-v-13f50f72>%\usepackage{tikz}</span>
+<span class="token comment" data-v-13f50f72>%\usepackage{forest}</span>
+<span class="token comment" data-v-13f50f72>%\begin{document}</span>
+<span class="token comment" data-v-13f50f72>%\begin{forest}</span>
+<span class="token comment" data-v-13f50f72>%  roundish filling/.style={%</span>
+<span class="token comment" data-v-13f50f72>%    draw=#1,</span>
+<span class="token comment" data-v-13f50f72>%    inner color=#1!25,</span>
+<span class="token comment" data-v-13f50f72>%    outer color=#1,</span>
+<span class="token comment" data-v-13f50f72>%  },</span>
+<span class="token comment" data-v-13f50f72>%  for tree={%</span>
+<span class="token comment" data-v-13f50f72>%    double,</span>
+<span class="token comment" data-v-13f50f72>%    rounded corners,</span>
+<span class="token comment" data-v-13f50f72>%  },</span>
+<span class="token comment" data-v-13f50f72>%  where level=0{% for the root node</span>
+<span class="token comment" data-v-13f50f72>%    minimum size=20pt,</span>
+<span class="token comment" data-v-13f50f72>%    roundish filling=red,</span>
+<span class="token comment" data-v-13f50f72>%    ultra thick,</span>
+<span class="token comment" data-v-13f50f72>%  }{%</span>
+<span class="token comment" data-v-13f50f72>%    if level=1{% middle nodes</span>
+<span class="token comment" data-v-13f50f72>%      minimum size=15pt,</span>
+<span class="token comment" data-v-13f50f72>%      semithick,</span>
+<span class="token comment" data-v-13f50f72>%      roundish filling=blue!50!cyan,</span>
+<span class="token comment" data-v-13f50f72>%    }</span>
+<span class="token comment" data-v-13f50f72>%    {% remaining nodes</span>
+<span class="token comment" data-v-13f50f72>%      delay={%</span>
+<span class="token comment" data-v-13f50f72>%        if n children=0{%</span>
+<span class="token comment" data-v-13f50f72>%          label/.wrap pgfmath arg={-90:#1}{content},</span>
+<span class="token comment" data-v-13f50f72>%          !u.s sep'+=5pt,</span>
+<span class="token comment" data-v-13f50f72>%          !uu.s sep'+=10pt,</span>
+<span class="token comment" data-v-13f50f72>%          content=,</span>
+<span class="token comment" data-v-13f50f72>%        }{},</span>
+<span class="token comment" data-v-13f50f72>%      },</span>
+<span class="token comment" data-v-13f50f72>%      green!75!black,</span>
+<span class="token comment" data-v-13f50f72>%      circle,</span>
+<span class="token comment" data-v-13f50f72>%      fill,</span>
+<span class="token comment" data-v-13f50f72>%      fill opacity=.5,</span>
+<span class="token comment" data-v-13f50f72>%      draw opacity=1,</span>
+<span class="token comment" data-v-13f50f72>%      draw,</span>
+<span class="token comment" data-v-13f50f72>%      minimum size=5pt,</span>
+<span class="token comment" data-v-13f50f72>%      inner sep=0pt,</span>
+<span class="token comment" data-v-13f50f72>%    },</span>
+<span class="token comment" data-v-13f50f72>%  },</span>
+<span class="token comment" data-v-13f50f72>%  [ChatBot</span>
+<span class="token comment" data-v-13f50f72>%    [B [C][Ch]]</span>
+<span class="token comment" data-v-13f50f72>%    [D [Dd][E][F][Ff [black]]]</span>
+<span class="token comment" data-v-13f50f72>%  ]</span>
+<span class="token comment" data-v-13f50f72>%\end{forest}</span>
+<span class="token comment" data-v-13f50f72>%\end{document}</span>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Reference Decision tree
-% Author: Stefan Kottwitz
-% https://www.packtpub.com/hardware-and-creative/latex-cookbook
-%\documentclass[border=10pt]{standalone}
-%\usepackage{tikz}
-%\tikzset{
-%  treenode/.style = {shape=rectangle, rounded corners,
-%                     draw, align=center,
-%                     top color=white, bottom color=blue!20},
-%  root/.style     = {treenode, font=\Large, bottom color=red!30},
-%  env/.style      = {treenode, font=\ttfamily\normalsize},
-%  dummy/.style    = {circle,draw}
-%}
-%\begin{document}
-%\begin{tikzpicture}
-%  [
-%    grow                    = down,
-%    sibling distance        = 6em,
-%    level distance          = 10em,
-%    edge from parent/.style = {draw, -latex},
-%    every node/.style       = {font=\footnotesize},
-%    sloped
-%  ]
-%  \node [root] {Formula}
-%    child { node [env] {equation}
-%      edge from parent node [below] {single-line?} }
-%    child { node [dummy] {}
-%      child { node [dummy] {}
-%        child { node [env] {align\\flalign}
-%          edge from parent node [above] {at relation sign?} }
-%        child { node [env] {alignat}
-%          edge from parent node [above] {at several}
-%                           node [below] {places?} }
-%        child { node [env] {gather}
-%                edge from parent node [above] {centered?} }
-%        edge from parent node [below] {aligned?} }
-%      child { node [env] {multline}
-%              edge from parent node [above, align=center]
-%                {first left,\\centered,}
-%              node [below] {last right}}
-%              edge from parent node [above] {multi-line?} };
-%\end{tikzpicture}
-%\end{document}</code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ReportDiagrams/fontawesomediagram.html" data-v-13f50f72>
+<span class="token comment" data-v-13f50f72>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="token comment" data-v-13f50f72>% Reference Decision tree</span>
+<span class="token comment" data-v-13f50f72>% Author: Stefan Kottwitz</span>
+<span class="token comment" data-v-13f50f72>% https://www.packtpub.com/hardware-and-creative/latex-cookbook</span>
+<span class="token comment" data-v-13f50f72>%\documentclass[border=10pt]{standalone}</span>
+<span class="token comment" data-v-13f50f72>%\usepackage{tikz}</span>
+<span class="token comment" data-v-13f50f72>%\tikzset{</span>
+<span class="token comment" data-v-13f50f72>%  treenode/.style = {shape=rectangle, rounded corners,</span>
+<span class="token comment" data-v-13f50f72>%                     draw, align=center,</span>
+<span class="token comment" data-v-13f50f72>%                     top color=white, bottom color=blue!20},</span>
+<span class="token comment" data-v-13f50f72>%  root/.style     = {treenode, font=\Large, bottom color=red!30},</span>
+<span class="token comment" data-v-13f50f72>%  env/.style      = {treenode, font=\ttfamily\normalsize},</span>
+<span class="token comment" data-v-13f50f72>%  dummy/.style    = {circle,draw}</span>
+<span class="token comment" data-v-13f50f72>%}</span>
+<span class="token comment" data-v-13f50f72>%\begin{document}</span>
+<span class="token comment" data-v-13f50f72>%\begin{tikzpicture}</span>
+<span class="token comment" data-v-13f50f72>%  [</span>
+<span class="token comment" data-v-13f50f72>%    grow                    = down,</span>
+<span class="token comment" data-v-13f50f72>%    sibling distance        = 6em,</span>
+<span class="token comment" data-v-13f50f72>%    level distance          = 10em,</span>
+<span class="token comment" data-v-13f50f72>%    edge from parent/.style = {draw, -latex},</span>
+<span class="token comment" data-v-13f50f72>%    every node/.style       = {font=\footnotesize},</span>
+<span class="token comment" data-v-13f50f72>%    sloped</span>
+<span class="token comment" data-v-13f50f72>%  ]</span>
+<span class="token comment" data-v-13f50f72>%  \node [root] {Formula}</span>
+<span class="token comment" data-v-13f50f72>%    child { node [env] {equation}</span>
+<span class="token comment" data-v-13f50f72>%      edge from parent node [below] {single-line?} }</span>
+<span class="token comment" data-v-13f50f72>%    child { node [dummy] {}</span>
+<span class="token comment" data-v-13f50f72>%      child { node [dummy] {}</span>
+<span class="token comment" data-v-13f50f72>%        child { node [env] {align\\flalign}</span>
+<span class="token comment" data-v-13f50f72>%          edge from parent node [above] {at relation sign?} }</span>
+<span class="token comment" data-v-13f50f72>%        child { node [env] {alignat}</span>
+<span class="token comment" data-v-13f50f72>%          edge from parent node [above] {at several}</span>
+<span class="token comment" data-v-13f50f72>%                           node [below] {places?} }</span>
+<span class="token comment" data-v-13f50f72>%        child { node [env] {gather}</span>
+<span class="token comment" data-v-13f50f72>%                edge from parent node [above] {centered?} }</span>
+<span class="token comment" data-v-13f50f72>%        edge from parent node [below] {aligned?} }</span>
+<span class="token comment" data-v-13f50f72>%      child { node [env] {multline}</span>
+<span class="token comment" data-v-13f50f72>%              edge from parent node [above, align=center]</span>
+<span class="token comment" data-v-13f50f72>%                {first left,\\centered,}</span>
+<span class="token comment" data-v-13f50f72>%              node [below] {last right}}</span>
+<span class="token comment" data-v-13f50f72>%              edge from parent node [above] {multi-line?} };</span>
+<span class="token comment" data-v-13f50f72>%\end{tikzpicture}</span>
+<span class="token comment" data-v-13f50f72>%\end{document}</span></code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ReportDiagrams/fontawesomediagram.html" data-v-13f50f72>
         Previous: fontawesomediagram.png
       </a></div> <div data-v-13f50f72><a href="/dli-vue-docs/ArtificialIntelligence/genetic_crossover.html" data-v-13f50f72>
         Next: genetic_crossover.png
@@ -217,4 +217,4 @@ nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direct
       Used to display latex docs
     </div> <div data-v-7934a95b> 
        Made with saber
-    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.9afb9940.js" defer></script><script src="/dli-vue-docs/_saber/js/page--BlogDiagrams-chat-decision-tree-md.43dc9cd7.js" defer></script></body></html>
+    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.d17572fb.js" defer></script><script src="/dli-vue-docs/_saber/js/page--BlogDiagrams-chat-decision-tree-md.773249bd.js" defer></script></body></html>

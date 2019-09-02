@@ -2,112 +2,112 @@
 .saber-highlight{position:relative;overflow:hidden;margin:2rem 0;background:#f5f7fa;border-radius:4px}.saber-highlight:before{content:attr(data-lang);position:absolute;right:10px;top:5px;font-size:.75rem;color:#bdc5d1}.saber-highlight-code,.saber-highlight-mask{line-height:1.5;background-color:transparent!important;text-shadow:none!important;box-shadow:none!important;margin:0!important;padding:1.25rem 1.5rem!important;white-space:pre}.saber-highlight-mask{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:transparent!important;padding-left:0!important;padding-right:0!important}.saber-highlight-code{position:relative;z-index:2;font-size:0!important}.saber-highlight-code code,.saber-highlight-mask{font-size:.875rem}.code-line.highlighted{background:rgba(3,169,244,.121)}.saber-highlight-line-numbers{pointer-events:none;font-size:100%;float:left;letter-spacing:-1px;border-right:1px solid #999;user-select:none;text-align:right;padding-right:.8rem;margin-right:.8rem;counter-reset:linenumber}.saber-highlight-line-numbers>span{counter-increment:linenumber;display:block}.saber-highlight-line-numbers>span:before{content:counter(linenumber);color:#999;display:block}
 p[data-v-13f50f72]{font-family:Helvetica}.page-enter-active[data-v-13f50f72],.page-leave-active[data-v-13f50f72]{transition:opacity .5s}.page-enter[data-v-13f50f72],.page-leave-to[data-v-13f50f72]{opacity:0}.links[data-v-13f50f72]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.img[data-v-13f50f72]{max-width:100%}
 nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direction:row;align-items:center;justify-content:space-between;color:#1c3ed3;background-color:#fff;display:flex;box-shadow:0 1px 15px rgba(50,50,93,.2);height:60px}.nav-left[data-v-b9ef9ed0],.nav-right[data-v-b9ef9ed0]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-b9ef9ed0]{text-decoration:none;font-size:2em}a[data-v-b9ef9ed0]:hover{color:#4e20ca}
-.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="latex_user_sw_levels.png" alt="BlogDiagrams" title="latex_user_sw_levels" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72>% Interaction diagram, LaTeX user level and TeX system software level
-% Author: Agostino De Marco
-% Based on diagram from Marco Miani and Pascal Seppecher.
-\documentclass{article}
-\usepackage{tikz}
-%%%&lt;
-\usepackage{verbatim}
-\usepackage[active,tightpage]{preview}
-\PreviewEnvironment{tikzpicture}
-\setlength\PreviewBorder{5pt}%
-%%%&gt;
-\usetikzlibrary{positioning}
+.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="latex_user_sw_levels.png" alt="BlogDiagrams" title="latex_user_sw_levels" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72><span class="token comment" data-v-13f50f72>% Interaction diagram, LaTeX user level and TeX system software level</span>
+<span class="token comment" data-v-13f50f72>% Author: Agostino De Marco</span>
+<span class="token comment" data-v-13f50f72>% Based on diagram from Marco Miani and Pascal Seppecher.</span>
+<span class="token function selector" data-v-13f50f72>\documentclass</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>article</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikz</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token comment" data-v-13f50f72>%%%&lt;</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>verbatim</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>[</span>active,tightpage<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>preview</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\PreviewEnvironment</span><span class="token punctuation" data-v-13f50f72>{</span>tikzpicture<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\setlength</span><span class="token function selector" data-v-13f50f72>\PreviewBorder</span><span class="token punctuation" data-v-13f50f72>{</span>5pt<span class="token punctuation" data-v-13f50f72>}</span><span class="token comment" data-v-13f50f72>%</span>
+<span class="token comment" data-v-13f50f72>%%%&gt;</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>positioning<span class="token punctuation" data-v-13f50f72>}</span>
 
-\newcommand{\yslant}{0.5}
-\newcommand{\xslant}{-0.6}
-\begin{document}
-\begin{tikzpicture}[scale=1.1,every node/.style={minimum size=1cm},on grid]
+<span class="token function selector" data-v-13f50f72>\newcommand</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\yslant</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>0.5<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\newcommand</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\xslant</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>-0.6<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>scale=1.1,every node/.style=<span class="token punctuation" data-v-13f50f72>{</span>minimum size=1cm<span class="token punctuation" data-v-13f50f72>}</span>,on grid<span class="token punctuation" data-v-13f50f72>]</span>
 
-	% Software level
-	\begin{scope}[
+	<span class="token comment" data-v-13f50f72>% Software level</span>
+	<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>
 		yshift=-120,
-		every node/.append style={yslant=\yslant,xslant=\xslant},
-		yslant=\yslant,xslant=\xslant
-	] 
-		% The lower frame:
-		\draw[black, dashed, thick] (-1.3,0) rectangle (8.2,4.8); 
-		% Agents:
-		\draw[fill=red]  
-			(7.5,2) circle (.1) % .pdf file
-			(5,2) circle (.1) % .ps file
-			(2,2) circle (.1) % .dvi file
-			(-0.5,2) circle (.1); % .tex file
-		% Flows:
-		\draw[-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt] 
-			(-0.5,2) to[out=0,in=-180] (2,2); % latex
-		\draw[-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt] 
-			(2,2) to[out=0,in=-180] (5,2); % dvi2ps
-		\draw[latex-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt] 
-			(5,2) to[out=0,in=-180] (7.5,2); % ps2pdf, pdf2ps
-		\draw[-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt] 
-			(-0.5,2) to[out=90,in=-180] (3.5,3.8) to[out=0,in=90] (7.5,2); % pdflatex
-		\draw[-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt] 
-			(2,2) to[out=90,in=-180] (2.7,3.0) to[out=0,in=-180] (6.7,3.0) to[out=0,in=135] (7.5,2); % ps2pdfm
-		 % Labels:
-		\fill[black]
-			(1.0,2) node[above=-3pt, scale=0.9] {\textsf{\bfseries file}}			
-			(3.5,2) node[above=-5pt, scale=0.9] {\textsf{\bfseries hash}}
-			(6.25,2) node[above=-5pt, scale=0.9] {\textsf{\bfseries interacts}}
-			%(6.25,2) node[xshift=-1ex,below=-5pt, scale=0.9] {\textsf{\bfseries pdf2ps}}
-			(3.5,3.8) node[xshift=2ex,below=-5pt, scale=0.9] {\textsf{\bfseries logic contained in}}
-			(4.3,3.0) node[xshift=2ex,below=-5pt, scale=0.9] {\textsf{\bfseries complements}}
-			(1.3,0.1) node[above=-2pt, scale=1.1] {\textbf{Blockchain/Ethereum Level}}
-			(-0.5,2) node[below,scale=.9]{\textsf{\bfseries Dapp} }
-			(2,2) node[below,scale=.9]{\textsf{\bfseries IPFS}}
-			(5,2) node[below,scale=.9]{\textsf{\bfseries Metamask}}
-			(7.5,2) node[below,scale=.9]{\textsf{\bfseries Solidity}};	
-	\end{scope}
+		every node/.append style=<span class="token punctuation" data-v-13f50f72>{</span>yslant=<span class="token function selector" data-v-13f50f72>\yslant</span>,xslant=<span class="token function selector" data-v-13f50f72>\xslant</span><span class="token punctuation" data-v-13f50f72>}</span>,
+		yslant=<span class="token function selector" data-v-13f50f72>\yslant</span>,xslant=<span class="token function selector" data-v-13f50f72>\xslant</span>
+	<span class="token punctuation" data-v-13f50f72>]</span> 
+		<span class="token comment" data-v-13f50f72>% The lower frame:</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>black, dashed, thick<span class="token punctuation" data-v-13f50f72>]</span> (-1.3,0) rectangle (8.2,4.8); 
+		<span class="token comment" data-v-13f50f72>% Agents:</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>fill=red<span class="token punctuation" data-v-13f50f72>]</span>  
+			(7.5,2) circle (.1) <span class="token comment" data-v-13f50f72>% .pdf file</span>
+			(5,2) circle (.1) <span class="token comment" data-v-13f50f72>% .ps file</span>
+			(2,2) circle (.1) <span class="token comment" data-v-13f50f72>% .dvi file</span>
+			(-0.5,2) circle (.1); <span class="token comment" data-v-13f50f72>% .tex file</span>
+		<span class="token comment" data-v-13f50f72>% Flows:</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt<span class="token punctuation" data-v-13f50f72>]</span> 
+			(-0.5,2) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (2,2); <span class="token comment" data-v-13f50f72>% latex</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt<span class="token punctuation" data-v-13f50f72>]</span> 
+			(2,2) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (5,2); <span class="token comment" data-v-13f50f72>% dvi2ps</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>latex-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt<span class="token punctuation" data-v-13f50f72>]</span> 
+			(5,2) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (7.5,2); <span class="token comment" data-v-13f50f72>% ps2pdf, pdf2ps</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt<span class="token punctuation" data-v-13f50f72>]</span> 
+			(-0.5,2) to<span class="token punctuation" data-v-13f50f72>[</span>out=90,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (3.5,3.8) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=90<span class="token punctuation" data-v-13f50f72>]</span> (7.5,2); <span class="token comment" data-v-13f50f72>% pdflatex</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>-latex,ultra thick,shorten &lt;=5pt,shorten &gt;=5pt<span class="token punctuation" data-v-13f50f72>]</span> 
+			(2,2) to<span class="token punctuation" data-v-13f50f72>[</span>out=90,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (2.7,3.0) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=-180<span class="token punctuation" data-v-13f50f72>]</span> (6.7,3.0) to<span class="token punctuation" data-v-13f50f72>[</span>out=0,in=135<span class="token punctuation" data-v-13f50f72>]</span> (7.5,2); <span class="token comment" data-v-13f50f72>% ps2pdfm</span>
+		 <span class="token comment" data-v-13f50f72>% Labels:</span>
+		<span class="token function selector" data-v-13f50f72>\fill</span><span class="token punctuation" data-v-13f50f72>[</span>black<span class="token punctuation" data-v-13f50f72>]</span>
+			(1.0,2) node<span class="token punctuation" data-v-13f50f72>[</span>above=-3pt, scale=0.9<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> file<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>			
+			(3.5,2) node<span class="token punctuation" data-v-13f50f72>[</span>above=-5pt, scale=0.9<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> hash<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(6.25,2) node<span class="token punctuation" data-v-13f50f72>[</span>above=-5pt, scale=0.9<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> interacts<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			<span class="token comment" data-v-13f50f72>%(6.25,2) node[xshift=-1ex,below=-5pt, scale=0.9] {\textsf{\bfseries pdf2ps}}</span>
+			(3.5,3.8) node<span class="token punctuation" data-v-13f50f72>[</span>xshift=2ex,below=-5pt, scale=0.9<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> logic contained in<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(4.3,3.0) node<span class="token punctuation" data-v-13f50f72>[</span>xshift=2ex,below=-5pt, scale=0.9<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> complements<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(1.3,0.1) node<span class="token punctuation" data-v-13f50f72>[</span>above=-2pt, scale=1.1<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textbf</span><span class="token punctuation" data-v-13f50f72>{</span>Blockchain/Ethereum Level<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(-0.5,2) node<span class="token punctuation" data-v-13f50f72>[</span>below,scale=.9<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Dapp<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>}</span>
+			(2,2) node<span class="token punctuation" data-v-13f50f72>[</span>below,scale=.9<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> IPFS<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(5,2) node<span class="token punctuation" data-v-13f50f72>[</span>below,scale=.9<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Metamask<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(7.5,2) node<span class="token punctuation" data-v-13f50f72>[</span>below,scale=.9<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Solidity<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>;	
+	<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span>
 	
-	% vertical lines for linking agents on the 2 levels
-	\draw[thick](6.3,5.1) to (6.3,0.9);
-	\draw[thick](3.8,4) to (3.8,-0.32);
-	\draw[thick](0.8,2.4) to (.8,-1.8);
-	\draw[thick](-1.70,1.02) to (-1.70,-3);
+	<span class="token comment" data-v-13f50f72>% vertical lines for linking agents on the 2 levels</span>
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>thick<span class="token punctuation" data-v-13f50f72>]</span>(6.3,5.1) to (6.3,0.9);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>thick<span class="token punctuation" data-v-13f50f72>]</span>(3.8,4) to (3.8,-0.32);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>thick<span class="token punctuation" data-v-13f50f72>]</span>(0.8,2.4) to (.8,-1.8);
+	<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>thick<span class="token punctuation" data-v-13f50f72>]</span>(-1.70,1.02) to (-1.70,-3);
 	
-	% User level
-	\begin{scope}[
+	<span class="token comment" data-v-13f50f72>% User level</span>
+	<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>
 		yshift=0,
-		every node/.append style={yslant=\yslant,xslant=\xslant},
-		yslant=\yslant,xslant=\xslant
-	]
-		% The upper frame:
-		\fill[white,fill opacity=.70] (-3.1,0) rectangle (9.9,6); % Opacity
-		\draw[black, dashed, thick] (-3.1,0) rectangle (9.9,6); 
-		 % Agents:
-		\draw [fill=red]
-			(7.5,2) circle (.1) % .pdf file
-			(5,2) circle (.1) % .ps
-			(2,2) circle (.1) % .dvi
-			(-0.5,2) circle (.1); % .tex file
+		every node/.append style=<span class="token punctuation" data-v-13f50f72>{</span>yslant=<span class="token function selector" data-v-13f50f72>\yslant</span>,xslant=<span class="token function selector" data-v-13f50f72>\xslant</span><span class="token punctuation" data-v-13f50f72>}</span>,
+		yslant=<span class="token function selector" data-v-13f50f72>\yslant</span>,xslant=<span class="token function selector" data-v-13f50f72>\xslant</span>
+	<span class="token punctuation" data-v-13f50f72>]</span>
+		<span class="token comment" data-v-13f50f72>% The upper frame:</span>
+		<span class="token function selector" data-v-13f50f72>\fill</span><span class="token punctuation" data-v-13f50f72>[</span>white,fill opacity=.70<span class="token punctuation" data-v-13f50f72>]</span> (-3.1,0) rectangle (9.9,6); <span class="token comment" data-v-13f50f72>% Opacity</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>black, dashed, thick<span class="token punctuation" data-v-13f50f72>]</span> (-3.1,0) rectangle (9.9,6); 
+		 <span class="token comment" data-v-13f50f72>% Agents:</span>
+		<span class="token function selector" data-v-13f50f72>\draw</span> <span class="token punctuation" data-v-13f50f72>[</span>fill=red<span class="token punctuation" data-v-13f50f72>]</span>
+			(7.5,2) circle (.1) <span class="token comment" data-v-13f50f72>% .pdf file</span>
+			(5,2) circle (.1) <span class="token comment" data-v-13f50f72>% .ps</span>
+			(2,2) circle (.1) <span class="token comment" data-v-13f50f72>% .dvi</span>
+			(-0.5,2) circle (.1); <span class="token comment" data-v-13f50f72>% .tex file</span>
 
-		% the icons
-		\node[anchor=south,inner sep=0,xshift=-20pt,yshift=10pt,fill=white] at (-0.5,2)
-			{\includegraphics[width=2.5cm]{truffle.png}};
-		\node[anchor=south,inner sep=0,xshift=0pt,yshift=8pt] at (2,2)
-			{\includegraphics[width=2.5cm]{ipfs-logo.png}};
-		\node[anchor=south,inner sep=0,xshift=-5pt,yshift=8pt] at (5,2)
-			{\includegraphics[width=3.0cm]{metamask.png}};
-		\node[anchor=south,inner sep=0,xshift=20pt,yshift=8pt] at (7.5,2)
-			{\includegraphics[width=3.5cm]{ethereum.png}};
+		<span class="token comment" data-v-13f50f72>% the icons</span>
+		<span class="token function selector" data-v-13f50f72>\node</span><span class="token punctuation" data-v-13f50f72>[</span>anchor=south,inner sep=0,xshift=-20pt,yshift=10pt,fill=white<span class="token punctuation" data-v-13f50f72>]</span> at (-0.5,2)
+			<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\includegraphics</span><span class="token punctuation" data-v-13f50f72>[</span>width=2.5cm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>truffle.png<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>;
+		<span class="token function selector" data-v-13f50f72>\node</span><span class="token punctuation" data-v-13f50f72>[</span>anchor=south,inner sep=0,xshift=0pt,yshift=8pt<span class="token punctuation" data-v-13f50f72>]</span> at (2,2)
+			<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\includegraphics</span><span class="token punctuation" data-v-13f50f72>[</span>width=2.5cm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>ipfs-logo.png<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>;
+		<span class="token function selector" data-v-13f50f72>\node</span><span class="token punctuation" data-v-13f50f72>[</span>anchor=south,inner sep=0,xshift=-5pt,yshift=8pt<span class="token punctuation" data-v-13f50f72>]</span> at (5,2)
+			<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\includegraphics</span><span class="token punctuation" data-v-13f50f72>[</span>width=3.0cm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>metamask.png<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>;
+		<span class="token function selector" data-v-13f50f72>\node</span><span class="token punctuation" data-v-13f50f72>[</span>anchor=south,inner sep=0,xshift=20pt,yshift=8pt<span class="token punctuation" data-v-13f50f72>]</span> at (7.5,2)
+			<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\includegraphics</span><span class="token punctuation" data-v-13f50f72>[</span>width=3.5cm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span>ethereum.png<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>;
 
-		\fill[black]
-			(7.5,2) node[below right,,xshift=-20pt,yshift=-5pt,scale=.9,text width=2.5cm,align=left,fill=white]
-				{\textsf{\bfseries \mbox{Smart Contracts}}\\ \textsf{\bfseries IPFS Hashes}
-				\\ \textsf{\bfseries Authentication}}
-			(-2.5,5.5) node[anchor=west,inner sep=0, scale=1.1] {\textbf{User level}}
-			(5.1,1.9) node[below right,xshift=-20pt,scale=.9,text width=2cm,align=left,fill=white]
-				{\textsf{\bfseries Transactions}\\ \textsf{\bfseries Ethereum Browser} }
-			(1.9,1.9) node[below right,xshift=-10pt,scale=.9,text width=2cm,align=left,fill=white]
-				{\textsf{\bfseries File Storage}\\ \textsf{\bfseries Peer to Peer}}
-			(-0.5,2) node[below right,xshift=-20pt,yshift=-5pt,scale=.9,text width=2.5cm,align=left,fill=white]
-				{\textsf{\bfseries Drizzle}\\ \textsf{\bfseries React}\\
-					\textsf{\bfseries Truffle}} 
+		<span class="token function selector" data-v-13f50f72>\fill</span><span class="token punctuation" data-v-13f50f72>[</span>black<span class="token punctuation" data-v-13f50f72>]</span>
+			(7.5,2) node<span class="token punctuation" data-v-13f50f72>[</span>below right,,xshift=-20pt,yshift=-5pt,scale=.9,text width=2.5cm,align=left,fill=white<span class="token punctuation" data-v-13f50f72>]</span>
+				<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> <span class="token function selector" data-v-13f50f72>\mbox</span><span class="token punctuation" data-v-13f50f72>{</span>Smart Contracts<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token function selector" data-v-13f50f72>\\</span> <span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> IPFS Hashes<span class="token punctuation" data-v-13f50f72>}</span>
+				<span class="token function selector" data-v-13f50f72>\\</span> <span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Authentication<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(-2.5,5.5) node<span class="token punctuation" data-v-13f50f72>[</span>anchor=west,inner sep=0, scale=1.1<span class="token punctuation" data-v-13f50f72>]</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textbf</span><span class="token punctuation" data-v-13f50f72>{</span>User level<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(5.1,1.9) node<span class="token punctuation" data-v-13f50f72>[</span>below right,xshift=-20pt,scale=.9,text width=2cm,align=left,fill=white<span class="token punctuation" data-v-13f50f72>]</span>
+				<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Transactions<span class="token punctuation" data-v-13f50f72>}</span><span class="token function selector" data-v-13f50f72>\\</span> <span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Ethereum Browser<span class="token punctuation" data-v-13f50f72>}</span> <span class="token punctuation" data-v-13f50f72>}</span>
+			(1.9,1.9) node<span class="token punctuation" data-v-13f50f72>[</span>below right,xshift=-10pt,scale=.9,text width=2cm,align=left,fill=white<span class="token punctuation" data-v-13f50f72>]</span>
+				<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> File Storage<span class="token punctuation" data-v-13f50f72>}</span><span class="token function selector" data-v-13f50f72>\\</span> <span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Peer to Peer<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+			(-0.5,2) node<span class="token punctuation" data-v-13f50f72>[</span>below right,xshift=-20pt,yshift=-5pt,scale=.9,text width=2.5cm,align=left,fill=white<span class="token punctuation" data-v-13f50f72>]</span>
+				<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Drizzle<span class="token punctuation" data-v-13f50f72>}</span><span class="token function selector" data-v-13f50f72>\\</span> <span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> React<span class="token punctuation" data-v-13f50f72>}</span><span class="token function selector" data-v-13f50f72>\\</span>
+					<span class="token function selector" data-v-13f50f72>\textsf</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\bfseries</span> Truffle<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span> 
 		;
-	\end{scope} 
-\end{tikzpicture}
-\end{document}</code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ReportDiagrams/ENGR446/simpleTimeline.html" data-v-13f50f72>
+	<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span> 
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span></code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ReportDiagrams/ENGR446/simpleTimeline.html" data-v-13f50f72>
         Previous: simpleTimeline.png
       </a></div> <div data-v-13f50f72><a href="/dli-vue-docs/ReportDiagrams/ENGR446/smartContractsExp.html" data-v-13f50f72>
         Next: smartContractsExp.png
@@ -117,4 +117,4 @@ nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direct
       Used to display latex docs
     </div> <div data-v-7934a95b> 
        Made with saber
-    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.9afb9940.js" defer></script><script src="/dli-vue-docs/_saber/js/page--BlogDiagrams-latex_user_sw_levels-md.1f50af9b.js" defer></script></body></html>
+    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.d17572fb.js" defer></script><script src="/dli-vue-docs/_saber/js/page--BlogDiagrams-latex_user_sw_levels-md.74408167.js" defer></script></body></html>

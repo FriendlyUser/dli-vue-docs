@@ -2,67 +2,67 @@
 .saber-highlight{position:relative;overflow:hidden;margin:2rem 0;background:#f5f7fa;border-radius:4px}.saber-highlight:before{content:attr(data-lang);position:absolute;right:10px;top:5px;font-size:.75rem;color:#bdc5d1}.saber-highlight-code,.saber-highlight-mask{line-height:1.5;background-color:transparent!important;text-shadow:none!important;box-shadow:none!important;margin:0!important;padding:1.25rem 1.5rem!important;white-space:pre}.saber-highlight-mask{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;color:transparent!important;padding-left:0!important;padding-right:0!important}.saber-highlight-code{position:relative;z-index:2;font-size:0!important}.saber-highlight-code code,.saber-highlight-mask{font-size:.875rem}.code-line.highlighted{background:rgba(3,169,244,.121)}.saber-highlight-line-numbers{pointer-events:none;font-size:100%;float:left;letter-spacing:-1px;border-right:1px solid #999;user-select:none;text-align:right;padding-right:.8rem;margin-right:.8rem;counter-reset:linenumber}.saber-highlight-line-numbers>span{counter-increment:linenumber;display:block}.saber-highlight-line-numbers>span:before{content:counter(linenumber);color:#999;display:block}
 p[data-v-13f50f72]{font-family:Helvetica}.page-enter-active[data-v-13f50f72],.page-leave-active[data-v-13f50f72]{transition:opacity .5s}.page-enter[data-v-13f50f72],.page-leave-to[data-v-13f50f72]{opacity:0}.links[data-v-13f50f72]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.img[data-v-13f50f72]{max-width:100%}
 nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direction:row;align-items:center;justify-content:space-between;color:#1c3ed3;background-color:#fff;display:flex;box-shadow:0 1px 15px rgba(50,50,93,.2);height:60px}.nav-left[data-v-b9ef9ed0],.nav-right[data-v-b9ef9ed0]{flex-direction:row;align-items:center;justify-content:space-around}a[data-v-b9ef9ed0]{text-decoration:none;font-size:2em}a[data-v-b9ef9ed0]:hover{color:#4e20ca}
-.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="DEHG.png" alt="ElectroMag" title="DEHG" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72>\documentclass{article}
-\usepackage[paperwidth=55mm,paperheight=55mm,margin=1mm]{geometry}
-\usepackage{bm}
-\usepackage{eucal}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\usetikzlibrary{decorations.markings}
-\pagestyle{empty}
-\parindent=0pt
-\begin{document}
-\pgfdeclarelayer{-1}
-\pgfsetlayers{-1,main}
-\tikzset{
-    zlevel/.style={%
-        execute at begin scope={\pgfonlayer{#1}},
-        execute at end scope={\endpgfonlayer}
-    },
-}
-\centering
-\begin{tikzpicture}[
-        ball/.style={circle, shading=ball, ball color=black!15, minimum size=9mm},
-        conline/.style={line width=#1, line cap=round},
-        label/.style 2 args={
-            postaction={decorate,transform shape,decoration={
-                markings, mark=at position #1 with \node {\scriptsize\color{black}#2};
-            }}
-        },
-        blue/.style={color=blue!60},
-        red/.style={color=red!50},
-        redl/.style={color=red!20},
-    ]
-    \def\conline&lt;#1&gt;[#2] (#3) (#4);{%
-        \draw[conline=#1, #2] (#3) -- (#4);
-    }
-    \def\conwhiline (#1) (#2);{%
-        \conline&lt;10pt&gt;[color=white] (#1) (#2);
-    }
-    \def\connectpos[#1] (#2) (#3) #4 #5;{%
-        \conline&lt;8pt&gt;[color=black] (#2) (#3);
-        \conline&lt;7pt&gt;[#1, label={#4}{#5}] (#2) (#3);
-    }
-    \def\connection[#1] (#2) (#3) #4;{%
-        \connectpos[#1] (#2) (#3) 0.5 {#4};
-    }
-    \node (B) [ball]                     {$\bm{B}$};
-    \node (D) [ball] at ($(B)+(95:4.4)$) {$\mathcal{D}$};
+.footer-container[data-v-7934a95b]{box-sizing:border-box;position:relative;padding-bottom:1em;min-height:100%}.footer[data-v-7934a95b]{position:relative;bottom:0;width:97.5%;display:flex;justify-content:space-between}.footer[data-v-7934a95b],p[data-v-7934a95b]{flex-wrap:wrap}p[data-v-7934a95b]{text-align:right}</style>  </head><body><div id="_saber" data-server-rendered="true"><div data-v-13f50f72><nav data-v-b9ef9ed0 data-v-13f50f72><div class="nav-left" data-v-b9ef9ed0><div data-v-b9ef9ed0></div> <a href="/dli-vue-docs/" class="router-link-active" data-v-b9ef9ed0>Home</a> <a href="/dli-vue-docs/about.html" data-v-b9ef9ed0>About</a></div> <div class="nav-right" data-v-b9ef9ed0><a href="https://github.com/FriendlyUser/dli-vue-docs" data-v-b9ef9ed0>Repo</a> <a href="https://github.com/FriendlyUser/LatexDiagrams" data-v-b9ef9ed0>Diagrams</a></div></nav> <p data-v-13f50f72><img src="DEHG.png" alt="ElectroMag" title="DEHG" data-v-13f50f72></p> <div class="saber-highlight" data-lang="tex" data-v-13f50f72><pre class="saber-highlight-code language-tex" data-v-13f50f72><code class="language-tex" data-v-13f50f72><span class="token function selector" data-v-13f50f72>\documentclass</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>article</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>[</span>paperwidth=55mm,paperheight=55mm,margin=1mm<span class="token punctuation" data-v-13f50f72>]</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>geometry</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>bm</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>eucal</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usepackage</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikz</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>calc<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\usetikzlibrary</span><span class="token punctuation" data-v-13f50f72>{</span>decorations.markings<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\pagestyle</span><span class="token punctuation" data-v-13f50f72>{</span>empty<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\parindent</span>=0pt
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\pgfdeclarelayer</span><span class="token punctuation" data-v-13f50f72>{</span>-1<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\pgfsetlayers</span><span class="token punctuation" data-v-13f50f72>{</span>-1,main<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\tikzset</span><span class="token punctuation" data-v-13f50f72>{</span>
+    zlevel/.style=<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        execute at begin scope=<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\pgfonlayer</span><span class="token punctuation" data-v-13f50f72>{</span>#1<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>,
+        execute at end scope=<span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\endpgfonlayer</span><span class="token punctuation" data-v-13f50f72>}</span>
+    <span class="token punctuation" data-v-13f50f72>}</span>,
+<span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\centering</span>
+<span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>
+        ball/.style=<span class="token punctuation" data-v-13f50f72>{</span>circle, shading=ball, ball color=black!15, minimum size=9mm<span class="token punctuation" data-v-13f50f72>}</span>,
+        conline/.style=<span class="token punctuation" data-v-13f50f72>{</span>line width=#1, line cap=round<span class="token punctuation" data-v-13f50f72>}</span>,
+        label/.style 2 args=<span class="token punctuation" data-v-13f50f72>{</span>
+            postaction=<span class="token punctuation" data-v-13f50f72>{</span>decorate,transform shape,decoration=<span class="token punctuation" data-v-13f50f72>{</span>
+                markings, mark=at position #1 with <span class="token function selector" data-v-13f50f72>\node</span> <span class="token punctuation" data-v-13f50f72>{</span><span class="token function selector" data-v-13f50f72>\scriptsize</span><span class="token function selector" data-v-13f50f72>\color</span><span class="token punctuation" data-v-13f50f72>{</span>black<span class="token punctuation" data-v-13f50f72>}</span>#2<span class="token punctuation" data-v-13f50f72>}</span>;
+            <span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>}</span>
+        <span class="token punctuation" data-v-13f50f72>}</span>,
+        blue/.style=<span class="token punctuation" data-v-13f50f72>{</span>color=blue!60<span class="token punctuation" data-v-13f50f72>}</span>,
+        red/.style=<span class="token punctuation" data-v-13f50f72>{</span>color=red!50<span class="token punctuation" data-v-13f50f72>}</span>,
+        redl/.style=<span class="token punctuation" data-v-13f50f72>{</span>color=red!20<span class="token punctuation" data-v-13f50f72>}</span>,
+    <span class="token punctuation" data-v-13f50f72>]</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\conline</span>&lt;#1&gt;<span class="token punctuation" data-v-13f50f72>[</span>#2<span class="token punctuation" data-v-13f50f72>]</span> (#3) (#4);<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        <span class="token function selector" data-v-13f50f72>\draw</span><span class="token punctuation" data-v-13f50f72>[</span>conline=#1, #2<span class="token punctuation" data-v-13f50f72>]</span> (#3) -- (#4);
+    <span class="token punctuation" data-v-13f50f72>}</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\conwhiline</span> (#1) (#2);<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        <span class="token function selector" data-v-13f50f72>\conline</span>&lt;10pt&gt;<span class="token punctuation" data-v-13f50f72>[</span>color=white<span class="token punctuation" data-v-13f50f72>]</span> (#1) (#2);
+    <span class="token punctuation" data-v-13f50f72>}</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\connectpos</span><span class="token punctuation" data-v-13f50f72>[</span>#1<span class="token punctuation" data-v-13f50f72>]</span> (#2) (#3) #4 #5;<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        <span class="token function selector" data-v-13f50f72>\conline</span>&lt;8pt&gt;<span class="token punctuation" data-v-13f50f72>[</span>color=black<span class="token punctuation" data-v-13f50f72>]</span> (#2) (#3);
+        <span class="token function selector" data-v-13f50f72>\conline</span>&lt;7pt&gt;<span class="token punctuation" data-v-13f50f72>[</span>#1, label=<span class="token punctuation" data-v-13f50f72>{</span>#4<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>{</span>#5<span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>]</span> (#2) (#3);
+    <span class="token punctuation" data-v-13f50f72>}</span>
+    <span class="token function selector" data-v-13f50f72>\def</span><span class="token function selector" data-v-13f50f72>\connection</span><span class="token punctuation" data-v-13f50f72>[</span>#1<span class="token punctuation" data-v-13f50f72>]</span> (#2) (#3) #4;<span class="token punctuation" data-v-13f50f72>{</span><span class="token comment" data-v-13f50f72>%</span>
+        <span class="token function selector" data-v-13f50f72>\connectpos</span><span class="token punctuation" data-v-13f50f72>[</span>#1<span class="token punctuation" data-v-13f50f72>]</span> (#2) (#3) 0.5 <span class="token punctuation" data-v-13f50f72>{</span>#4<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token punctuation" data-v-13f50f72>}</span>
+    <span class="token function selector" data-v-13f50f72>\node</span> (B) <span class="token punctuation" data-v-13f50f72>[</span>ball<span class="token punctuation" data-v-13f50f72>]</span>                     <span class="token punctuation" data-v-13f50f72>{</span><span class="token equation string" data-v-13f50f72>$<span class="token equation-command regex" data-v-13f50f72>\bm</span>{B}$</span><span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\node</span> (D) <span class="token punctuation" data-v-13f50f72>[</span>ball<span class="token punctuation" data-v-13f50f72>]</span> at (<span class="token equation string" data-v-13f50f72>$(B)+(95:4.4)$</span>) <span class="token punctuation" data-v-13f50f72>{</span><span class="token equation string" data-v-13f50f72>$<span class="token equation-command regex" data-v-13f50f72>\mathcal</span>{D}$</span><span class="token punctuation" data-v-13f50f72>}</span>;
 
-    \begin{scope}[zlevel=-1]
-    \node (H) [ball] at ($(B)+(60:2.5)$) {$\mathcal{H}$};
-    \node (E) [ball] at ($(B)+(155:3)$)  {$\bm{E}$};
-    \connectpos[blue] (E)     (H.180) 0.35 {1-forms};
-    \conwhiline       (B)     (D);
-    \connection[red]  (E.-45) (B)          {field strength};
-    \connection[redl] (B)     (H.-115)     {magnetic};
-    \end{scope}
+    <span class="token function selector" data-v-13f50f72>\begin</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span><span class="token punctuation" data-v-13f50f72>[</span>zlevel=-1<span class="token punctuation" data-v-13f50f72>]</span>
+    <span class="token function selector" data-v-13f50f72>\node</span> (H) <span class="token punctuation" data-v-13f50f72>[</span>ball<span class="token punctuation" data-v-13f50f72>]</span> at (<span class="token equation string" data-v-13f50f72>$(B)+(60:2.5)$</span>) <span class="token punctuation" data-v-13f50f72>{</span><span class="token equation string" data-v-13f50f72>$<span class="token equation-command regex" data-v-13f50f72>\mathcal</span>{H}$</span><span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\node</span> (E) <span class="token punctuation" data-v-13f50f72>[</span>ball<span class="token punctuation" data-v-13f50f72>]</span> at (<span class="token equation string" data-v-13f50f72>$(B)+(155:3)$</span>)  <span class="token punctuation" data-v-13f50f72>{</span><span class="token equation string" data-v-13f50f72>$<span class="token equation-command regex" data-v-13f50f72>\bm</span>{E}$</span><span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\connectpos</span><span class="token punctuation" data-v-13f50f72>[</span>blue<span class="token punctuation" data-v-13f50f72>]</span> (E)     (H.180) 0.35 <span class="token punctuation" data-v-13f50f72>{</span>1-forms<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\conwhiline</span>       (B)     (D);
+    <span class="token function selector" data-v-13f50f72>\connection</span><span class="token punctuation" data-v-13f50f72>[</span>red<span class="token punctuation" data-v-13f50f72>]</span>  (E.-45) (B)          <span class="token punctuation" data-v-13f50f72>{</span>field strength<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\connection</span><span class="token punctuation" data-v-13f50f72>[</span>redl<span class="token punctuation" data-v-13f50f72>]</span> (B)     (H.-115)     <span class="token punctuation" data-v-13f50f72>{</span>magnetic<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>scope</span><span class="token punctuation" data-v-13f50f72>}</span>
 
-    \connection[red]  (D.-40) (H)          {excitation};
-    \connectpos[blue] (D)     (B)     0.35 {2-forms};
-    \connection[redl] (E.60)  (D)          {electric};
-\end{tikzpicture}
-\end{document}</code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ArtificialIntelligence/ga.html" data-v-13f50f72>
+    <span class="token function selector" data-v-13f50f72>\connection</span><span class="token punctuation" data-v-13f50f72>[</span>red<span class="token punctuation" data-v-13f50f72>]</span>  (D.-40) (H)          <span class="token punctuation" data-v-13f50f72>{</span>excitation<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\connectpos</span><span class="token punctuation" data-v-13f50f72>[</span>blue<span class="token punctuation" data-v-13f50f72>]</span> (D)     (B)     0.35 <span class="token punctuation" data-v-13f50f72>{</span>2-forms<span class="token punctuation" data-v-13f50f72>}</span>;
+    <span class="token function selector" data-v-13f50f72>\connection</span><span class="token punctuation" data-v-13f50f72>[</span>redl<span class="token punctuation" data-v-13f50f72>]</span> (E.60)  (D)          <span class="token punctuation" data-v-13f50f72>{</span>electric<span class="token punctuation" data-v-13f50f72>}</span>;
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>tikzpicture</span><span class="token punctuation" data-v-13f50f72>}</span>
+<span class="token function selector" data-v-13f50f72>\end</span><span class="token punctuation" data-v-13f50f72>{</span><span class="token keyword" data-v-13f50f72>document</span><span class="token punctuation" data-v-13f50f72>}</span></code></pre></div> <div class="links" data-v-13f50f72><div data-v-13f50f72><a href="/dli-vue-docs/ArtificialIntelligence/ga.html" data-v-13f50f72>
         Previous: ga.png
       </a></div> <div data-v-13f50f72><a href="/dli-vue-docs/ElectroMag/Q1Circuit2.html" data-v-13f50f72>
         Next: Q1Circuit2.png
@@ -72,4 +72,4 @@ nav[data-v-b9ef9ed0]{margin:auto;width:100%;background-color:#b05ac4;flex-direct
       Used to display latex docs
     </div> <div data-v-7934a95b> 
        Made with saber
-    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.9afb9940.js" defer></script><script src="/dli-vue-docs/_saber/js/page--ElectroMag-DEHG-md.42e27faa.js" defer></script></body></html>
+    </div></div></div></div></div><script src="/dli-vue-docs/_saber/js/client.d17572fb.js" defer></script><script src="/dli-vue-docs/_saber/js/page--ElectroMag-DEHG-md.a9c8e0cd.js" defer></script></body></html>
