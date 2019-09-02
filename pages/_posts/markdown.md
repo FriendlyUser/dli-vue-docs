@@ -1,7 +1,7 @@
 ---
 title: Daily
 date: 2019-02-22
-layout: test
+layout: plain
 ---
 
 ## Hello

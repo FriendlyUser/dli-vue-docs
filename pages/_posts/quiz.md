@@ -1,7 +1,7 @@
 ---
 title: Quiz
 date: 2019-02-22
-layout: test
+layout: plain
 ---
 
 <Quiz v-bind:quizObj="{questions: [ { 

@@ -1,7 +1,7 @@
 ---
 title: Mister man
 date: 2019-02-23
-layout: test
+layout: plain
 ---
 
 ## Hello
