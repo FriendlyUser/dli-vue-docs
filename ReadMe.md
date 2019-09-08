@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/FriendlyUser/dli-vue-docs.svg?style=svg)](https://circleci.com/gh/FriendlyUser/dli-vue-docs)
 ## Basic Saber Repo
 
 Designed to display the various latex documents I have created over the years
