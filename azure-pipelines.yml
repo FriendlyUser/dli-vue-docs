@@ -20,21 +20,21 @@ steps:
     npx saber build
   displayName: 'Build and commit pages'
 
-- task: DownloadSecureFile@1
-  inputs:
-    secureFile: github_rsa
-  displayName: 'Get the deploy key'
+# - task: DownloadSecureFile@1
+#   inputs:
+#     secureFile: github_rsa
+#   displayName: 'Get the deploy key'
 
-- script: |
-    git init
-    git config --local user.name "Azure Pipelines"
-    git config --local user.email "azuredevops@microsoft.com"
-    git add .
-    git commit -m "Publishing GitHub Pages  ***NO_CI***"
-    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    git remote add origin git@github.com:$(githubRepo).git
-    git push origin HEAD:refs/heads/gh-pages --force
-  displayName: 'Publish GitHub Pages'
-  condition: |
-    and(not(eq(variables['Build.Reason'], 'PullRequest')),
-        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+# - script: |
+#     git init
+#     git config --local user.name "Azure Pipelines"
+#     git config --local user.email "azuredevops@microsoft.com"
+#     git add .
+#     git commit -m "Publishing GitHub Pages  ***NO_CI***"
+#     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+#     git remote add origin git@github.com:$(githubRepo).git
+#     git push origin HEAD:refs/heads/gh-pages --force
+#   displayName: 'Publish GitHub Pages'
+#   condition: |
+#     and(not(eq(variables['Build.Reason'], 'PullRequest')),
+#         eq(variables['Build.SourceBranch'], 'refs/heads/master'))
