@@ -1,19 +1,9 @@
 <template>
-  <div class="footer-container">
-    <br />
-    <br />
-    <div class="footer">
-      <div>
-        Created by David Li
-      </div>
-      <div>
-        Used to display latex docs
-      </div>
-      <div> 
-         Made with saber
-      </div>
-    </div>
-  </div>
+<div class="flex justify-between bg-gray-200">
+  <div class="text-gray-700 text-center px-4 py-2 m-2">Created By <a href="https://FriendlyUser.github.io"> David Li </a> </div>
+  <div class="text-gray-700 text-center px-4 py-2 m-2">2019</div>
+  <div class="text-gray-700 text-center px-4 py-2 m-2">Created using saber</div>
+</div>  
 </template>
 
 <style scoped>

@@ -13,10 +13,14 @@
   "author": "David Li",
   "license": "ISC",
   "dependencies": {
+    "nprogress": "^0.2.0"
+  },
+  "devDependencies": {
     "prismjs": "^1.17.1",
     "saber": "^0.8.1",
     "saber-highlight-css": "^0.1.1",
     "saber-plugin-prismjs": "^0.2.2",
+    "tailwindcss": "^1.1.2",
     "vue-material-design-icons": "^3.4.0"
   }
 }

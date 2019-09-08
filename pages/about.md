@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: plain
 ---
 ## About me
 

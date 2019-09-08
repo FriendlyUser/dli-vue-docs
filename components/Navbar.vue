@@ -1,20 +1,32 @@
 <template>
-  <nav class="navbar">
-    <div class="nav-left">
-      <div></div>
-      <saber-link to="/"><warehouse-icon title="Home" class="icon-2x" /></saber-link>
-      <saber-link to="/about.html"><information-icon title="About" class="icon-2x" /></saber-link>
-    </div>
-    <div class="nav-right">
-      <!--- Add icons -->
-      <a href="https://github.com/FriendlyUser/dli-vue-docs">
-        <source-branch-icon title ="this is an icon" class="icon-2x" />
-      </a>
-      <a href="https://github.com/FriendlyUser/LatexDiagrams">
-        <github-circle-icon title="this is an icon!" class="icon-2x"/>
-      </a>
-    </div>
-  </nav>
+<div>
+  <nav class="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white shadow sm:items-baseline w-full">
+  <div class="mb-2 sm:mb-0 inner">
+
+    <a href="https://saber.land/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Saber</a><br>
+    <span class="text-xs text-grey-dark">Latex Diagrams Gallery Website</span>
+
+  </div>
+
+  <div class="sm:mb-0 self-center">
+    <saber-link to="/" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
+      Home <warehouse-icon title="Home" class="icon-2x" />
+    </saber-link>
+    <saber-link to="/about.html" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
+      About<information-icon title="this is an icon!" class="icon-2x"/>
+    </saber-link>
+    <!-- <div class="h-10" style="display: table-cell, vertical-align: middle;"> -->
+    <a href="https://github.com/FriendlyUser/dli-vue-docs" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
+      Repo <source-branch-icon title ="this is an icon" class="icon-2x" />
+    </a>
+    <a href="https://github.com/FriendlyUser/LatexDiagrams" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
+      LatexDiagrams<github-circle-icon title="this is an icon!" class="icon-2x"/>
+    </a>
+    <!-- </div> -->
+
+  </div>
+</nav>
+</div>
 </template>
 
 
@@ -50,7 +62,7 @@ export default {
   display: flex;
   align-items: center;
 } */
-nav {
+.navbar {
   /** margin: auto; */
   width: 100%;
   background-color: rgb(176, 90, 196);
