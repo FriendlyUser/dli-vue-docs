@@ -1,5 +1,6 @@
 ---
 layout: plain
+excerpt: Hello World
 ---
 ## About me
 

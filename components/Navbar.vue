@@ -5,7 +5,9 @@
 
     <a href="https://saber.land/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Saber</a><br>
     <span class="text-xs text-grey-dark">Latex Diagrams Gallery Website</span>
-
+    <div>
+      <Search />
+    </div>
   </div>
 
   <div class="sm:mb-0 self-center">
@@ -31,6 +33,7 @@
 
 
 <script>
+import Search from './Search.vue';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import GithubBoxIcon  from 'vue-material-design-icons/GithubBox.vue';
 import GithubCircleIcon from 'vue-material-design-icons/GithubCircle.vue'
@@ -44,7 +47,8 @@ export default {
     GithubCircleIcon,
     SourceBranchIcon,
     WarehouseIcon,
-    InformationIcon
+    InformationIcon,
+    Search
   }
 }
 </script>

@@ -2,6 +2,7 @@
 title: Quiz
 date: 2019-02-22
 layout: plain
+excerpt: Quiz
 ---
 
 <Quiz v-bind:quizObj="{questions: [ { 
