@@ -1,10 +1,10 @@
 <template>
 <div class="relative mr-6 my-2">
   <input type="search" class="bg-purple-white shadow rounded border-0 p-3" placeholder="Search by name..."  v-model="search" v-on:input="getList">
-  <div v-if="search !== ''">
-  <div class="card" v-bind:data="list" v-for="post in list" :key="post.title">
-    <a v-bind:href="post.permalink" target="_blank">{{post.title}} </a>
-  </div>
+  <div v-if="search !== ''" class="searchbar">
+    <div v-bind:data="list" v-for="post in list" :key="post.title" class="list">
+      <a v-bind:href="post.permalink" target="_blank" class="max-w-sm rounded list block group bg-gray-200 group-hover:text-blue">{{post.title}} </a>
+    </div>
   </div>
 </div>
 </template>
@@ -35,3 +35,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.list {
+  width:inherit;
+}
+.searchbar {
+  width:inherit;
+}
+</style>
