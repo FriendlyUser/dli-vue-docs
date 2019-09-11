@@ -1,7 +1,7 @@
 siteConfig:
   title: My Epic Blog
 build:
-  publicUrl: /dli-vue-docs/
+  publicUrl: /
 plugins:
   - resolve: saber-plugin-prismjs
   - resolve: saber-plugin-search
