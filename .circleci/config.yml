@@ -63,8 +63,9 @@ jobs:
             git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
             git push origin $TARGET_BRANCH
             sudo npm install -g surge
+            rm -rf .git
             echo  dli-vue-docs.surge.sh > CNAME
-            echo | surge docs dli-vue-docs.surge.sh
+            echo | surge . dli-vue-docs.surge.sh
 
 workflows:
   version: 2
