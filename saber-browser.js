@@ -5,6 +5,7 @@ import 'saber-highlight-css/default.css'
 import 'vue-material-design-icons/styles.css';
 
 import './assets/css/base.css'
+import Vue from 'vue'
 export default ({ router, setHead }) => {
 
   // Progress bar is not needed on server-side
