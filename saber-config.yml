@@ -5,4 +5,8 @@ build:
 plugins:
   - resolve: saber-plugin-prismjs
   - resolve: saber-plugin-search
-  - resolve: saber-plugin-code-copy
+  - resolve: saber-plugin-copy-code
+    options: 
+      statusAttribute: title
+      buttonStyle: 
+        background-color: red
