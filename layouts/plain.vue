@@ -1,20 +1,22 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <Navbar />
-    <slot name="default" />
-    <div class="links">
-      <div v-if="page.prevPost">
-        <router-link :to="page.prevPost.permalink">
-          <arrow-left-icon /> {{ page.prevPost.title }}
-        </router-link>
+    <div class="container mx-auto">
+      <slot name="default" />
+      <div class="links">
+        <div v-if="page.prevPost">
+          <router-link :to="page.prevPost.permalink">
+            <arrow-left-icon /> {{ page.prevPost.title }}
+          </router-link>
+        </div>
+        <div v-if="page.nextPost">
+          <router-link :to="page.nextPost.permalink">
+          {{ page.nextPost.title }} <arrow-right-icon /> 
+          </router-link>
+        </div>
       </div>
-      <div v-if="page.nextPost">
-        <router-link :to="page.nextPost.permalink">
-         {{ page.nextPost.title }} <arrow-right-icon /> 
-        </router-link>
-      </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
 

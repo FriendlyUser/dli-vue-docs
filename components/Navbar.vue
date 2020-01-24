@@ -1,33 +1,48 @@
 <template>
 <div>
-  <nav class="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white shadow sm:items-baseline w-full">
-  <div class="mb-2 sm:mb-0 inner">
-
-    <a href="https://saber.land/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Saber</a><br>
-    <span class="text-xs text-grey-dark">Latex Diagrams Gallery Website</span>
-    <div>
+  <nav class="z-50 bg-white top-0 flex flex-wrap items-center sm:justify-between py-2 px-6 shadow-lg w-full">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <span class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-gray-800">
+          Latex Diagrams Gallery Website
+        </span>
+        <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="lg:flex flex-grow items-center hidden" id="example-navbar-danger">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <li class="nav-item">
+            <saber-link to="/" class="px-3 py-2 flex items-center text-xs uppercase font-bold text-gray-800 hover:text-gray-600" target="_blank">
+              <warehouse-icon title="Home" class="icon-2x" />
+              <span class="ml-2">Home</span>
+            </saber-link>
+          </li>
+          <li class="nav-item">
+            <saber-link to="/about.html" class="px-3 py-2 flex items-center text-xs uppercase font-bold text-gray-800 hover:text-gray-600" target="_blank">
+              <information-icon title="this is an icon!" class="icon-2x"/>
+              <span class="ml-2">About</span>
+            </saber-link>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/FriendlyUser/LatexDiagrams" class="px-3 py-2 flex items-center text-xs uppercase font-bold text-gray-800 hover:text-gray-600">
+              <github-circle-icon title="this is an icon!" class="icon-2x"/>
+              <span class="ml-2">LatexDiagram</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/FriendlyUser/dli-vue-docs" class="download-button px-3 py-2 flex items-center text-xs uppercase font-bold text-gray-800 hover:text-gray-600">
+              <source-branch-icon title ="this is an icon" class="icon-2x" />
+              <span class="ml-2">Repo</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container px-4 mx-auto flex flex-wrap items-center">
       <Search />
     </div>
-  </div>
-
-  <div class="sm:mb-0 self-center">
-    <saber-link to="/" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
-      Home <warehouse-icon title="Home" class="icon-2x" />
-    </saber-link>
-    <saber-link to="/about.html" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
-      About<information-icon title="this is an icon!" class="icon-2x"/>
-    </saber-link>
-    <!-- <div class="h-10" style="display: table-cell, vertical-align: middle;"> -->
-    <a href="https://github.com/FriendlyUser/dli-vue-docs" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
-      Repo <source-branch-icon title ="this is an icon" class="icon-2x" />
-    </a>
-    <a href="https://github.com/FriendlyUser/LatexDiagrams" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">
-      LatexDiagrams<github-circle-icon title="this is an icon!" class="icon-2x"/>
-    </a>
-    <!-- </div> -->
-
-  </div>
-</nav>
+  </nav>
 </div>
 </template>
 

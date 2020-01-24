@@ -1,5 +1,5 @@
 siteConfig:
-  title: My Epic Blog
+  title: Latex Diagrams
 build:
   publicUrl: /
 plugins:

@@ -20,15 +20,13 @@ export default {
   },
   methods: {
     getList: async function() {
-      if(this.search === '') return
+      if (this.search === '') return
       const database = await this.$fetchSearchDatabase()
-      console.log(this.search)
       const keyword = this.search
       const matchedResults = database.filter(page => {
         const {title='', excerpt=''} = page
         return title.includes(keyword) || excerpt.includes(keyword)
       })
-      console.log(matchedResults)
       this.list = matchedResults
       return matchedResults
     }
