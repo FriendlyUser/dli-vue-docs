@@ -32,4 +32,13 @@ export default ({ router, setHead }) => {
       nprogress.done()
     })
   }
+  // setHead({
+  //   link: [
+  //     {
+  //       rel: 'stylesheet',
+  //       href:
+  //         'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap'
+  //     }
+  //   ]
+  // })
 }

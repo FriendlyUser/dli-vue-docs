@@ -4,7 +4,8 @@
   "description": "Basic documentation site for things that cannot be contained in latex",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "saber",
+    "build": "saber build"
   },
   "keywords": [
     "saber",
