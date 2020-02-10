@@ -34,7 +34,6 @@ export default {
             initPayload: "/",
             customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
             socketUrl: "http://35.212.163.241",
-            socketPath: "/socket.io/",
             title: "David Li",
             subtitle: "Talk to me now",
           })
