@@ -52,6 +52,7 @@ jobs:
             cd out
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .
+            echo "" > .nojekyll || true
             cd ..
             ls
             cp -a public/. out/.
@@ -59,6 +60,7 @@ jobs:
             cd out
             git remote rm origin
             git remote add origin https://$USERNAME:$GITHUB_TOKEN@github.com/$USERNAME/$REPO.git
+            echo "" > .nojekyll || true
             git add -A
             git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
             git push origin $TARGET_BRANCH
