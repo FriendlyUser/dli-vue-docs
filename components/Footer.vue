@@ -35,6 +35,7 @@ export default {
             customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
             socketUrl: "http://35.212.163.241",
             title: "David Li",
+            connectOn: "open",
             subtitle: "Talk to me now",
           })
         `
