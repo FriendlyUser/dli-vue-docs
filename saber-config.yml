@@ -2,8 +2,8 @@ siteConfig:
   title: Latex Diagrams
 build:
   # / for surge
-  # /dli-vue-docs 
-  publicUrl: /
+  # / dli-vue-docs 
+  publicUrl: /dli-vue-docs
 plugins:
   - resolve: saber-plugin-prismjs
   - resolve: saber-plugin-search
