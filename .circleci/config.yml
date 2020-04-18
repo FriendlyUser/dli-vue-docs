@@ -36,12 +36,14 @@ jobs:
       - attach_workspace:
           at: .
       - run: ls && npm install
+      # move build files in saber pages and go back to the root folder
       - run: cd LatexDiagrams/saber && ls && mv static ../../ && cp -r pages ../../ && cd ../../
       - run: ls
       - run: 
           name: saber build
           command: |
             ls
+            sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
             npx saber build
       - run:
           name: deployment
