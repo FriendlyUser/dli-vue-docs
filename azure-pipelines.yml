@@ -16,6 +16,7 @@ steps:
     versionSpec: '10.x' # replace this value with the version that you need for your project
 
 - script: |
+    sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
     npm install
     npx saber build
   displayName: 'Build and commit pages'
