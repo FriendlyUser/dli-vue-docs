@@ -3,7 +3,7 @@ siteConfig:
 build:
   # / for surge
   # / dli-vue-docs 
-  publicUrl: /dli-vue-docs
+  publicUrl: /
 plugins:
   - resolve: saber-plugin-prismjs
   - resolve: saber-plugin-search
