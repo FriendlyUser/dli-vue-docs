@@ -12,3 +12,6 @@ plugins:
       statusAttribute: title
       buttonStyle: 
         background-color: red
+  - resolve: saber-plugin-google-analytics
+    options:
+      trackId: UA-119155027-4 # Google Analytics Track ID

@@ -16,6 +16,7 @@
   "dependencies": {
     "nprogress": "^0.2.0",
     "saber-plugin-copy-code": "^0.2.0",
+    "saber-plugin-google-analytics": "^0.2.1",
     "saber-plugin-search": "^0.1.0"
   },
   "devDependencies": {
