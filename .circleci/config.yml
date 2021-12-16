@@ -43,9 +43,10 @@ jobs:
           name: saber build
           command: |
             ls
-            sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
             npx saber build
-            cp assets/ads.txt public
+            # sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
+            # npx saber build
+            # cp assets/ads.txt public
       - run:
           name: deployment
           command: |
