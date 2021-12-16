@@ -57,9 +57,9 @@ jobs:
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .
             echo "" > .nojekyll || true
-            cd ..
+            cd ../
             ls
-            cp -a public/. out/.
+            cp -a public/* out/*
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
             git remote rm origin
