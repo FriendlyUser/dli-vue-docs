@@ -26,7 +26,7 @@ jobs:
 
   saber:
     docker:
-      - image: circleci/node:10.8 # ...with this image as the primary container; this is where all `steps` will run
+      - image: circleci/node:14.17 # ...with this image as the primary container; this is where all `steps` will run
     environment:
       - TARGET_BRANCH: gh-pages
       - USERNAME: FriendlyUser
@@ -43,10 +43,10 @@ jobs:
           name: saber build
           command: |
             ls
-            npx saber build
+            npm run build || true
             # sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
             # npx saber build
-            # cp assets/ads.txt public
+            cp assets/ads.txt public || true
       - run:
           name: deployment
           command: |
