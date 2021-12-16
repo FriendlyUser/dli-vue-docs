@@ -43,6 +43,7 @@ jobs:
           name: saber build
           command: |
             ls
+            npm update
             npm run build || true
             # sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
             # npx saber build
@@ -56,10 +57,10 @@ jobs:
             cd out
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .
-            echo "" > .nojekyll || true
+            echo "" > .nojekyl
             cd ../
             ls
-            cp -a public/ out/ || true
+            cp -a public/ out/
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
             git remote rm origin
