@@ -59,7 +59,7 @@ jobs:
             echo "" > .nojekyll || true
             cd ../
             ls
-            cp -a public/* out/
+            cp -a public/ out/ || true
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
             git remote rm origin
