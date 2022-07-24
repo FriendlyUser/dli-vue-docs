@@ -16,7 +16,7 @@
             <p class="mb-12 mx-4">I have decent skill making latex diagrams, if desired I could help you make yours for a small fee depending on the situation. </p>
 
             <div class="text-lg sm:text-lg mb-16 mx-4">
-              <form action="https://formspree.io/davidli012345@gmail.com" method="POST" class="mb-12">
+              <form action="https://formspree.io/f/davidli012345@gmail.com" method="POST" class="mb-12">
                 <div class="flex flex-wrap mb-6 -mx-4">
                     <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                         <label class="block mb-2 text-copy-primary" for="name">
