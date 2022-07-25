@@ -79,10 +79,10 @@ workflows:
   build_and_test:
     jobs:
       - latex:
-        filters:
-            branches:
-              ignore:
-                - gh-pages
+          filters:
+              branches:
+                ignore:
+                  - gh-pages
       - saber:
           requires:
             - latex
