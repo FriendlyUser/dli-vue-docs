@@ -78,7 +78,7 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - latex
+      - latex:
         filters:
             branches:
               ignore:
