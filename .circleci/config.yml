@@ -62,6 +62,7 @@ jobs:
             cp -a public/ out/
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
+            cp -r public/ .
             git remote rm origin
             git remote add origin https://$USERNAME:$GITHUB_TOKEN@github.com/$USERNAME/$REPO.git
             echo "" > .nojekyll || true
