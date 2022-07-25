@@ -26,7 +26,7 @@ jobs:
 
   saber:
     docker:
-      - image: circleci/node:10.8 # ...with this image as the primary container; this is where all `steps` will run
+      - image: circleci/node:14.17 # ...with this image as the primary container; this is where all `steps` will run
     environment:
       - TARGET_BRANCH: gh-pages
       - USERNAME: FriendlyUser
@@ -35,7 +35,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: ls && npm install
+      - run: ls && npm update && npm install || npm update
       # move build files in saber pages and go back to the root folder
       - run: cd LatexDiagrams/saber && ls && mv static ../../ && cp -r pages ../../ && cd ../../
       - run: ls
@@ -43,9 +43,10 @@ jobs:
           name: saber build
           command: |
             ls
-            sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
-            npx saber build
-            cp assets/ads.txt public
+            npm run build
+            # sed -i '36i script: [{src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "data-ad-client": "ca-pub-2479144310234386", async: true }]' saber-browser.js
+            # npx saber build
+            cp assets/ads.txt public || true
       - run:
           name: deployment
           command: |
@@ -55,10 +56,10 @@ jobs:
             cd out
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .
-            echo "" > .nojekyll || true
-            cd ..
+            echo "" > .nojekyl
+            cd ../
             ls
-            cp -a public/. out/.
+            cp -a public/ out/
             mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
             cd out
             git remote rm origin
@@ -67,10 +68,10 @@ jobs:
             git add -A
             git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
             git push origin $TARGET_BRANCH
-            sudo npm install -g surge
-            rm -rf .git
-            echo  dli-vue-docs.surge.sh > CNAME
-            echo | surge . dli-vue-docs.surge.sh
+            # sudo npm install -g surge
+            # rm -rf .git
+            # echo  dli-vue-docs.surge.sh > CNAME
+            # echo | surge . dli-vue-docs.surge.sh
 
 workflows:
   version: 2
